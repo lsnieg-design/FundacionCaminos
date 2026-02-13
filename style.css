@@ -410,16 +410,20 @@ ul { list-style: none !important; padding: 0; margin: 0; }
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #25D366; /* Verde Oficial */
+    background-color: #25D366; /* Verde WhatsApp */
     color: white;
-    font-size: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    z-index: 9999;
-    transition: 0.3s;
-    text-decoration: none; /* Asegura que no tenga subrayado */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    z-index: 10000; /* Asegura que flote sobre todo */
+    transition: transform 0.3s ease;
+    border: 2px solid white; /* Borde blanco para resaltar */
+}
+
+.btn-whatsapp-float:hover {
+    transform: scale(1.1) rotate(10deg);
+    background-color: #20b85c;
 }
 
 .btn-whatsapp-float:hover {
@@ -428,3 +432,4 @@ ul { list-style: none !important; padding: 0; margin: 0; }
     background-color: #20b85c;
     color: white;
 }
+
