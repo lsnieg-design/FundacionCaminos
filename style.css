@@ -432,4 +432,99 @@ ul { list-style: none !important; padding: 0; margin: 0; }
     background-color: #20b85c;
     color: white;
 }
+/* =========================================
+   6. SCROLL TESTIMONIOS (GOOGLE MAPS STYLE)
+   ========================================= */
+.marquee-container {
+    width: 100%;
+    overflow: hidden; /* Oculta lo que se sale de la pantalla */
+    position: relative;
+    padding: 40px 0;
+    background: #fff;
+    /* Efecto desvanecido en los bordes */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-content {
+    display: flex; /* Pone las cards en fila */
+    gap: 30px;     /* Espacio entre cards */
+    width: max-content; /* El ancho es la suma de las cards */
+    animation: scrollLeft 40s linear infinite; /* Velocidad suave */
+}
+
+.marquee-content:hover {
+    animation-play-state: paused; /* Se frena si pasas el mouse */
+}
+
+@keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Se mueve la mitad (el set original) */
+}
+
+/* DISEÑO DE LA TARJETA GOOGLE */
+.review-card {
+    width: 350px;       /* Ancho fijo importante */
+    flex-shrink: 0;     /* IMPIDE QUE SE APLASTEN */
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #e0e0e0;
+    white-space: normal; /* Permite que el texto tenga saltos de línea */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.review-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #78909c; /* Color genérico Google */
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Colores aleatorios para avatars (opcional, por CSS puro) */
+.review-card:nth-child(odd) .review-avatar { background-color: #EC407A; }
+.review-card:nth-child(even) .review-avatar { background-color: #5C6BC0; }
+
+.review-info strong {
+    display: block;
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.review-stars {
+    color: #FFC107; /* Amarillo Estrella */
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.review-text {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    font-family: 'Lato', sans-serif;
+}
+
+.google-icon {
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+}
 
