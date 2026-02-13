@@ -402,3 +402,29 @@ ul { list-style: none !important; padding: 0; margin: 0; }
         right: -80px; bottom: -80px; 
     }
 }
+/* BOTÓN WHATSAPP FLOTANTE */
+.btn-whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #25D366; /* Verde Oficial */
+    color: white;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 9999;
+    transition: 0.3s;
+    text-decoration: none; /* Asegura que no tenga subrayado */
+}
+
+.btn-whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    background-color: #20b85c;
+    color: white;
+}
