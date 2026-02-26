@@ -212,14 +212,42 @@
         <div class="container">
             <span class="subtitle">Alianzas</span>
             <h2>Quienes nos acompañan</h2>
-            <div class="logos-grid">
+            
+            <div class="logos-grid" style="margin-bottom: 40px;">
                 <img src="https://placehold.co/150x80/fff/333?text=Logo+Empresa" alt="LogoAliado" class="logo-partner">
                 <img src="https://placehold.co/150x80/fff/333?text=Logo+Gobierno" alt="LogoAliado" class="logo-partner">
                 <img src="https://placehold.co/150x80/fff/333?text=Logo+ONG" alt="LogoAliado" class="logo-partner">
             </div>
+
+            <button class="btn btn-primary" onclick="openModal('modal-alianzas')" style="background: white; color: var(--color-primario); border: 2px solid var(--color-primario); box-shadow: none;">
+                Conocé nuestra red de apoyo
+            </button>
         </div>
     </section>
+<div id="modal-alianzas" class="modal-overlay">
+        <div class="modal-content" style="max-width: 750px;">
+            <span class="modal-close" onclick="closeModal('modal-alianzas')">&times;</span>
+            
+            <h2 style="color: var(--color-primario); margin-bottom: 20px; text-align: center;">Alianzas por la Inclusión</h2>
+            
+            <p style="font-size: 1.1rem; color: #555; margin-bottom: 30px; text-align: justify; line-height: 1.7;">
+                A lo largo de nuestra trayectoria, diversas empresas han sido pilares fundamentales para el crecimiento de Fundación Caminos. Gracias a su compromiso, hemos logrado construir nuestra sede actual y equiparla con la tecnología e infraestructura necesaria para el desarrollo de nuestros concurrentes.
+            </p>
+            
+            <div style="text-align: center; margin-bottom: 30px;">
+                <img src="logos.jpg" alt="Empresas que apoyan a Fundación Caminos" style="max-width: 100%; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+            </div>
+            
+            <div style="background: var(--color-fondo-suave); padding: 30px; border-radius: 15px; border-left: 5px solid var(--color-acento);">
+                <h3 style="color: var(--color-primario); margin-bottom: 10px;">Sumá tu empresa</h3>
+                <p style="margin-bottom: 15px; color: #444;">Si formás parte de una organización interesada en impulsar proyectos inclusivos y transformar realidades, te invitamos a ser parte de nuestra red.</p>
+                <p style="font-weight: 800; font-size: 1.1rem;">
+                    Escribinos a: <a href="mailto:Donaciones@fundacioncaminos.org.ar" style="color: var(--color-acento); text-decoration: underline;">Donaciones@fundacioncaminos.org.ar</a>
+                </p>
+            </div>
 
+        </div>
+    </div>
     <footer class="footer">
         <div class="container">
             <img src="logo.png" alt="Fundación Caminos" style="height: 60px; margin: 0 auto 20px; border-radius: 10px; border: 2px solid white;">
@@ -261,6 +289,7 @@
 </html>
 </body>
 </html>
+
 
 
 
