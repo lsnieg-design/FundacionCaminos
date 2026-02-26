@@ -207,66 +207,77 @@
         </div>
     </section>
 
-    <section class="section bg-light text-center" style="padding-top: 20px; padding-bottom: 60px;">
+   <section class="section bg-light text-center" style="padding-top: 60px; padding-bottom: 60px;">
         <div class="container">
             <span class="subtitle">Alianzas</span>
-            <h2 style="margin-bottom: 30px;">Quienes nos acompañan</h2>
+            <h2 style="margin-bottom: 20px;">Quienes nos acompañan</h2>
             
-            <div style="max-width: 800px; margin: 0 auto 30px; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <img src="logos.jpg" alt="Alianzas Fundación Caminos" style="width: 100%; height: 120px; object-fit: contain; opacity: 0.9;">
+            <p style="max-width: 800px; margin: 0 auto 50px; color: #555; font-size: 1.1rem; line-height: 1.6;">
+                A lo largo de nuestra trayectoria, diversas empresas han sido pilares fundamentales para nuestro crecimiento. Gracias a su compromiso, hemos logrado construir nuestra sede actual y equiparla con la mejor tecnología.
+            </p>
+
+            <div class="logos-alianzas-grid">
+                <img src="https://placehold.co/180x90/ffffff/888888?text=Logo+Empresa" alt="Empresa 1">
+                <img src="https://placehold.co/180x90/ffffff/888888?text=Logo+Empresa" alt="Empresa 2">
+                <img src="https://placehold.co/180x90/ffffff/888888?text=Logo+Empresa" alt="Empresa 3">
+                <img src="https://placehold.co/180x90/ffffff/888888?text=Logo+Empresa" alt="Empresa 4">
+                <img src="https://placehold.co/180x90/ffffff/888888?text=Logo+Empresa" alt="Empresa 5">
+                <img src="https://placehold.co/180x90/ffffff/888888?text=Logo+Empresa" alt="Empresa 6">
             </div>
 
-            <button id="btn-alianzas" class="btn btn-primary" onclick="toggleAlianzas()" style="background: white; color: var(--color-primario); border: 2px solid var(--color-primario); box-shadow: none; font-size: 1.1rem; padding: 15px 40px; cursor: pointer; transition: 0.3s; display: inline-flex; align-items: center; justify-content: center; gap: 10px;">
-                <span>Conocé nuestra red de apoyo</span> 
-                <i id="icono-alianzas" class="fas fa-chevron-down" style="transition: transform 0.3s;"></i>
-            </button>
-
-            <div id="contenido-alianzas" style="display: none; max-width: 800px; margin: 30px auto 0; text-align: left; animation: aparecerAbajo 0.4s ease-out;">
-                
-                <h3 style="color: var(--color-primario); margin-bottom: 15px; font-family: 'Montserrat', sans-serif;">Alianzas por la Inclusión</h3>
-                <p style="font-size: 1.05rem; color: #555; margin-bottom: 25px; line-height: 1.6; text-align: justify; font-family: 'Lato', sans-serif;">
-                    A lo largo de nuestra trayectoria, diversas empresas han sido pilares fundamentales para el crecimiento de Fundación Caminos. Gracias a su compromiso, hemos logrado construir nuestra sede actual y equiparla con la tecnología e infraestructura necesaria para el desarrollo de nuestros concurrentes.
+            <div class="suma-empresa-box">
+                <h3 style="color: var(--color-primario); font-family: 'Montserrat', sans-serif; margin-bottom: 15px;">Sumá tu empresa</h3>
+                <p style="color: #555; font-size: 1.05rem; margin-bottom: 25px; font-family: 'Lato', sans-serif;">
+                    Si formás parte de una organización interesada en impulsar proyectos inclusivos y transformar realidades, te invitamos a ser parte de nuestra red.
                 </p>
-
-                <div style="background: #F3F6FB; padding: 25px; border-radius: 15px; border-left: 5px solid var(--color-acento);">
-                    <h4 style="color: var(--color-primario); margin: 0 0 10px 0; font-size: 1.2rem; font-family: 'Montserrat', sans-serif;">Sumá tu empresa</h4>
-                    <p style="margin: 0 0 10px 0; color: #444; font-family: 'Lato', sans-serif;">Si formás parte de una organización interesada en impulsar proyectos inclusivos, te invitamos a ser parte de nuestra red.</p>
-                    <p style="font-weight: 800; font-size: 1.05rem; margin: 0; font-family: 'Lato', sans-serif;">
-                        Escribinos a: <a href="mailto:Donaciones@fundacioncaminos.org.ar" style="color: var(--color-acento); text-decoration: underline;">Donaciones@fundacioncaminos.org.ar</a>
-                    </p>
-                </div>
+                <a href="mailto:Donaciones@fundacioncaminos.org.ar" class="btn btn-primary" style="padding: 12px 30px; font-size: 1.1rem; box-shadow: 0 5px 15px rgba(255, 112, 67, 0.3);">
+                    <i class="fas fa-envelope" style="margin-right: 8px;"></i> Escribinos
+                </a>
             </div>
 
         </div>
     </section>
 
     <style>
-        /* Animación suave para cuando el texto aparece */
-        @keyframes aparecerAbajo {
-            from { opacity: 0; transform: translateY(-15px); }
-            to { opacity: 1; transform: translateY(0); }
+        .logos-alianzas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 40px;
+            align-items: center;
+            justify-items: center;
+            margin-bottom: 60px;
+            padding: 0 20px;
+        }
+        .logos-alianzas-grid img {
+            max-width: 100%;
+            height: auto;
+            max-height: 80px; /* Evita que logos muy altos rompan la grilla */
+            filter: grayscale(100%); /* Logos en gris por defecto */
+            opacity: 0.6;
+            transition: all 0.3s ease;
+        }
+        .logos-alianzas-grid img:hover {
+            filter: grayscale(0%); /* Toman color al pasar el mouse */
+            opacity: 1;
+            transform: scale(1.05);
+        }
+        .suma-empresa-box {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            border-top: 5px solid var(--color-acento);
+        }
+        @media (max-width: 768px) {
+            .logos-alianzas-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columnas en celulares */
+                gap: 30px;
+            }
+            .suma-empresa-box { padding: 30px 20px; }
         }
     </style>
-
-    <script>
-        function toggleAlianzas() {
-            var contenido = document.getElementById('contenido-alianzas');
-            var icono = document.getElementById('icono-alianzas');
-            var btnTexto = document.querySelector('#btn-alianzas span');
-
-            if (contenido.style.display === 'none' || contenido.style.display === '') {
-                // Mostrar contenido
-                contenido.style.display = 'block';
-                icono.style.transform = 'rotate(180deg)'; // Gira la flechita hacia arriba
-                btnTexto.textContent = 'Ocultar información';
-            } else {
-                // Ocultar contenido
-                contenido.style.display = 'none';
-                icono.style.transform = 'rotate(0deg)'; // Gira la flechita hacia abajo
-                btnTexto.textContent = 'Conocé nuestra red de apoyo';
-            }
-        }
-    </script>
 
     <footer class="footer">
         <div class="container">
@@ -306,5 +317,6 @@
 
 </body>
 </html>
+
 
 
