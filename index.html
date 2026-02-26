@@ -208,11 +208,15 @@
             </div>
         </div>
     </section>
-  <section class="section bg-light text-center">
+<section class="section bg-light text-center">
         <div class="container">
             <span class="subtitle">Alianzas</span>
-            <h2 style="margin-bottom: 40px;">Quienes nos acompañan</h2>
+            <h2 style="margin-bottom: 30px;">Quienes nos acompañan</h2>
             
+            <div style="max-width: 800px; margin: 0 auto 30px; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <img src="logos.jpg" alt="Alianzas Fundación Caminos" style="width: 100%; height: 120px; object-fit: contain; opacity: 0.9;">
+            </div>
+
             <button class="btn btn-primary" onclick="abrirModalAlianzas()" style="background: white; color: var(--color-primario); border: 2px solid var(--color-primario); box-shadow: none; font-size: 1.1rem; padding: 15px 40px; cursor: pointer;">
                 Conocé nuestra red de apoyo
             </button>
@@ -220,50 +224,67 @@
     </section>
 
     <style>
-        /* Estilos integrados para asegurar que funcione */
         .mi-modal-alianzas {
-            display: none; /* Oculto por defecto */
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0,0,0,0.8); z-index: 999999;
             align-items: center; justify-content: center;
             opacity: 0; transition: opacity 0.3s ease;
+            padding: 20px; box-sizing: border-box;
         }
         .mi-modal-alianzas.activo {
-            display: flex; opacity: 1; /* Se muestra al agregar clase 'activo' */
+            display: flex; opacity: 1;
         }
         .mi-modal-cuerpo {
-            background: white; width: 90%; max-width: 750px;
-            border-radius: 20px; padding: 40px; position: relative;
-            max-height: 90vh; overflow-y: auto;
+            background: white; width: 100%; max-width: 800px;
+            border-radius: 20px; padding: 30px; position: relative;
             transform: translateY(20px); transition: transform 0.3s ease;
             text-align: left;
+            /* Flexbox ayuda a que el contenido se apriete sin generar scroll */
+            display: flex; flex-direction: column; gap: 15px;
+            box-sizing: border-box;
         }
         .mi-modal-alianzas.activo .mi-modal-cuerpo { transform: translateY(0); }
         .mi-modal-cerrar {
             position: absolute; top: 15px; right: 20px;
-            font-size: 2.5rem; cursor: pointer; color: #999; line-height: 1;
+            font-size: 2.5rem; cursor: pointer; color: #999; line-height: 1; z-index: 10;
         }
         .mi-modal-cerrar:hover { color: #FF7043; }
+        
+        /* Esta es la magia: La imagen nunca supera el 30% del alto de la pantalla */
+        .mi-img-dinamica {
+            width: 100%; 
+            height: 30vh; 
+            min-height: 120px;
+            object-fit: contain;
+        }
+
+        /* Ajustes automáticos para que en celulares entre perfecto */
+        @media (max-width: 768px) {
+            .mi-modal-cuerpo { padding: 20px; gap: 12px; }
+            .mi-modal-cuerpo h2 { font-size: 1.5rem !important; margin-bottom: 0 !important; }
+            .mi-modal-cuerpo p { font-size: 0.95rem !important; line-height: 1.4 !important; }
+            .mi-img-dinamica { height: 25vh; }
+        }
     </style>
 
     <div id="ventana-alianzas" class="mi-modal-alianzas">
         <div class="mi-modal-cuerpo">
             <span class="mi-modal-cerrar" onclick="cerrarModalAlianzas()">&times;</span>
             
-            <h2 style="color: #004aad; margin-bottom: 20px; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 800;">Alianzas por la Inclusión</h2>
+            <h2 style="color: #004aad; margin: 0; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 800;">Alianzas por la Inclusión</h2>
             
-            <p style="font-size: 1.1rem; color: #555; margin-bottom: 30px; text-align: justify; line-height: 1.7; font-family: 'Lato', sans-serif;">
+            <p style="font-size: 1.05rem; color: #555; margin: 0; text-align: justify; line-height: 1.5; font-family: 'Lato', sans-serif;">
                 A lo largo de nuestra trayectoria, diversas empresas han sido pilares fundamentales para el crecimiento de Fundación Caminos. Gracias a su compromiso, hemos logrado construir nuestra sede actual y equiparla con la tecnología e infraestructura necesaria para el desarrollo de nuestros concurrentes.
             </p>
             
-            <div style="text-align: center; margin-bottom: 30px;">
-                <img src="logos.jpg" alt="Empresas que apoyan a Fundación Caminos" style="max-width: 100%; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+            <div style="text-align: center;">
+                <img src="logos.jpg" alt="Empresas que apoyan a Fundación Caminos" class="mi-img-dinamica">
             </div>
             
-            <div style="background: #F3F6FB; padding: 30px; border-radius: 15px; border-left: 5px solid #FF7043;">
-                <h3 style="color: #004aad; margin-bottom: 10px; font-size: 1.4rem; font-family: 'Montserrat', sans-serif;">Sumá tu empresa</h3>
-                <p style="margin-bottom: 15px; color: #444; font-family: 'Lato', sans-serif;">Si formás parte de una organización interesada en impulsar proyectos inclusivos y transformar realidades, te invitamos a ser parte de nuestra red.</p>
-                <p style="font-weight: 800; font-size: 1.1rem; margin:0; font-family: 'Lato', sans-serif;">
+            <div style="background: #F3F6FB; padding: 20px; border-radius: 15px; border-left: 5px solid #FF7043; margin: 0;">
+                <h3 style="color: #004aad; margin: 0 0 5px 0; font-size: 1.2rem; font-family: 'Montserrat', sans-serif;">Sumá tu empresa</h3>
+                <p style="margin: 0 0 10px 0; color: #444; font-family: 'Lato', sans-serif;">Si formás parte de una organización interesada en impulsar proyectos inclusivos, te invitamos a ser parte de nuestra red.</p>
+                <p style="font-weight: 800; font-size: 1.05rem; margin: 0; font-family: 'Lato', sans-serif;">
                     Escribinos a: <a href="mailto:Donaciones@fundacioncaminos.org.ar" style="color: #FF7043; text-decoration: underline;">Donaciones@fundacioncaminos.org.ar</a>
                 </p>
             </div>
@@ -277,7 +298,6 @@
         function cerrarModalAlianzas() {
             document.getElementById('ventana-alianzas').classList.remove('activo');
         }
-        // Cerrar si haces clic afuera del cuadro blanco
         document.getElementById('ventana-alianzas').addEventListener('click', function(event) {
             if (event.target === this) {
                 cerrarModalAlianzas();
@@ -325,6 +345,7 @@
 </html>
 </body>
 </html>
+
 
 
 
