@@ -222,27 +222,31 @@
         </div>
     </section>
 
-    <style>
+  <style>
         .mi-modal-alianzas {
-            display: none; 
-            position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; 
-            width: 100vw !important; height: 100vh !important;
-            background: rgba(0,0,0,0.8); z-index: 9999999 !important;
-            align-items: center; justify-content: center;
-            opacity: 0; transition: opacity 0.3s ease;
-            padding: 20px; box-sizing: border-box;
+            display: none !important; 
+            position: fixed !important; 
+            top: 0 !important; 
+            left: 0 !important; 
+            width: 100vw !important; 
+            height: 100vh !important;
+            background: rgba(0,0,0,0.8) !important; 
+            z-index: 9999999 !important;
         }
+        /* Obligamos al centrado absoluto cuando está activo */
         .mi-modal-alianzas.activo {
-            display: flex; opacity: 1;
+            display: flex !important; 
+            align-items: center !important; 
+            justify-content: center !important;
         }
         .mi-modal-cuerpo {
-            background: white; width: 100%; max-width: 800px;
+            background: white; width: 90%; max-width: 800px;
             border-radius: 20px; padding: 30px; position: relative;
             transform: translateY(20px); transition: transform 0.3s ease;
             text-align: left;
             display: flex; flex-direction: column; gap: 15px;
             box-sizing: border-box;
-            max-height: 90vh; overflow-y: auto; /* Por si el celular es muy pequeño */
+            max-height: 90vh; overflow-y: auto; 
         }
         .mi-modal-alianzas.activo .mi-modal-cuerpo { transform: translateY(0); }
         .mi-modal-cerrar {
@@ -290,16 +294,13 @@
         </div>
     </div>
 
-    <script>
+   <script>
         function abrirModalAlianzas() {
+            // Solo abrimos la ventana, sin tocar el scroll del body
             document.getElementById('ventana-alianzas').classList.add('activo');
-            // Bloquea el scroll del fondo para que la pantalla no salte ni se mueva
-            document.body.style.overflow = 'hidden'; 
         }
         function cerrarModalAlianzas() {
             document.getElementById('ventana-alianzas').classList.remove('activo');
-            // Devuelve el scroll a la normalidad al cerrar
-            document.body.style.overflow = ''; 
         }
         document.getElementById('ventana-alianzas').addEventListener('click', function(event) {
             if (event.target === this) {
@@ -346,3 +347,4 @@
 
 </body>
 </html>
+
