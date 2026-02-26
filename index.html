@@ -208,29 +208,51 @@
             </div>
         </div>
     </section>
-    <section class="section bg-light text-center">
+  <section class="section bg-light text-center">
         <div class="container">
             <span class="subtitle">Alianzas</span>
-            <h2>Quienes nos acompañan</h2>
+            <h2 style="margin-bottom: 40px;">Quienes nos acompañan</h2>
             
-            <div class="logos-grid" style="margin-bottom: 40px;">
-                <img src="https://placehold.co/150x80/fff/333?text=Logo+Empresa" alt="LogoAliado" class="logo-partner">
-                <img src="https://placehold.co/150x80/fff/333?text=Logo+Gobierno" alt="LogoAliado" class="logo-partner">
-                <img src="https://placehold.co/150x80/fff/333?text=Logo+ONG" alt="LogoAliado" class="logo-partner">
-            </div>
-
-            <button class="btn btn-primary" onclick="openModal('modal-alianzas')" style="background: white; color: var(--color-primario); border: 2px solid var(--color-primario); box-shadow: none;">
+            <button class="btn btn-primary" onclick="abrirModalAlianzas()" style="background: white; color: var(--color-primario); border: 2px solid var(--color-primario); box-shadow: none; font-size: 1.1rem; padding: 15px 40px; cursor: pointer;">
                 Conocé nuestra red de apoyo
             </button>
         </div>
     </section>
-<div id="modal-alianzas" class="modal-overlay">
-        <div class="modal-content" style="max-width: 750px;">
-            <span class="modal-close" onclick="closeModal('modal-alianzas')">&times;</span>
+
+    <style>
+        /* Estilos integrados para asegurar que funcione */
+        .mi-modal-alianzas {
+            display: none; /* Oculto por defecto */
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8); z-index: 999999;
+            align-items: center; justify-content: center;
+            opacity: 0; transition: opacity 0.3s ease;
+        }
+        .mi-modal-alianzas.activo {
+            display: flex; opacity: 1; /* Se muestra al agregar clase 'activo' */
+        }
+        .mi-modal-cuerpo {
+            background: white; width: 90%; max-width: 750px;
+            border-radius: 20px; padding: 40px; position: relative;
+            max-height: 90vh; overflow-y: auto;
+            transform: translateY(20px); transition: transform 0.3s ease;
+            text-align: left;
+        }
+        .mi-modal-alianzas.activo .mi-modal-cuerpo { transform: translateY(0); }
+        .mi-modal-cerrar {
+            position: absolute; top: 15px; right: 20px;
+            font-size: 2.5rem; cursor: pointer; color: #999; line-height: 1;
+        }
+        .mi-modal-cerrar:hover { color: #FF7043; }
+    </style>
+
+    <div id="ventana-alianzas" class="mi-modal-alianzas">
+        <div class="mi-modal-cuerpo">
+            <span class="mi-modal-cerrar" onclick="cerrarModalAlianzas()">&times;</span>
             
-            <h2 style="color: var(--color-primario); margin-bottom: 20px; text-align: center;">Alianzas por la Inclusión</h2>
+            <h2 style="color: #004aad; margin-bottom: 20px; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 800;">Alianzas por la Inclusión</h2>
             
-            <p style="font-size: 1.1rem; color: #555; margin-bottom: 30px; text-align: justify; line-height: 1.7;">
+            <p style="font-size: 1.1rem; color: #555; margin-bottom: 30px; text-align: justify; line-height: 1.7; font-family: 'Lato', sans-serif;">
                 A lo largo de nuestra trayectoria, diversas empresas han sido pilares fundamentales para el crecimiento de Fundación Caminos. Gracias a su compromiso, hemos logrado construir nuestra sede actual y equiparla con la tecnología e infraestructura necesaria para el desarrollo de nuestros concurrentes.
             </p>
             
@@ -238,16 +260,30 @@
                 <img src="logos.jpg" alt="Empresas que apoyan a Fundación Caminos" style="max-width: 100%; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
             </div>
             
-            <div style="background: var(--color-fondo-suave); padding: 30px; border-radius: 15px; border-left: 5px solid var(--color-acento);">
-                <h3 style="color: var(--color-primario); margin-bottom: 10px;">Sumá tu empresa</h3>
-                <p style="margin-bottom: 15px; color: #444;">Si formás parte de una organización interesada en impulsar proyectos inclusivos y transformar realidades, te invitamos a ser parte de nuestra red.</p>
-                <p style="font-weight: 800; font-size: 1.1rem;">
-                    Escribinos a: <a href="mailto:Donaciones@fundacioncaminos.org.ar" style="color: var(--color-acento); text-decoration: underline;">Donaciones@fundacioncaminos.org.ar</a>
+            <div style="background: #F3F6FB; padding: 30px; border-radius: 15px; border-left: 5px solid #FF7043;">
+                <h3 style="color: #004aad; margin-bottom: 10px; font-size: 1.4rem; font-family: 'Montserrat', sans-serif;">Sumá tu empresa</h3>
+                <p style="margin-bottom: 15px; color: #444; font-family: 'Lato', sans-serif;">Si formás parte de una organización interesada en impulsar proyectos inclusivos y transformar realidades, te invitamos a ser parte de nuestra red.</p>
+                <p style="font-weight: 800; font-size: 1.1rem; margin:0; font-family: 'Lato', sans-serif;">
+                    Escribinos a: <a href="mailto:Donaciones@fundacioncaminos.org.ar" style="color: #FF7043; text-decoration: underline;">Donaciones@fundacioncaminos.org.ar</a>
                 </p>
             </div>
-
         </div>
     </div>
+
+    <script>
+        function abrirModalAlianzas() {
+            document.getElementById('ventana-alianzas').classList.add('activo');
+        }
+        function cerrarModalAlianzas() {
+            document.getElementById('ventana-alianzas').classList.remove('activo');
+        }
+        // Cerrar si haces clic afuera del cuadro blanco
+        document.getElementById('ventana-alianzas').addEventListener('click', function(event) {
+            if (event.target === this) {
+                cerrarModalAlianzas();
+            }
+        });
+    </script>
     <footer class="footer">
         <div class="container">
             <img src="logo.png" alt="Fundación Caminos" style="height: 60px; margin: 0 auto 20px; border-radius: 10px; border: 2px solid white;">
@@ -289,6 +325,7 @@
 </html>
 </body>
 </html>
+
 
 
 
