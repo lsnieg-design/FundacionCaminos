@@ -279,21 +279,21 @@
         }
     </style>
 
-<footer style="background-color: #004aad; color: white; padding: 50px 20px 20px; text-align: center; position: relative; z-index: 10; margin-top: auto;">
-        <div class="container">
-            <img src="logo.png" alt="Fundación Caminos" style="height: 80px; margin: 0 auto 30px; border-radius: 10px; background: white; padding: 10px; display: block; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-            
-            <div style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 40px; font-family: 'Lato', sans-serif;">
-                <p style="margin: 0;"><i class="fas fa-map-marker-alt" style="margin-right: 8px; color: #FF7043;"></i> Teodoro García 3545</p>
-                <p style="margin: 0;">C1427ECA</p>
-                <p style="margin: 0;">Ciudad Autónoma de Buenos Aires, Argentina</p>
-                <p style="margin: 15px 0 5px 0;"><i class="fas fa-phone-alt" style="margin-right: 8px; color: #FF7043;"></i> Tel (+54-11) 4551-2141</p>
-                <p style="margin: 0;"><i class="fas fa-envelope" style="margin-right: 8px; color: #FF7043;"></i> secretariafcaminos@gmail.com</p>
+<footer class="footer-horizontal">
+        <div class="container footer-flex">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Fundación Caminos">
             </div>
             
-            <hr style="border-color: rgba(255,255,255,0.2); margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <div class="footer-info">
+                <p><i class="fas fa-map-marker-alt"></i> Teodoro García 3545, C1427ECA, Ciudad Autónoma de Buenos Aires</p>
+                <p><i class="fas fa-phone-alt"></i> Tel (+54-11) 4551-2141 &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fas fa-envelope"></i> secretariafcaminos@gmail.com</p>
+            </div>
             
-            <p style="font-size: 0.95rem; margin: 0; font-family: 'Montserrat', sans-serif;">Diseñado por <a href="https://www.somosnomade.com.ar" target="_blank" style="color: white; font-weight: 800; text-decoration: none; letter-spacing: 1px;">NOMADE</a></p>
+            <div class="footer-firma">
+                Diseñado por<br>
+                <a href="https://www.somosnomade.com.ar" target="_blank">NOMADE</a>
+            </div>
         </div>
     </footer>
 
@@ -302,28 +302,73 @@
     </a>
 
     <style>
+        .footer-horizontal {
+            background-color: var(--color-primario, #004aad);
+            color: white;
+            padding: 20px 0;
+            margin-top: auto;
+            border-top: 4px solid var(--color-acento, #FF7043);
+        }
+        .footer-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .footer-logo img {
+            height: 55px; /* Logo más sutil para que el footer sea fino */
+            background: white;
+            padding: 5px 10px;
+            border-radius: 8px;
+            display: block;
+        }
+        .footer-info {
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .footer-info p { margin: 0; }
+        .footer-info i {
+            color: var(--color-acento, #FF7043);
+            margin-right: 6px;
+        }
+        .footer-firma {
+            text-align: right;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            line-height: 1.2;
+        }
+        .footer-firma a {
+            color: white;
+            font-weight: 800;
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+        }
+        .footer-firma a:hover { color: var(--color-acento, #FF7043); }
+
+        /* Botón WhatsApp Fijo */
         .whatsapp-btn-fijo {
-            position: fixed !important;
-            bottom: 30px !important;
-            right: 30px !important;
-            width: 60px !important;
-            height: 60px !important;
-            background-color: #25D366 !important;
-            color: white !important;
-            border-radius: 50% !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            font-size: 35px !important;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
-            z-index: 2147483647 !important;
-            text-decoration: none !important;
+            position: fixed !important; bottom: 30px !important; right: 30px !important;
+            width: 60px !important; height: 60px !important; background-color: #25D366 !important;
+            color: white !important; border-radius: 50% !important; display: flex !important;
+            align-items: center !important; justify-content: center !important;
+            font-size: 35px !important; box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+            z-index: 2147483647 !important; text-decoration: none !important;
             transition: transform 0.3s ease, box-shadow 0.3s ease !important;
         }
         .whatsapp-btn-fijo:hover {
-            transform: scale(1.1) !important;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.4) !important;
-            color: white !important;
+            transform: scale(1.1) !important; box-shadow: 0 6px 20px rgba(0,0,0,0.4) !important; color: white !important;
+        }
+
+        /* Adaptación a Celulares */
+        @media (max-width: 900px) {
+            .footer-flex { flex-direction: column; text-align: center; }
+            .footer-info { margin: 10px 0; }
+            .footer-firma { text-align: center; }
+            .footer-info p { margin-bottom: 5px; }
         }
     </style>
 
