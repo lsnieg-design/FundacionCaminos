@@ -44,122 +44,150 @@
         </div>
     </section>
 
-    <section class="section bg-light" style="margin-top: 40px;">
+    <section class="section pt-0">
         <div class="container">
-            <div class="grid-cards">
-                
-                <article class="card-service">
-                    <div class="card-img" style="height: 250px;">
-                        <img src="https://placehold.co/500x300/004aad/fff?text=Taller+Arte" alt="Arte y Expresión" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="card-body">
-                        <h3>Nombre del Taller 1</h3>
-                        <p>Breve descripción de la propuesta del taller, sus objetivos y qué tipo de actividades realizan los concurrentes aquí.</p>
-                    </div>
-                </article>
-
-                <article class="card-service">
-                    <div class="card-img" style="height: 250px;">
-                        <img src="https://placehold.co/500x300/FF7043/fff?text=Taller+Cocina" alt="Cocina" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="card-body">
-                        <h3>Nombre del Taller 2</h3>
-                        <p>Breve descripción de la propuesta del taller, sus objetivos y qué tipo de actividades realizan los concurrentes aquí.</p>
-                    </div>
-                </article>
-
-                <article class="card-service">
-                    <div class="card-img" style="height: 250px;">
-                        <img src="https://placehold.co/500x300/8E44AD/fff?text=Taller+Fisico" alt="Educación Física" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="card-body">
-                        <h3>Nombre del Taller 3</h3>
-                        <p>Breve descripción de la propuesta del taller, sus objetivos y qué tipo de actividades realizan los concurrentes aquí.</p>
-                    </div>
-                </article>
-
-                <article class="card-service">
-                    <div class="card-img" style="height: 250px;">
-                        <img src="https://placehold.co/500x300/004aad/fff?text=Taller+Cognitivo" alt="Estimulación Cognitiva" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="card-body">
-                        <h3>Nombre del Taller 4</h3>
-                        <p>Breve descripción de la propuesta del taller, sus objetivos y qué tipo de actividades realizan los concurrentes aquí.</p>
-                    </div>
-                </article>
-                
-                </div>
-            
-            <div class="text-center" style="margin-top: 60px;">
-                <a href="dispositivos.html" class="btn btn-primary" style="background: white; color: var(--color-primario); border: 2px solid var(--color-primario); box-shadow: none;">
-                    <i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Volver a Dispositivos
-                </a>
+            <h3 style="text-align: center; color: var(--color-primario); margin-bottom: 30px;">Conocé nuestra Sede</h3>
+            <div class="sede-gallery">
+                <div class="sede-img-wrap"><img src="sede/sede1.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+1'" alt="Sede 1"></div>
+                <div class="sede-img-wrap"><img src="sede/sede2.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+2'" alt="Sede 2"></div>
+                <div class="sede-img-wrap"><img src="sede/sede3.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+3'" alt="Sede 3"></div>
+                <div class="sede-img-wrap"><img src="sede/sede4.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+4'" alt="Sede 4"></div>
+                <div class="sede-img-wrap"><img src="sede/sede5.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+5'" alt="Sede 5"></div>
+                <div class="sede-img-wrap"><img src="sede/sede6.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+6'" alt="Sede 6"></div>
+                <div class="sede-img-wrap"><img src="sede/sede7.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+7'" alt="Sede 7"></div>
+                <div class="sede-img-wrap"><img src="sede/sede8.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+8'" alt="Sede 8"></div>
+                <div class="sede-img-wrap"><img src="sede/sede9.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+9'" alt="Sede 9"></div>
+                <div class="sede-img-wrap"><img src="sede/sede10.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+10'" alt="Sede 10"></div>
             </div>
-            
         </div>
     </section>
 
- <section class="section bg-light text-center" style="padding-top: 60px; padding-bottom: 60px;">
-        <div class="container">
-            <span class="subtitle">Alianzas</span>
-            <h2 style="margin-bottom: 20px;">Quienes nos acompañan</h2>
-            
-            <p style="max-width: 800px; margin: 0 auto 50px; color: #555; font-size: 1.1rem; line-height: 1.6; font-family: 'Lato', sans-serif;">
-                A lo largo de nuestra trayectoria, diversas empresas han sido pilares fundamentales para nuestro crecimiento. Gracias a su compromiso, hemos logrado construir nuestra sede actual y equiparla con la mejor tecnología.
-            </p>
+    <style>
+        .sede-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 0 15px;
+        }
+        .sede-img-wrap {
+            overflow: hidden;
+            border-radius: 12px;
+            aspect-ratio: 1 / 1;
+            background: #eee;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .sede-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(40%) brightness(90%);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        .sede-img-wrap img:hover {
+            filter: grayscale(0%) brightness(100%);
+            transform: scale(1.1);
+        }
+    </style>
 
-            <div class="logos-alianzas-grid">
-                <img src="logos/abb.png" alt="ABB">
-                <img src="logos/Marlew S.A..png" alt="Marlew S.A.">
-                <img src="logos/ParexKlaukol.jpeg" alt="ParexKlaukol">
-                <img src="logos/Baremes.jpeg" alt="Baremes">
-                <img src="logos/Doble A.png" alt="Doble A">
-                <img src="logos/ILVA.png" alt="ILVA">
-                <img src="logos/Rep-San.png" alt="Rep-San">
-                <img src="logos/Currao.png" alt="Currao">
-                <img src="logos/Genrod.png" alt="Genrod">
-                <img src="logos/Melisam.png" alt="Melisam">
-                <img src="logos/Philips.png" alt="Philips">
-                <img src="logos/Sika.png" alt="Sika">
-                <img src="logos/Artelum.png" alt="Artelum">
-                <img src="logos/Moblar.png" alt="Moblar">
-                <img src="logos/Lomax.png" alt="Lomax">
-                <img src="logos/Hidraulpas S.A..png" alt="Hidraulpas S.A.">
-                <img src="logos/BLOQ..png" alt="BLOQ">
-                <img src="logos/VASA.png" alt="VASA">
-                <img src="logos/Sinteplast.jpg" alt="Sinteplast">
-                <img src="logos/Herrajes San Martín.png" alt="Herrajes San Martín">
-                <img src="logos/Barbieri.png" alt="Barbieri">
-                <img src="logos/SHAP.png" alt="SHAP">
-                <img src="logos/M.A.C..png" alt="M.A.C.">
-                <img src="logos/Cerámica San Lorenzo.png" alt="Cerámica San Lorenzo">
-                <img src="logos/Revear.png" alt="Revear">
-                <img src="logos/Durlock.png" alt="Durlock">
-                <img src="logos/Sabelli S.R.L. (Aberturas).png" alt="Sabelli S.R.L.">
-                <img src="logos/Caños Luz Ayan.jpg" alt="Caños Luz Ayan">
-                <img src="logos/AluTecnic.png" alt="AluTecnic">
-                <img src="logos/T.A.S.png" alt="T.A.S.">
-                <img src="logos/PEISA.png" alt="PEISA">
-                <img src="logos/Cerámica Fanelli.png" alt="Cerámica Fanelli">
-                <img src="logos/Ferrum.png" alt="Ferrum">
-                <img src="logos/Prysmian.png" alt="Prysmian">
-                <img src="logos/Adiabatic.png" alt="Adiabatic">
-                <img src="logos/MyS Matyser S.A.png" alt="MyS Matyser S.A.">
-                <img src="logos/Tecnocom.png" alt="Tecnocom">
-                <img src="logos/Ingeniería Gastronómica.jpeg" alt="Ingeniería Gastronómica">
-                <img src="logos/Roker.jpeg" alt="Roker">
-                <img src="logos/FV.png" alt="FV">
+    <section class="section bg-light" style="padding-top: 40px;">
+        <div class="container">
+            <h3 style="text-align: center; color: var(--color-primario); margin-bottom: 40px; font-size: 2rem;">Cronograma Semanal de Talleres</h3>
+            
+            <div class="accordion-container">
+                
+                <button class="accordion">LUNES <i class="fas fa-chevron-down"></i></button>
+                <div class="panel">
+                    <div class="taller-item">
+                        <h4><i class="far fa-clock"></i> 9:00 a 12:00hs.</h4>
+                        <h5>TALLER DE COCINA PRODUCTIVA / ARTES VISUALES</h5>
+                        <p><strong>Cocina:</strong> Enfoque en la producción para el centro y venta interna. Repetición mensual de productos (muffins, pizzetas, mermeladas, panificados) para afianzar técnicas.</p>
+                        <p><strong>Artes Visuales (Solana y Lucila):</strong> Dos propuestas: 1) <em>Cartelería</em> mediante sellos e iconos para espacio público. 2) <em>Diseño textil</em> inspirado en los mantos de PARACAS (Perú), contextualizando época y mitología.</p>
+                    </div>
+                    <hr>
+                    <div class="taller-item">
+                        <h4><i class="far fa-clock"></i> 13:00 a 16:00hs.</h4>
+                        <h5>RELATOS DE LA HUERTA / COCINA PRODUCTIVA</h5>
+                        <p><strong>Huerta (Hansi y Gus):</strong> Producción de aromáticas, distribución y confección de sales saborizadas. Espacio de lectura y narración sobre problemática ambiental.</p>
+                        <p><strong>Cocina Productiva:</strong> (Repetición del taller matutino enfocado en elaboración y técnicas culinarias).</p>
+                    </div>
+                </div>
+
+                <button class="accordion">MARTES <i class="fas fa-chevron-down"></i></button>
+                <div class="panel">
+                    <div class="taller-item">
+                        <h4><i class="far fa-clock"></i> 9:00 a 12:00hs.</h4>
+                        <h5>ARTES VISUALES / DEPORTES EN MOVIMIENTO</h5>
+                        <p><strong>Artes Visuales (Solana, Lucila y Gus):</strong> Propuestas: "Llegó Carta" (comunicación postal y decoración) y "Cuaderno de Artista" (registro personal y creativo).</p>
+                        <p><strong>Deportes (Vane y Fercha):</strong> Preparación física, yoga, entrenamiento funcional y actividades deportivas/recreativas ("las cachitas").</p>
+                    </div>
+                    <hr>
+                    <div class="taller-item">
+                        <h4><i class="far fa-clock"></i> 13:00 a 16:00hs.</h4>
+                        <h5>EN MOVIMIENTO / STREAMING PUNTO Y COMA</h5>
+                        <p><strong>En Movimiento:</strong> Conexión lúdica, deportiva y artística cambiando de escenario semanalmente.</p>
+                        <p><strong>Streaming (Matu, Blas y Lucila):</strong> Espacio radiofónico en YouTube con entrevistas, música y debate (a las 15hs).</p>
+                    </div>
+                </div>
+
+                <button class="accordion">MIÉRCOLES <i class="fas fa-chevron-down"></i></button>
+                <div class="panel">
+                    <div class="taller-item">
+                        <h4><i class="far fa-clock"></i> 9:00 a 12:00hs.</h4>
+                        <h5>AUTONOMÍA / MIRADAS CRÍTICAS</h5>
+                        <p><strong>Autonomía (Juli, Ayelen y Hansi):</strong> Herramientas para la gestión adulta, fortaleciendo el rol protagónico frente a familias y comunidad.</p>
+                        <p><strong>Miradas Críticas (Matías y Gus):</strong> Diálogo sobre fenómenos socio-culturales e históricos mediante debates, entrevistas y podcasts.</p>
+                    </div>
+                    <hr>
+                    <div class="taller-item">
+                        <h4><i class="far fa-clock"></i> 13:00 a 16:00hs.</h4>
+                        <h5>EN PRIMER PLANO / OBRA EN ACCIÓN</h5>
+                        <p><strong>En Primer Plano (Lucila y Gus):</strong> Fotografía, observación estática y creación de historias sumando voz en off y sonido.</p>
+                        <p><strong>Obra en Acción (Mahia y Fer):</strong> Taller de teatro y preparación corporal escénica para presentar obras en espacios culturales.</p>
+                    </div>
+                </div>
+
+                <button class="accordion">JUEVES <i class="fas fa-chevron-down"></i></button>
+                <div class="panel">
+                    <div class="taller-item">
+                        <h4><i class="far fa-clock"></i> 9:00 a 12:00hs.</h4>
+                        <h5>ALIADOS DIGITALES / ESPACIO PRODUCTIVO / CORONAUTAS</h5>
+                        <p><strong>Aliados Digitales (Maru y Aye):</strong> Uso práctico de Inteligencia Artificial para potenciar la autonomía y creatividad.</p>
+                        <p><strong>Espacio Productivo (Lara, Juli y Carlos):</strong> Desarrollo de habilidades laborales, producción, intercambio comunitario e información sobre derechos (9 a 10.30hs).</p>
+                        <p><strong>Coronautas:</strong> Expresión musical a través de la actividad coral (11 a 12hs).</p>
+                    </div>
+                    <hr>
+                    <div class="taller-item">
+                        <h4><i class="far fa-clock"></i> 13:00 a 16:00hs.</h4>
+                        <h5>TALLER DE TEATRO / CONECTANDO: TECNO Y VIDA DIARIA</h5>
+                        <p><strong>Teatro (Mahia y Gus):</strong> Ejercicios de preparación escénica y actuación.</p>
+                        <p><strong>Conectando (Mai, Juli y Maru):</strong> Informática e instructivos para la vida diaria con visitas al departamento anexo.</p>
+                    </div>
+                </div>
+
+                <button class="accordion">VIERNES <i class="fas fa-chevron-down"></i></button>
+                <div class="panel">
+                    <div class="taller-item">
+                        <h4><i class="far fa-clock"></i> 9:00 a 12:00hs.</h4>
+                        <h5>VARIETÉ URBANA / CORONAUTAS / FOTO-CALENDARIO</h5>
+                        <p><strong>Varieté Urbana (Carlos, Matu y Vane):</strong> Exploración del mundo urbano y la interacción comunitaria (9 a 11hs).</p>
+                        <p><strong>Coronautas:</strong> Expresión musical coral (11 a 12hs).</p>
+                        <p><strong>Foto-Calendario (Lucila y Maru):</strong> Creación de un calendario anual ficcionado bajo la temática "personajes argentinxs".</p>
+                    </div>
+                    <hr>
+                    <div class="taller-item">
+                        <h4><i class="far fa-clock"></i> 13:00 a 16:00hs.</h4>
+                        <h5>FOTO CRONISTAS / LUDOTECA RODANTE</h5>
+                        <p><strong>Foto Cronistas (Lucila y Maru):</strong> Registro fotográfico de la vida en la Fundación, anexo y barrio.</p>
+                        <p><strong>Ludoteca Rodante (Hansi, Fercha y Vane):</strong> Creación de juegos y actividades recreativas para la comunidad e instituciones barriales.</p>
+                    </div>
+                </div>
+
             </div>
 
-            <div style="background: white; border-radius: 20px; padding: 40px; max-width: 700px; margin: 0 auto; box-shadow: 0 10px 40px rgba(0,0,0,0.06); border-top: 5px solid var(--color-acento);">
-                <h3 style="color: var(--color-primario); font-family: 'Montserrat', sans-serif; margin-bottom: 15px; font-size: 1.5rem;">Sumá tu empresa</h3>
-                
-                <p style="color: #555; font-size: 1.05rem; margin-bottom: 25px; font-family: 'Lato', sans-serif;">
-                    Si formás parte de una organización interesada en impulsar proyectos inclusivos y transformar realidades, te invitamos a ser parte de nuestra red.
-                </p>
-                
-                <a href="mailto:Donaciones@fundacioncaminos.org.ar" class="btn btn-primary" style="padding: 12px 35px; font-size: 1.1rem; box-shadow: 0 5px 15px rgba(255, 112, 67, 0.3); border-radius: 50px;">
-                    <i class="fas fa-envelope" style="margin-right: 8px;"></i> Escribinos
+            <div class="text-center" style="margin-top: 50px;">
+                <a href="dispositivos" class="btn btn-primary" style="background: white; color: var(--color-primario); border: 2px solid var(--color-primario); box-shadow: none;">
+                    <i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Volver a Dispositivos
                 </a>
             </div>
 
@@ -167,41 +195,205 @@
     </section>
 
     <style>
-        .logos-alianzas-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 40px;
+        .accordion-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .accordion {
+            background-color: white;
+            color: var(--color-primario);
+            cursor: pointer;
+            padding: 20px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.3s;
+            font-size: 1.3rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-items: center;
-            margin-bottom: 60px;
+        }
+        .accordion.active, .accordion:hover {
+            background-color: var(--color-primario);
+            color: white;
+        }
+        .accordion i {
+            transition: transform 0.3s;
+        }
+        .accordion.active i {
+            transform: rotate(180deg);
+        }
+        .panel {
             padding: 0 20px;
+            background-color: transparent;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            margin-bottom: 15px;
         }
-        .logos-alianzas-grid img {
-            max-width: 100%;
-            height: auto;
-            max-height: 70px;
-            filter: grayscale(100%);
-            opacity: 0.5;
-            transition: all 0.3s ease;
+        .taller-item {
+            padding: 15px 0;
+            text-align: left;
         }
-        .logos-alianzas-grid img:hover {
-            filter: grayscale(0%);
-            opacity: 1;
-            transform: scale(1.1);
+        .taller-item h4 {
+            color: var(--color-acento);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
         }
-
-        @media (max-width: 768px) {
-            .logos-alianzas-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 25px;
-            }
-            .logos-alianzas-grid img { max-height: 50px; }
+        .taller-item h5 {
+            color: #333;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
         }
-        @media (max-width: 480px) {
-            .logos-alianzas-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        .taller-item p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+        .panel hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 10px 0;
         }
     </style>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        }
+    </script>
+
+    <footer class="footer-horizontal">
+        <div class="container footer-flex">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Fundación Caminos">
+            </div>
+            
+            <div class="footer-info">
+                <p><i class="fas fa-map-marker-alt"></i> Teodoro García 3545, C1427ECA, CABA</p>
+                <p><i class="fas fa-phone-alt"></i> Tel (+54-11) 4551-2141 &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fas fa-envelope"></i> secretariafcaminos@gmail.com</p>
+            </div>
+            
+            <div class="footer-firma">
+                Diseñado por<br>
+                <a href="https://www.somosnomade.com.ar" target="_blank">NOMADE</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send/?phone=541136953600&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp-btn-fijo" aria-label="Chat en WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <style>
+        .footer-horizontal {
+            background-color: var(--color-primario, #004aad);
+            color: white;
+            padding: 20px 0;
+            margin-top: auto;
+            border-top: 4px solid var(--color-acento, #FF7043);
+        }
+        .footer-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .footer-logo img {
+            height: 55px;
+            background: white;
+            padding: 5px 10px;
+            border-radius: 8px;
+            display: block;
+        }
+        .footer-info {
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .footer-info p { margin: 0; }
+        .footer-info i {
+            color: var(--color-acento, #FF7043);
+            margin-right: 6px;
+        }
+        .footer-firma {
+            text-align: right;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            line-height: 1.2;
+        }
+        .footer-firma a {
+            color: white;
+            font-weight: 800;
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+        }
+        .footer-firma a:hover { color: var(--color-acento, #FF7043); }
+
+        .whatsapp-btn-fijo {
+            position: fixed !important; bottom: 30px !important; right: 30px !important;
+            width: 60px !important; height: 60px !important; background-color: #25D366 !important;
+            color: white !important; border-radius: 50% !important; display: flex !important;
+            align-items: center !important; justify-content: center !important;
+            font-size: 35px !important; box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+            z-index: 2147483647 !important; text-decoration: none !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        }
+        .whatsapp-btn-fijo:hover {
+            transform: scale(1.1) !important; box-shadow: 0 6px 20px rgba(0,0,0,0.4) !important; color: white !important;
+        }
+
+        @media (max-width: 900px) {
+            .footer-flex { flex-direction: column; text-align: center; }
+            .footer-info { margin: 10px 0; }
+            .footer-firma { text-align: center; }
+            .footer-info p { margin-bottom: 5px; }
+        }
+    </style>
+    
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navList = document.querySelector('.nav-list');
+        if(navToggle){
+            navToggle.addEventListener('click', () => {
+                if(navList.style.display === 'flex'){
+                    navList.style.display = 'none';
+                } else {
+                    navList.style.display = 'flex';
+                    navList.style.flexDirection = 'column';
+                    navList.style.position = 'absolute';
+                    navList.style.top = '80px';
+                    navList.style.left = '0';
+                    navList.style.width = '100%';
+                    navList.style.background = 'white';
+                    navList.style.padding = '20px';
+                    navList.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
