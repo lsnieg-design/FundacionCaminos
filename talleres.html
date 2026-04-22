@@ -90,99 +90,138 @@
         }
     </style>
 
-    <section class="section bg-light" style="padding-top: 40px;">
+  <section class="section bg-light" style="padding-top: 40px; padding-bottom: 60px;">
         <div class="container">
-            <h3 style="text-align: center; color: var(--color-primario); margin-bottom: 40px; font-size: 2rem;">Cronograma Semanal de Talleres</h3>
+            <h3 style="text-align: center; color: var(--color-primario); margin-bottom: 40px; font-size: 2rem;">Cronograma Semanal</h3>
             
-            <div class="accordion-container">
-                
-                <button class="accordion">LUNES <i class="fas fa-chevron-down"></i></button>
-                <div class="panel">
-                    <div class="taller-item">
-                        <h4><i class="far fa-clock"></i> 9:00 a 12:00hs.</h4>
-                        <h5>TALLER DE COCINA PRODUCTIVA / ARTES VISUALES</h5>
-                        <p><strong>Cocina:</strong> Enfoque en la producción para el centro y venta interna. Repetición mensual de productos (muffins, pizzetas, mermeladas, panificados) para afianzar técnicas.</p>
-                        <p><strong>Artes Visuales (Solana y Lucila):</strong> Dos propuestas: 1) <em>Cartelería</em> mediante sellos e iconos para espacio público. 2) <em>Diseño textil</em> inspirado en los mantos de PARACAS (Perú), contextualizando época y mitología.</p>
+            <div class="tabs-container">
+                <button class="tab-btn active" onclick="abrirDia(event, 'Lunes')">LUNES</button>
+                <button class="tab-btn" onclick="abrirDia(event, 'Martes')">MARTES</button>
+                <button class="tab-btn" onclick="abrirDia(event, 'Miercoles')">MIÉRCOLES</button>
+                <button class="tab-btn" onclick="abrirDia(event, 'Jueves')">JUEVES</button>
+                <button class="tab-btn" onclick="abrirDia(event, 'Viernes')">VIERNES</button>
+            </div>
+
+            <div id="Lunes" class="tab-content activo">
+                <div class="workshops-grid">
+                    <div class="workshop-card">
+                        <img src="https://placehold.co/600x350/004aad/fff?text=Artes+Visuales" class="workshop-img" alt="Artes Visuales">
+                        <div class="workshop-info">
+                            <span class="workshop-time"><i class="far fa-clock"></i> 9 a 12 hs</span>
+                            <h4>ARTES VISUALES</h4>
+                            <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;"><strong>Con Solana y Lucila</strong></p>
+                            <p>Dos propuestas: cartelería mediante sellos para el espacio público y diseño textil inspirado en los mantos de Paracas (Perú), explorando su estética y mitología.</p>
+                        </div>
                     </div>
-                    <hr>
-                    <div class="taller-item">
-                        <h4><i class="far fa-clock"></i> 13:00 a 16:00hs.</h4>
-                        <h5>RELATOS DE LA HUERTA / COCINA PRODUCTIVA</h5>
-                        <p><strong>Huerta (Hansi y Gus):</strong> Producción de aromáticas, distribución y confección de sales saborizadas. Espacio de lectura y narración sobre problemática ambiental.</p>
-                        <p><strong>Cocina Productiva:</strong> (Repetición del taller matutino enfocado en elaboración y técnicas culinarias).</p>
+                    <div class="workshop-card">
+                        <img src="https://placehold.co/600x350/FF7043/fff?text=Cocina+Productiva" class="workshop-img" alt="Cocina Productiva">
+                        <div class="workshop-info">
+                            <span class="workshop-time"><i class="far fa-clock"></i> 13 a 16 hs</span>
+                            <h4>COCINA PRODUCTIVA</h4>
+                            <p>Enfoque en la producción para comidas del centro y venta interna. Repetiremos cada mes la elaboración de distintos productos (muffins, pizzetas, mermeladas) para afianzar técnicas culinarias.</p>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <button class="accordion">MARTES <i class="fas fa-chevron-down"></i></button>
-                <div class="panel">
-                    <div class="taller-item">
-                        <h4><i class="far fa-clock"></i> 9:00 a 12:00hs.</h4>
-                        <h5>ARTES VISUALES / DEPORTES EN MOVIMIENTO</h5>
-                        <p><strong>Artes Visuales (Solana, Lucila y Gus):</strong> Propuestas: "Llegó Carta" (comunicación postal y decoración) y "Cuaderno de Artista" (registro personal y creativo).</p>
-                        <p><strong>Deportes (Vane y Fercha):</strong> Preparación física, yoga, entrenamiento funcional y actividades deportivas/recreativas ("las cachitas").</p>
+            <div id="Martes" class="tab-content">
+                <div class="workshops-grid">
+                    <div class="workshop-card">
+                        <img src="https://placehold.co/600x350/004aad/fff?text=Deportes" class="workshop-img" alt="Deportes en Movimiento">
+                        <div class="workshop-info">
+                            <span class="workshop-time"><i class="far fa-clock"></i> 9 a 12 hs</span>
+                            <h4>DEPORTES EN MOVIMIENTO</h4>
+                            <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;"><strong>Con Vane y Fercha</strong></p>
+                            <p>Participación activa con el cuerpo mediante yoga y entrenamiento funcional. Luego, trabajo en "las cachitas" con actividades deportivas y juegos recreativos pre-deportivos.</p>
+                        </div>
                     </div>
-                    <hr>
-                    <div class="taller-item">
-                        <h4><i class="far fa-clock"></i> 13:00 a 16:00hs.</h4>
-                        <h5>EN MOVIMIENTO / STREAMING PUNTO Y COMA</h5>
-                        <p><strong>En Movimiento:</strong> Conexión lúdica, deportiva y artística cambiando de escenario semanalmente.</p>
-                        <p><strong>Streaming (Matu, Blas y Lucila):</strong> Espacio radiofónico en YouTube con entrevistas, música y debate (a las 15hs).</p>
+                    <div class="workshop-card">
+                        <img src="https://placehold.co/600x350/FF7043/fff?text=Streaming" class="workshop-img" alt="Streaming">
+                        <div class="workshop-info">
+                            <span class="workshop-time"><i class="far fa-clock"></i> 13 a 16 hs</span>
+                            <h4>STREAMING PUNTO Y COMA</h4>
+                            <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;"><strong>Con Matu, Blas y Lucila</strong></p>
+                            <p>Ciclo radiofónico en streaming por nuestro canal de YouTube. Combina contenidos de interés, música y una puesta en escena con estilo propio para encontrarnos con la audiencia.</p>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <button class="accordion">MIÉRCOLES <i class="fas fa-chevron-down"></i></button>
-                <div class="panel">
-                    <div class="taller-item">
-                        <h4><i class="far fa-clock"></i> 9:00 a 12:00hs.</h4>
-                        <h5>AUTONOMÍA / MIRADAS CRÍTICAS</h5>
-                        <p><strong>Autonomía (Juli, Ayelen y Hansi):</strong> Herramientas para la gestión adulta, fortaleciendo el rol protagónico frente a familias y comunidad.</p>
-                        <p><strong>Miradas Críticas (Matías y Gus):</strong> Diálogo sobre fenómenos socio-culturales e históricos mediante debates, entrevistas y podcasts.</p>
+            <div id="Miercoles" class="tab-content">
+                <div class="workshops-grid">
+                    <div class="workshop-card">
+                        <img src="https://placehold.co/600x350/004aad/fff?text=Miradas+Criticas" class="workshop-img" alt="Miradas Críticas">
+                        <div class="workshop-info">
+                            <span class="workshop-time"><i class="far fa-clock"></i> 9 a 12 hs</span>
+                            <h4>MIRADAS CRÍTICAS</h4>
+                            <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;"><strong>Con Matías y Gus</strong></p>
+                            <p>Diálogo sobre fenómenos socio-culturales e históricos y sus resonancias en la actualidad, utilizando debates, entrevistas y producción de podcasts para construir miradas críticas.</p>
+                        </div>
                     </div>
-                    <hr>
-                    <div class="taller-item">
-                        <h4><i class="far fa-clock"></i> 13:00 a 16:00hs.</h4>
-                        <h5>EN PRIMER PLANO / OBRA EN ACCIÓN</h5>
-                        <p><strong>En Primer Plano (Lucila y Gus):</strong> Fotografía, observación estática y creación de historias sumando voz en off y sonido.</p>
-                        <p><strong>Obra en Acción (Mahia y Fer):</strong> Taller de teatro y preparación corporal escénica para presentar obras en espacios culturales.</p>
+                    <div class="workshop-card">
+                        <img src="https://placehold.co/600x350/FF7043/fff?text=Obra+en+Accion" class="workshop-img" alt="Obra en Acción">
+                        <div class="workshop-info">
+                            <span class="workshop-time"><i class="far fa-clock"></i> 13 a 16 hs</span>
+                            <h4>OBRA EN ACCIÓN</h4>
+                            <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;"><strong>Con Mahia y Fer</strong></p>
+                            <p>Participación activa con el cuerpo expresivo. Realizamos juegos y ejercicios de preparación corporal escénica con el objetivo de presentar obras en diferentes espacios culturales de la ciudad.</p>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <button class="accordion">JUEVES <i class="fas fa-chevron-down"></i></button>
-                <div class="panel">
-                    <div class="taller-item">
-                        <h4><i class="far fa-clock"></i> 9:00 a 12:00hs.</h4>
-                        <h5>ALIADOS DIGITALES / ESPACIO PRODUCTIVO / CORONAUTAS</h5>
-                        <p><strong>Aliados Digitales (Maru y Aye):</strong> Uso práctico de Inteligencia Artificial para potenciar la autonomía y creatividad.</p>
-                        <p><strong>Espacio Productivo (Lara, Juli y Carlos):</strong> Desarrollo de habilidades laborales, producción, intercambio comunitario e información sobre derechos (9 a 10.30hs).</p>
-                        <p><strong>Coronautas:</strong> Expresión musical a través de la actividad coral (11 a 12hs).</p>
+            <div id="Jueves" class="tab-content">
+                <div class="workshops-grid">
+                    <div class="workshop-card">
+                        <img src="https://placehold.co/600x350/004aad/fff?text=Espacio+Productivo" class="workshop-img" alt="Espacio Productivo">
+                        <div class="workshop-info">
+                            <span class="workshop-time"><i class="far fa-clock"></i> 9 a 10.30 hs</span>
+                            <h4>ESPACIO PRODUCTIVO</h4>
+                            <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;"><strong>Con Lara, Juli y Carlos</strong></p>
+                            <p>Exploración de habilidades vinculadas al ámbito laboral y acercamiento al conocimiento de derechos laborales, experiencias de inclusión y modalidades de empleo.</p>
+                        </div>
                     </div>
-                    <hr>
-                    <div class="taller-item">
-                        <h4><i class="far fa-clock"></i> 13:00 a 16:00hs.</h4>
-                        <h5>TALLER DE TEATRO / CONECTANDO: TECNO Y VIDA DIARIA</h5>
-                        <p><strong>Teatro (Mahia y Gus):</strong> Ejercicios de preparación escénica y actuación.</p>
-                        <p><strong>Conectando (Mai, Juli y Maru):</strong> Informática e instructivos para la vida diaria con visitas al departamento anexo.</p>
+                    <div class="workshop-card">
+                        <img src="https://placehold.co/600x350/FF7043/fff?text=Coronautas" class="workshop-img" alt="Coronautas">
+                        <div class="workshop-info">
+                            <span class="workshop-time"><i class="far fa-clock"></i> 11 a 12 hs</span>
+                            <h4>CORONAUTAS</h4>
+                            <p>Exploración y expresión musical a través de la actividad coral. Un ámbito que promueve el trabajo grupal y el disfrute de hacer música juntos.</p>
+                        </div>
+                    </div>
+                    <div class="workshop-card">
+                        <img src="https://placehold.co/600x350/004aad/fff?text=Conectando" class="workshop-img" alt="Conectando">
+                        <div class="workshop-info">
+                            <span class="workshop-time"><i class="far fa-clock"></i> 13 a 16 hs</span>
+                            <h4>CONECTANDO: TECNO Y VIDA</h4>
+                            <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;"><strong>Con Mai, Juli y Maru</strong></p>
+                            <p>Combinamos habilidades digitales con la vida cotidiana. Exploramos herramientas informáticas, uso de aplicaciones y rutinas prácticas con visitas al departamento anexo.</p>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <button class="accordion">VIERNES <i class="fas fa-chevron-down"></i></button>
-                <div class="panel">
-                    <div class="taller-item">
-                        <h4><i class="far fa-clock"></i> 9:00 a 12:00hs.</h4>
-                        <h5>VARIETÉ URBANA / CORONAUTAS / FOTO-CALENDARIO</h5>
-                        <p><strong>Varieté Urbana (Carlos, Matu y Vane):</strong> Exploración del mundo urbano y la interacción comunitaria (9 a 11hs).</p>
-                        <p><strong>Coronautas:</strong> Expresión musical coral (11 a 12hs).</p>
-                        <p><strong>Foto-Calendario (Lucila y Maru):</strong> Creación de un calendario anual ficcionado bajo la temática "personajes argentinxs".</p>
+            <div id="Viernes" class="tab-content">
+                <div class="workshops-grid">
+                    <div class="workshop-card">
+                        <img src="https://placehold.co/600x350/004aad/fff?text=Foto-Calendario" class="workshop-img" alt="Foto-Calendario">
+                        <div class="workshop-info">
+                            <span class="workshop-time"><i class="far fa-clock"></i> 9 a 12 hs</span>
+                            <h4>FOTO-CALENDARIO</h4>
+                            <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;"><strong>Con Lucila y Maru</strong></p>
+                            <p>Creación de un calendario anual con doce imágenes. La temática elegida es “personajes argentin@s” donde los retratos serán ficcionados y producidos en grupo.</p>
+                        </div>
                     </div>
-                    <hr>
-                    <div class="taller-item">
-                        <h4><i class="far fa-clock"></i> 13:00 a 16:00hs.</h4>
-                        <h5>FOTO CRONISTAS / LUDOTECA RODANTE</h5>
-                        <p><strong>Foto Cronistas (Lucila y Maru):</strong> Registro fotográfico de la vida en la Fundación, anexo y barrio.</p>
-                        <p><strong>Ludoteca Rodante (Hansi, Fercha y Vane):</strong> Creación de juegos y actividades recreativas para la comunidad e instituciones barriales.</p>
+                    <div class="workshop-card">
+                        <img src="https://placehold.co/600x350/FF7043/fff?text=Ludoteca" class="workshop-img" alt="Ludoteca Rodante">
+                        <div class="workshop-info">
+                            <span class="workshop-time"><i class="far fa-clock"></i> 13 a 16 hs</span>
+                            <h4>LUDOTECA RODANTE</h4>
+                            <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;"><strong>Con Hansi, Fercha y Vane</strong></p>
+                            <p>Creación y realización de juegos, actividades recreativas y lectura de cuentos dirigidos hacia la comunidad barrial, instituciones educativas y espacios culturales.</p>
+                        </div>
                     </div>
                 </div>
-
             </div>
 
             <div class="text-center" style="margin-top: 50px;">
@@ -195,204 +234,135 @@
     </section>
 
     <style>
-        .accordion-container {
-            max-width: 900px;
-            margin: 0 auto;
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
         }
-        .accordion {
+        .tab-btn {
             background-color: white;
             color: var(--color-primario);
-            cursor: pointer;
-            padding: 20px;
-            width: 100%;
-            text-align: left;
-            border: none;
-            outline: none;
-            transition: 0.3s;
-            font-size: 1.3rem;
+            border: 2px solid var(--color-primario);
+            padding: 12px 25px;
+            border-radius: 30px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            border-radius: 10px;
-            margin-bottom: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
-        .accordion.active, .accordion:hover {
+        .tab-btn:hover, .tab-btn.active {
             background-color: var(--color-primario);
             color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 74, 173, 0.2);
         }
-        .accordion i {
-            transition: transform 0.3s;
+        
+        .tab-content {
+            display: none;
+            animation: aparecerSuave 0.5s ease-out;
         }
-        .accordion.active i {
-            transform: rotate(180deg);
-        }
-        .panel {
-            padding: 0 20px;
-            background-color: transparent;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            margin-bottom: 15px;
-        }
-        .taller-item {
-            padding: 15px 0;
-            text-align: left;
-        }
-        .taller-item h4 {
-            color: var(--color-acento);
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-        .taller-item h5 {
-            color: #333;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            font-family: 'Montserrat', sans-serif;
-        }
-        .taller-item p {
-            color: #555;
-            font-size: 1rem;
-            line-height: 1.5;
-            margin-bottom: 8px;
-        }
-        .panel hr {
-            border: 0;
-            height: 1px;
-            background: #ddd;
-            margin: 10px 0;
-        }
-    </style>
-
-    <script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                } 
-            });
-        }
-    </script>
-
-    <footer class="footer-horizontal">
-        <div class="container footer-flex">
-            <div class="footer-logo">
-                <img src="logo.png" alt="Fundación Caminos">
-            </div>
-            
-            <div class="footer-info">
-                <p><i class="fas fa-map-marker-alt"></i> Teodoro García 3545, C1427ECA, CABA</p>
-                <p><i class="fas fa-phone-alt"></i> Tel (+54-11) 4551-2141 &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fas fa-envelope"></i> secretariafcaminos@gmail.com</p>
-            </div>
-            
-            <div class="footer-firma">
-                Diseñado por<br>
-                <a href="https://www.somosnomade.com.ar" target="_blank">NOMADE</a>
-            </div>
-        </div>
-    </footer>
-
-    <a href="https://api.whatsapp.com/send/?phone=541136953600&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp-btn-fijo" aria-label="Chat en WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <style>
-        .footer-horizontal {
-            background-color: var(--color-primario, #004aad);
-            color: white;
-            padding: 20px 0;
-            margin-top: auto;
-            border-top: 4px solid var(--color-acento, #FF7043);
-        }
-        .footer-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .footer-logo img {
-            height: 55px;
-            background: white;
-            padding: 5px 10px;
-            border-radius: 8px;
+        .tab-content.activo {
             display: block;
         }
-        .footer-info {
-            text-align: center;
-            font-family: 'Lato', sans-serif;
-            font-size: 0.95rem;
-            line-height: 1.6;
+        
+        @keyframes aparecerSuave {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        .footer-info p { margin: 0; }
-        .footer-info i {
-            color: var(--color-acento, #FF7043);
-            margin-right: 6px;
+
+        .workshops-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
         }
-        .footer-firma {
-            text-align: right;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.85rem;
-            line-height: 1.2;
+        
+        .workshop-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
-        .footer-firma a {
+        .workshop-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .workshop-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 4px solid var(--color-acento);
+        }
+        
+        .workshop-info {
+            padding: 30px 25px 25px;
+            position: relative;
+            flex-grow: 1;
+        }
+        
+        .workshop-time {
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            background: var(--color-acento);
             color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
             font-weight: 800;
-            text-decoration: none;
-            letter-spacing: 1px;
-            font-size: 1.1rem;
+            font-family: 'Montserrat', sans-serif;
+            box-shadow: 0 4px 10px rgba(255, 112, 67, 0.3);
         }
-        .footer-firma a:hover { color: var(--color-acento, #FF7043); }
-
-        .whatsapp-btn-fijo {
-            position: fixed !important; bottom: 30px !important; right: 30px !important;
-            width: 60px !important; height: 60px !important; background-color: #25D366 !important;
-            color: white !important; border-radius: 50% !important; display: flex !important;
-            align-items: center !important; justify-content: center !important;
-            font-size: 35px !important; box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
-            z-index: 2147483647 !important; text-decoration: none !important;
-            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        
+        .workshop-info h4 {
+            color: var(--color-primario);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
         }
-        .whatsapp-btn-fijo:hover {
-            transform: scale(1.1) !important; box-shadow: 0 6px 20px rgba(0,0,0,0.4) !important; color: white !important;
-        }
-
-        @media (max-width: 900px) {
-            .footer-flex { flex-direction: column; text-align: center; }
-            .footer-info { margin: 10px 0; }
-            .footer-firma { text-align: center; }
-            .footer-info p { margin-bottom: 5px; }
+        
+        .workshop-info p {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+            font-family: 'Lato', sans-serif;
         }
     </style>
-    
+
     <script>
-        const navToggle = document.getElementById('nav-toggle');
-        const navList = document.querySelector('.nav-list');
-        if(navToggle){
-            navToggle.addEventListener('click', () => {
-                if(navList.style.display === 'flex'){
-                    navList.style.display = 'none';
-                } else {
-                    navList.style.display = 'flex';
-                    navList.style.flexDirection = 'column';
-                    navList.style.position = 'absolute';
-                    navList.style.top = '80px';
-                    navList.style.left = '0';
-                    navList.style.width = '100%';
-                    navList.style.background = 'white';
-                    navList.style.padding = '20px';
-                    navList.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
-                }
-            });
+        function abrirDia(evt, nombreDia) {
+            // Ocultar todo el contenido de las pestañas
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("activo");
+            }
+            
+            // Sacar la clase "active" de todos los botones
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            
+            // Mostrar la pestaña actual y añadirle la clase "active" al botón
+            var tabActual = document.getElementById(nombreDia);
+            tabActual.style.display = "block";
+            
+            // Pequeño truco para reiniciar la animación
+            setTimeout(function() {
+                tabActual.classList.add("activo");
+            }, 10);
+            
+            evt.currentTarget.classList.add("active");
         }
     </script>
 </body>
