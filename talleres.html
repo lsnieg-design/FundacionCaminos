@@ -260,13 +260,13 @@
                 <div class="puzzle-item span-2-2"><img src="sede/sede1.jpg" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/600x600?text=Sede+1'" alt="Sede 1"></div>
                 <div class="puzzle-item"><img src="sede/sede2.jpg" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/300x300?text=Sede+2'" alt="Sede 2"></div>
                 <div class="puzzle-item"><img src="sede/sede3.jpg" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/300x300?text=Sede+3'" alt="Sede 3"></div>
-                <div class="puzzle-item row-span-2"><img src="sede/sede4.jpg" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/300x600?text=Sede+4'" alt="Sede 4"></div>
-                <div class="puzzle-item"><img src="sede/sede5.jpg" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/300x300?text=Sede+5'" alt="Sede 5"></div>
-                <div class="puzzle-item span-2-1"><img src="sede/sede6.jpg" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/600x300?text=Sede+6'" alt="Sede 6"></div>
-                <div class="puzzle-item"><img src="sede/sede7.jpg" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/300x300?text=Sede+7'" alt="Sede 7"></div>
-                <div class="puzzle-item"><img src="sede/sede8.jpg" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/300x300?text=Sede+8'" alt="Sede 8"></div>
-                <div class="puzzle-item span-2-1"><img src="sede/sede9.jpg" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/600x300?text=Sede+9'" alt="Sede 9"></div>
-                <div class="puzzle-item"><img src="sede/sede10.jpg" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/300x300?text=Sede+10'" alt="Sede 10"></div>
+                <div class="puzzle-item row-span-2"><img src="sede/sede4.png" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/300x600?text=Sede+4'" alt="Sede 4"></div>
+                <div class="puzzle-item"><img src="sede/sede5.png" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/300x300?text=Sede+5'" alt="Sede 5"></div>
+                <div class="puzzle-item span-2-1"><img src="sede/sede6.png" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/600x300?text=Sede+6'" alt="Sede 6"></div>
+                <div class="puzzle-item"><img src="sede/sede7.png" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/300x300?text=Sede+7'" alt="Sede 7"></div>
+                <div class="puzzle-item"><img src="sede/sede8.png" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/300x300?text=Sede+8'" alt="Sede 8"></div>
+                <div class="puzzle-item span-2-1"><img src="sede/sede9.png" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/600x300?text=Sede+9'" alt="Sede 9"></div>
+                <div class="puzzle-item"><img src="sede/sede10.png" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/300x300?text=Sede+10'" alt="Sede 10"></div>
             </div>
             
             <div class="text-center" style="margin-top: 60px;">
@@ -283,7 +283,7 @@
     </div>
 
     <style>
-        /* CRONOGRAMA */
+        /* --- CRONOGRAMA --- */
         .calendario-semanal { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; align-items: start; }
         .col-dia { display: flex; flex-direction: column; gap: 15px; }
         .cabecera-dia { background-color: #004aad; color: white; text-align: center; padding: 12px; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: 1px; }
@@ -297,53 +297,63 @@
         .nombre { font-size: 0.95rem; color: #333; font-family: 'Montserrat', sans-serif; font-weight: 800; line-height: 1.3; }
         .icono { color: #666; transition: transform 0.3s ease; font-size: 0.9rem; margin-left: 10px;}
 
-        /* CUANDO EL TALLER ESTÁ ABIERTO */
+        /* Taller Abierto */
         .taller-contenedor.abierto .bloque-taller { background-color: #004aad !important; border-left: 4px solid #004aad !important; border-radius: 8px 8px 0 0; padding: 20px 15px; }
         .taller-contenedor.abierto .hora { display: none; }
         .taller-contenedor.abierto .icono { transform: rotate(180deg); color: white !important;}
         .taller-contenedor.abierto .nombre { color: white !important; text-align: center; font-size: 1.1rem; margin: 0 auto; }
         .taller-contenedor.abierto .info-resumen { align-items: center; justify-content: center; }
-        .detalle-taller { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background: transparent; }
-        .detalle-contenido { padding: 15px 5px 5px 5px; }
+        .detalle-taller { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background: white; border-radius: 0 0 8px 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .taller-contenedor.abierto .detalle-taller { border: 1px solid #eee; border-top: none; }
+        .detalle-contenido { padding: 20px; }
         .detalle-contenido .profes { font-size: 0.85rem; color: #FF7043; font-weight: 800; font-family: 'Montserrat', sans-serif; margin-bottom: 10px; }
         .detalle-contenido .desc { font-size: 0.85rem; color: #666; line-height: 1.6; margin: 0; font-family: 'Lato', sans-serif; }
 
-        /* GALERÍA PUZZLE GEOMÉTRICA CON EFECTOS Y LIGHTBOX */
+        /* --- GALERÍA PUZZLE GEOMÉTRICA CON EFECTOS --- */
         .sede-grilla-puzzle {
             display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(100px, auto); gap: 10px; max-width: 1000px; margin: 0 auto; padding: 0 15px;
         }
-        @media (min-width: 769px) { .sede-grilla-puzzle { grid-auto-rows: calc((1000px / 4) - 10px); } }
+        /* Ajuste para mantener proporción cuadrada en pantallas grandes */
+        @media (min-width: 769px) { .sede-grilla-puzzle { grid-auto-rows: calc((1000px / 4) - 20px); } }
         
-        .puzzle-item { overflow: hidden; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: relative; background: #eee; cursor: zoom-in; }
+        .puzzle-item { overflow: hidden; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: relative; cursor: pointer; background-color: #eee;}
+        
         .puzzle-item img { 
-            width: 100%; height: 100%; object-fit: cover; display: block;
-            filter: grayscale(100%); /* Arranca en blanco y negro */
-            transition: transform 0.5s ease, filter 0.5s ease; /* Transición suave */
+            width: 100%; height: 100%; object-fit: cover; display: block; 
+            /* Efecto inicial: Blanco y negro */
+            filter: grayscale(100%);
+            transition: transform 0.5s ease, filter 0.5s ease;
         }
         
-        /* Efecto Hover: Se pone a color y se agranda */
+        /* Efecto HOVER: Color y Zoom */
         .puzzle-item:hover img { 
             transform: scale(1.1); 
-            filter: grayscale(0%); 
+            filter: grayscale(0%); /* Vuelve a color */
         }
         
+        /* Clases de grilla */
         .span-2-2 { grid-column: span 2; grid-row: span 2; }
         .span-2-1 { grid-column: span 2; }
         .row-span-2 { grid-row: span 2; }
 
-        /* VENTANA MODAL PARA FOTOS (Lightbox) */
+        /* --- ESTILOS LIGHTBOX (Ventana modal) --- */
         .modal-galeria-overlay {
-            display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-            background: rgba(0,0,0,0.9); z-index: 9999999; align-items: center; justify-content: center;
+            display: none; /* Oculto por defecto */
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9); z-index: 99999; /* Por encima de todo */
+            align-items: center; justify-content: center;
+            cursor: zoom-out;
+            animation: fadeIn 0.3s ease;
         }
-        .modal-galeria-overlay.activo { display: flex; animation: fadeIn 0.3s ease; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .modal-galeria-overlay.activo { display: flex; }
         
-        .modal-galeria-overlay img { max-width: 90vw; max-height: 90vh; border-radius: 8px; box-shadow: 0 5px 25px rgba(0,0,0,0.5); object-fit: contain;}
-        .cerrar-galeria { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; transition: color 0.3s; font-family: sans-serif;}
-        .cerrar-galeria:hover { color: var(--color-acento); }
+        .modal-galeria-overlay img { max-width: 90%; max-height: 90%; border: 3px solid white; border-radius: 4px; box-shadow: 0 0 30px rgba(0,0,0,0.5); object-fit: contain;}
+        
+        .cerrar-galeria { position: absolute; top: 20px; right: 30px; color: white; font-size: 50px; cursor: pointer; font-family: Arial, sans-serif;}
+        
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        /* RESPONSIVE */
+        /* --- RESPONSIVE GENERAl --- */
         @media (max-width: 1000px) {
             .calendario-semanal { grid-template-columns: repeat(2, 1fr); }
             .col-dia:last-child { grid-column: span 2; }
@@ -364,7 +374,7 @@
     </style>
 
     <script>
-        // SCRIPT DEL CRONOGRAMA
+        // Funcionalidad del Cronograma (Acordeón)
         function toggleTaller(elemento) {
             var contenedor = elemento.parentElement;
             document.querySelectorAll('.taller-contenedor').forEach(c => {
@@ -382,20 +392,32 @@
             }
         }
 
-        // SCRIPT DE LA GALERÍA (Lightbox)
+        // Funcionalidad de la Galería (Lightbox)
         function abrirFoto(src) {
-            // Si la imagen de muestra de 'placehold.co' se disparó por error, no la abrimos grande
-            if(src.includes('placehold.co')) return; 
+            // No ampliar si es la imagen de error (placeholder)
+            if (src.includes('placehold.co')) return;
             
-            document.getElementById('img-ampliada').src = src;
-            document.getElementById('modal-galeria').classList.add('activo');
-            document.body.style.overflow = 'hidden'; // Bloquea el scroll del fondo
+            const modal = document.getElementById('modal-galeria');
+            const imgAmpliada = document.getElementById('img-ampliada');
+            imgAmpliada.src = src;
+            modal.classList.add('activo');
+            // Bloquear scroll de la página de fondo
+            document.body.style.overflow = 'hidden';
         }
 
         function cerrarFoto() {
-            document.getElementById('modal-galeria').classList.remove('activo');
-            document.body.style.overflow = ''; // Devuelve el scroll
+            const modal = document.getElementById('modal-galeria');
+            modal.classList.remove('activo');
+            // Reactivar scroll
+            document.body.style.overflow = '';
         }
+        
+        // Cerrar también con la tecla Esc
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                cerrarFoto();
+            }
+        });
     </script>
 
     <footer class="footer-horizontal">
@@ -439,7 +461,7 @@
         if(navToggle){
             navToggle.addEventListener('click', () => {
                 if(navList.style.display === 'flex'){ navList.style.display = 'none'; } 
-                else { navList.style.display = 'flex'; navList.style.flexDirection = 'column'; navList.style.position = 'absolute'; navList.style.top = '80px'; navList.style.left = '0'; navList.style.width = '100%'; navList.style.background = 'white'; navList.style.padding = '20px'; navList.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)'; }
+                else { navList.style.display = 'flex'; navList.style.flexDirection = 'column'; navList.style.position = 'absolute'; navList.style.top = '80px'; navList.style.left = '0'; navList.style.width = '100%'; navList.style.background = 'white'; navList.style.padding = '20px'; navList.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)'; z-index: 999;}
             });
         }
     </script>
