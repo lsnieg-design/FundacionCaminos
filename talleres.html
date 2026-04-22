@@ -49,7 +49,6 @@
             <h3 style="text-align: center; color: var(--color-primario); margin-bottom: 40px; font-size: 2rem;">Cronograma Semanal</h3>
             
             <div class="calendario-semanal">
-                
                 <div class="col-dia">
                     <div class="cabecera-dia">LUNES</div>
                     <div class="bloque-taller manana" onclick="abrirTaller('artes')">
@@ -113,11 +112,37 @@
                         <span class="nombre">Ludoteca Rodante</span>
                     </div>
                 </div>
-
             </div>
             
             <p style="text-align: center; margin-top: 20px; color: #777; font-size: 0.9rem; font-style: italic;">* Hacé clic en cualquier taller para ver más información.</p>
 
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container text-center">
+            <span class="subtitle">Nuestra Casa</span>
+            <h2>Un recorrido por la Sede</h2>
+            <p style="max-width: 600px; margin: 0 auto 50px; color: #555;">Cada rincón de nuestra fundación está diseñado para alojar el deseo y potenciar la autonomía.</p>
+            
+            <div class="sede-collage">
+                <div class="collage-item collage-p1"><img src="sede/sede1.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+1'" alt="Sede 1"></div>
+                <div class="collage-item collage-p2"><img src="sede/sede2.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+2'" alt="Sede 2"></div>
+                <div class="collage-item collage-p3 collage-span-2"><img src="sede/sede3.jpg" onerror="this.src='https://placehold.co/600x300?text=Sede+3'" alt="Sede 3"></div>
+                <div class="collage-item collage-p4"><img src="sede/sede4.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+4'" alt="Sede 4"></div>
+                <div class="collage-item collage-p5"><img src="sede/sede5.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+5'" alt="Sede 5"></div>
+                <div class="collage-item collage-p6 collage-row-2"><img src="sede/sede6.jpg" onerror="this.src='https://placehold.co/300x600?text=Sede+6'" alt="Sede 6"></div>
+                <div class="collage-item collage-p7"><img src="sede/sede7.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+7'" alt="Sede 7"></div>
+                <div class="collage-item collage-p8"><img src="sede/sede8.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+8'" alt="Sede 8"></div>
+                <div class="collage-item collage-p9 collage-span-2"><img src="sede/sede9.jpg" onerror="this.src='https://placehold.co/600x300?text=Sede+9'" alt="Sede 9"></div>
+                <div class="collage-item collage-p10"><img src="sede/sede10.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+10'" alt="Sede 10"></div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 60px;">
+                <a href="dispositivos" class="btn btn-primary" style="background: white; color: var(--color-primario); border: 2px solid var(--color-primario); box-shadow: none;">
+                    <i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Volver a Dispositivos
+                </a>
+            </div>
         </div>
     </section>
 
@@ -128,89 +153,54 @@
             <div class="modal-taller-info">
                 <span id="mt-hora" class="mt-etiqueta"></span>
                 <h3 id="mt-titulo"></h3>
-                <p id="mt-profs" style="color: var(--color-acento); font-weight: bold; font-size: 0.9rem; margin-bottom: 15px;"></p>
-                <p id="mt-desc" style="color: #555; line-height: 1.6;"></p>
+                <p id="mt-profs" style="color: var(--color-acento); font-weight: bold; font-size: 0.95rem; margin-bottom: 15px;"></p>
+                <p id="mt-desc" style="color: #555; line-height: 1.6; font-family: 'Lato', sans-serif; text-align: justify;"></p>
             </div>
         </div>
     </div>
 
     <style>
-        .calendario-semanal {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 15px;
-            background: white;
-            padding: 20px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-        .col-dia {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .cabecera-dia {
-            background-color: var(--color-primario);
-            color: white;
-            text-align: center;
-            padding: 12px;
-            border-radius: 10px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            font-size: 1rem;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-        .bloque-taller {
-            border-radius: 10px;
-            padding: 15px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: flex;
-            flex-direction: column;
-            border-left: 5px solid transparent;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .bloque-taller:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
+        /* CRONOGRAMA */
+        .calendario-semanal { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; background: white; padding: 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .col-dia { display: flex; flex-direction: column; gap: 10px; }
+        .cabecera-dia { background-color: var(--color-primario); color: white; text-align: center; padding: 12px; border-radius: 10px; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: 1px; margin-bottom: 5px; }
+        .bloque-taller { border-radius: 10px; padding: 15px; cursor: pointer; transition: all 0.2s ease; display: flex; flex-direction: column; border-left: 5px solid transparent; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .bloque-taller:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
         
-        /* Colores por turnos para que sea súper visual */
         .manana { background-color: #E3F2FD; border-left-color: #2196F3; }
         .tarde { background-color: #FFF3E0; border-left-color: #FF9800; }
         .especial { background-color: #F3E5F5; border-left-color: #9C27B0; }
         
-        .hora {
-            font-size: 0.8rem;
-            color: #666;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .nombre {
-            font-size: 0.95rem;
-            color: #333;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            line-height: 1.2;
-        }
+        .hora { font-size: 0.8rem; color: #666; font-weight: bold; margin-bottom: 5px; }
+        .nombre { font-size: 0.95rem; color: #333; font-family: 'Montserrat', sans-serif; font-weight: 700; line-height: 1.2; }
 
-        /* Estilos de la Ventana Emergente */
+        /* COLLAGE */
+        .sede-collage { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; padding: 10px; max-width: 1000px; margin: 0 auto; }
+        .collage-item { background: white; padding: 8px 8px 25px 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: all 0.4s ease; cursor: pointer; z-index: 1; position: relative; }
+        .collage-item:hover { transform: scale(1.15) rotate(0deg) !important; box-shadow: 0 10px 25px rgba(0,0,0,0.2); z-index: 10; }
+        .collage-item img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: filter 0.4s ease; }
+        .collage-item:hover img { filter: grayscale(0%); }
+        .collage-span-2 { grid-column: span 2; }
+        .collage-row-2 { grid-row: span 2; }
+        .collage-p1 { transform: rotate(-3deg); } .collage-p2 { transform: rotate(2deg); } .collage-p3 { transform: rotate(-1.5deg); } .collage-p4 { transform: rotate(3deg); } .collage-p5 { transform: rotate(-2.5deg); } .collage-p6 { transform: rotate(1.5deg); } .collage-p7 { transform: rotate(-4deg); } .collage-p8 { transform: rotate(2.5deg); } .collage-p9 { transform: rotate(-1deg); } .collage-p10 { transform: rotate(3.5deg); }
+
+        /* VENTANA EMERGENTE (MODAL BLINDADO) */
         .modal-taller-overlay {
-            display: none;
-            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-            background: rgba(0,0,0,0.8); z-index: 999999;
-            align-items: center; justify-content: center;
-            padding: 20px; box-sizing: border-box;
+            display: none !important; 
+            position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; 
+            width: 100vw !important; height: 100vh !important;
+            background: rgba(0,0,0,0.8) !important; z-index: 9999999 !important;
         }
-        .modal-taller-overlay.activo { display: flex; }
+        .modal-taller-overlay.activo { 
+            display: flex !important; align-items: center !important; justify-content: center !important; 
+        }
         .modal-taller-cuerpo {
-            background: white; width: 100%; max-width: 600px;
-            border-radius: 20px; overflow: hidden; position: relative;
+            background: white; width: 90%; max-width: 600px;
+            max-height: 85vh; overflow-y: auto; 
+            border-radius: 20px; position: relative;
             animation: zoomIn 0.3s ease;
         }
         @keyframes zoomIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-        
         .modal-cerrar {
             position: absolute; top: 15px; right: 20px;
             background: white; color: #333; width: 35px; height: 35px;
@@ -219,15 +209,17 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
         .modal-cerrar:hover { background: #FF7043; color: white; }
-        
-        .modal-taller-cuerpo img { width: 100%; height: 250px; object-fit: cover; border-bottom: 4px solid var(--color-acento); }
-        .modal-taller-info { padding: 30px; }
+        .modal-taller-cuerpo img { width: 100%; height: 200px; object-fit: cover; border-bottom: 4px solid var(--color-acento); }
+        .modal-taller-info { padding: 25px 30px 30px; }
         .mt-etiqueta { background: var(--color-primario); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; display: inline-block; margin-bottom: 15px; }
         #mt-titulo { font-family: 'Montserrat', sans-serif; font-size: 1.6rem; color: #333; margin-bottom: 5px; }
 
         @media (max-width: 900px) {
             .calendario-semanal { grid-template-columns: repeat(2, 1fr); }
             .col-dia:last-child { grid-column: span 2; }
+            .sede-collage { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .collage-span-2 { grid-column: span 1; } .collage-row-2 { grid-row: span 1; }
+            .collage-item { padding: 5px 5px 15px 5px; transform: none !important; }
         }
         @media (max-width: 600px) {
             .calendario-semanal { grid-template-columns: 1fr; }
@@ -240,47 +232,47 @@
         const datosTalleres = {
             artes: {
                 titulo: "Artes Visuales", profs: "Solana y Lucila", hora: "Lunes | 9:00 a 12:00 hs", img: "https://placehold.co/600x400/004aad/fff?text=Artes+Visuales",
-                desc: "Se ofrecerán dos propuestas: una es trabajar con CARTELERÍA mediante sellos de fácil factura con iconos y tipografías para poner frases en el espacio público. La otra es DISEÑO TEXTIL, partiendo de los mantos de Paracas (Perú), observando su estética y mitología."
+                desc: "Se van a ofrecer dos propuestas: una propuesta es trabajar con CARTELERÍA mediante sellos. Se trabajará con sellos de fácil factura con diferentes símbolos e iconos y tipografías. El objetivo general es lograr el armado de carteles con frases y consignas construidas en el taller mediante la reflexión grupal a partir de las inquietudes que vayan presentando los participantes y la puesta de los mismos en circulación en el espacio público trayendo una reflexión sobre el uso del mismo. Otra propuesta: será partiendo del diseño textil de los mantos de PARACAS (Perú), observar su estética (colores, formas, composición y temática), contextualizar en la época en que se desarrollaron, acompañando con pequeños escritos sobre la mitología, sus personajes principales son los que encontramos en las piezas textiles (seres antropomorfos, felinos, cóndores, peces y figuras demoníacas o míticas)."
             },
             cocina: {
-                titulo: "Cocina Productiva", profs: "Equipo de Centro de Día", hora: "Lunes | 13:00 a 16:00 hs", img: "https://placehold.co/600x400/FF7043/fff?text=Cocina+Productiva",
-                desc: "Nos enfocaremos en la producción de productos destinados a las comidas del centro y a la venta interna. Repetiremos cada mes la elaboración de muffins, pizzetas, mermeladas y panificados para afianzar técnicas culinarias y ganar seguridad."
+                titulo: "Taller de Cocina Productiva", profs: "Equipo", hora: "Lunes | 13:00 a 16:00 hs", img: "https://placehold.co/600x400/FF7043/fff?text=Cocina+Productiva",
+                desc: "Durante el ciclo 2026 nos enfocaremos en la producción de distintos productos que estarán destinados tanto a las comidas y colaciones del centro de día, como a la venta interna. Para lograrlo, organizaremos nuestros encuentros repitiendo cada mes la elaboración de distintos productos como por ejemplo muffins, pizzetas, mermeladas y panificados; una rutina que nos ayudará a afianzar las técnicas culinarias y ganar mucha más seguridad."
             },
             deportes: {
                 titulo: "Deportes en Movimiento", profs: "Vane y Fercha", hora: "Martes | 9:00 a 12:00 hs", img: "https://placehold.co/600x400/2196F3/fff?text=Deportes",
-                desc: "Invita a participar de manera activa con el cuerpo. Realizamos preparación física, yoga y entrenamiento funcional, seguido de un trabajo en 'las cachitas' con actividades deportivas y juegos pre-deportivos."
+                desc: "El taller de Deportes y Movimiento invita a cada concurrente a participar de manera activa con su cuerpo. El taller se enfoca en realizar actividades de preparación física corporal, con ejercicios de yoga y entrenamiento funcional, y un posterior trabajo en “las cachitas” donde se llevarán a cabo actividades deportivas y juegos recreativos pre-deportivos."
             },
             streaming: {
                 titulo: "Streaming Punto y Coma", profs: "Matu, Blas y Lucila", hora: "Martes | 13:00 a 16:00 hs", img: "https://placehold.co/600x400/FF9800/fff?text=Streaming",
-                desc: "Espacio radiofónico en formato streaming por nuestro canal de YouTube. Combina contenidos de interés, música y una puesta en escena propia, generando un clima dinámico para encontrarnos con la audiencia."
+                desc: "Anunciamos el inicio del ciclo de streaming 2026, que llega con nuevos desafíos y propuestas. Se trata de un espacio radiofónico en formato streaming que combina contenidos de interés, música y una puesta en escena con estilo propio, generando un clima dinámico y participativo. Cada martes a las 15 hs, el equipo toma el aire a través del canal de YouTube de Fundación Caminos, compartiendo conversaciones, música y distintos segmentos pensados para el encuentro con la audiencia. ¡Les esperamos para acompañarnos en esta nueva temporada!"
             },
             miradas: {
                 titulo: "Miradas Críticas", profs: "Matías y Gus", hora: "Miércoles | 9:00 a 12:00 hs", img: "https://placehold.co/600x400/004aad/fff?text=Miradas+Criticas",
-                desc: "Diálogo entre fenómenos socio-culturales, políticos y económicos del pasado y sus resonancias actuales. Trabajamos mediante debates, entrevistas y producción de podcasts para construir miradas críticas."
+                desc: "Esta propuesta invita a abrir un espacio de diálogo entre distintos fenómenos socio-culturales, políticos y económicos del pasado y sus resonancias en la actualidad. A partir de ese recorrido, se buscará pensar juntos cómo ciertos procesos, ideas o acontecimientos históricos siguen influyendo en la realidad contemporánea. Para abordar estos temas se trabajará mediante debates, entrevistas y producción de podcasts, utilizando estos formatos breves y dinámicos como herramientas que favorezcan la participación, el intercambio de opiniones y la construcción colectiva de miradas críticas."
             },
             teatro: {
-                titulo: "Obra en Acción", profs: "Mahia y Fer", hora: "Miércoles | 13:00 a 16:00 hs", img: "https://placehold.co/600x400/9C27B0/fff?text=Teatro",
-                desc: "Taller de teatro que invita a participar de manera activa con el cuerpo expresivo. Realizamos juegos y preparación corporal escénica con el objetivo de presentar obras en espacios culturales de la ciudad."
+                titulo: "Obra en Acción", profs: "Mahia y Fer", hora: "Miércoles | 13:00 a 16:00 hs", img: "https://placehold.co/600x400/9C27B0/fff?text=Obra+en+Accion",
+                desc: "En este espacio, el taller de teatro invita a cada concurrente a participar de manera activa con su cuerpo expresivo. Se enfoca en realizar actividades, juegos y ejercicios de preparación corporal escénica para poder actuar. El objetivo del taller es presentar la obra en diferentes espacios culturales de la ciudad."
             },
             productivo: {
                 titulo: "Espacio Productivo", profs: "Lara, Juli y Carlos", hora: "Jueves | 9:00 a 10:30 hs", img: "https://placehold.co/600x400/FF7043/fff?text=Espacio+Productivo",
-                desc: "Orientado a la exploración de intereses vinculados al ámbito laboral. Fortalecemos destrezas, participamos en producción comunitaria y conocemos sobre derechos laborales y modalidades de empleo."
+                desc: "Proponen un espacio orientado a la exploración de intereses y al desarrollo de habilidades vinculadas al ámbito productivo y laboral. A través de diferentes propuestas prácticas, se busca que los concurrentes puedan identificar sus habilidades, fortalecer destrezas y participar en experiencias concretas de producción e intercambio con la comunidad. Asimismo, el espacio pretende acercar a los participantes al conocimiento del mundo del trabajo, promoviendo el acceso a información sobre derechos laborales, experiencias de inclusión y diferentes modalidades de empleo para personas con discapacidad."
             },
             coronautas: {
-                titulo: "Coronautas", profs: "Equipo de Música", hora: "Jueves | 11:00 a 12:00 hs", img: "https://placehold.co/600x400/2196F3/fff?text=Coronautas",
-                desc: "Espacio orientado a la exploración y la expresión musical a través de la actividad coral. Promueve el trabajo grupal y el disfrute de hacer música juntos en un clima participativo."
+                titulo: "Coronautas", profs: "Equipo", hora: "Jueves | 11:00 a 12:00 hs", img: "https://placehold.co/600x400/2196F3/fff?text=Coronautas",
+                desc: "Es un espacio orientado a la exploración y la expresión musical a través de la actividad coral. Se trata de un ámbito que promueve la expresión artística, el trabajo grupal y el disfrute de hacer música juntos, generando un clima participativo en el que cada integrante puede desarrollar y compartir su propio modo de habitar la experiencia musical."
             },
             conectando: {
-                titulo: "Conectando: Tecno y Vida", profs: "Mai, Juli y Maru", hora: "Jueves | 13:00 a 16:00 hs", img: "https://placehold.co/600x400/004aad/fff?text=Tecno+y+Vida",
-                desc: "Combinamos habilidades digitales con la práctica cotidiana. Exploramos herramientas informáticas, aplicaciones y rutinas diarias con visitas semanales a nuestro departamento anexo."
+                titulo: "Conectando: Tecno y Vida Diaria", profs: "Mai, Juli y Maru", hora: "Jueves | 13:00 a 16:00 hs", img: "https://placehold.co/600x400/004aad/fff?text=Tecno+y+Vida",
+                desc: "Vamos a acompañarte en un recorrido donde combinamos habilidades digitales con la práctica de la vida cotidiana. A lo largo del año, trabajaremos en tres áreas: informática, instructivos para la vida diaria y aplicaciones, el taller te permitirá explorar herramientas tecnológicas y desarrollar autonomía en tus rutinas diarias. Con visitas semanales a nuestro departamento anexo y una consultoría de dudas personales."
             },
             fotocalendario: {
                 titulo: "Foto-Calendario", profs: "Lucila y Maru", hora: "Viernes | 9:00 a 12:00 hs", img: "https://placehold.co/600x400/FF9800/fff?text=Foto-Calendario",
-                desc: "Creación de un calendario anual con doce imágenes. La temática elegida es 'personajes argentinxs', donde los retratos serán ficcionados y producidos íntegramente en grupo."
+                desc: "La propuesta del taller consistirá en la creación de un calendario anual. La idea se toma del taller de verano donde trabajamos con un almanaque de página única. La idea del trabajo anual es armar un calendario con doce imágenes, una por mes. La temática elegida es “personajes argentin@s” proyectando que dichos personajes y la producción de las fotografías se armen en dos grupos. Las fotografías serán retratos ficcionados."
             },
             ludoteca: {
                 titulo: "Ludoteca Rodante", profs: "Hansi, Fercha y Vane", hora: "Viernes | 13:00 a 16:00 hs", img: "https://placehold.co/600x400/9C27B0/fff?text=Ludoteca",
-                desc: "Espacio de creación y realización de juegos, actividades recreativas y lectura de cuentos dirigidos hacia la comunidad barrial, instituciones educativas y espacios culturales."
+                desc: "En esta nueva propuesta el taller invita a cada concurrente a participar de manera activa en un espacio de creación y realización de juegos, actividades recreativas y lectura de cuentos para y con la comunidad barrial, instituciones educativas y espacios culturales."
             }
         };
 
@@ -292,19 +284,65 @@
             document.getElementById('mt-profs').innerText = taller.profs ? "Coordinan: " + taller.profs : "";
             document.getElementById('mt-desc').innerText = taller.desc;
             
+            // Abre la ventana usando SOLO la clase "activo", sin tocar el body overflow
             document.getElementById('modal-taller').classList.add('activo');
-            document.body.style.overflow = 'hidden'; // Evita que el fondo se mueva
         }
 
         function cerrarTaller() {
             document.getElementById('modal-taller').classList.remove('activo');
-            document.body.style.overflow = '';
         }
 
-        // Cierra la ventana si tocás afuera de la caja blanca
         document.getElementById('modal-taller').addEventListener('click', function(event) {
             if (event.target === this) cerrarTaller();
         });
+    </script>
+
+    <footer class="footer-horizontal">
+        <div class="container footer-flex">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Fundación Caminos">
+            </div>
+            
+            <div class="footer-info">
+                <p><i class="fas fa-map-marker-alt"></i> Teodoro García 3545, C1427ECA, Ciudad Autónoma de Buenos Aires</p>
+                <p><i class="fas fa-phone-alt"></i> Tel (+54-11) 4551-2141 &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fas fa-envelope"></i> secretariafcaminos@gmail.com</p>
+            </div>
+            
+            <div class="footer-firma">
+                Diseñado por<br>
+                <a href="https://www.somosnomade.com.ar" target="_blank">NOMADE</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send/?phone=541136953600&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp-btn-fijo" aria-label="Chat en WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <style>
+        .footer-horizontal { background-color: var(--color-primario, #004aad); color: white; padding: 20px 0; margin-top: auto; border-top: 4px solid var(--color-acento, #FF7043); }
+        .footer-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+        .footer-logo img { height: 55px; background: white; padding: 5px 10px; border-radius: 8px; display: block; }
+        .footer-info { text-align: center; font-family: 'Lato', sans-serif; font-size: 0.95rem; line-height: 1.6; }
+        .footer-info p { margin: 0; }
+        .footer-info i { color: var(--color-acento, #FF7043); margin-right: 6px; }
+        .footer-firma { text-align: right; font-family: 'Montserrat', sans-serif; font-size: 0.85rem; line-height: 1.2; }
+        .footer-firma a { color: white; font-weight: 800; text-decoration: none; letter-spacing: 1px; font-size: 1.1rem; }
+        .footer-firma a:hover { color: var(--color-acento, #FF7043); }
+        .whatsapp-btn-fijo { position: fixed !important; bottom: 30px !important; right: 30px !important; width: 60px !important; height: 60px !important; background-color: #25D366 !important; color: white !important; border-radius: 50% !important; display: flex !important; align-items: center !important; justify-content: center !important; font-size: 35px !important; box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important; z-index: 2147483647 !important; text-decoration: none !important; transition: transform 0.3s ease, box-shadow 0.3s ease !important; }
+        .whatsapp-btn-fijo:hover { transform: scale(1.1) !important; box-shadow: 0 6px 20px rgba(0,0,0,0.4) !important; color: white !important; }
+        @media (max-width: 900px) { .footer-flex { flex-direction: column; text-align: center; } .footer-info { margin: 10px 0; } .footer-firma { text-align: center; } .footer-info p { margin-bottom: 5px; } }
+    </style>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navList = document.querySelector('.nav-list');
+        if(navToggle){
+            navToggle.addEventListener('click', () => {
+                if(navList.style.display === 'flex'){ navList.style.display = 'none'; } 
+                else { navList.style.display = 'flex'; navList.style.flexDirection = 'column'; navList.style.position = 'absolute'; navList.style.top = '80px'; navList.style.left = '0'; navList.style.width = '100%'; navList.style.background = 'white'; navList.style.padding = '20px'; navList.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)'; }
+            });
+        }
     </script>
 </body>
 </html>
