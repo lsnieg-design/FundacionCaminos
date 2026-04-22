@@ -49,73 +49,215 @@
             <h3 style="text-align: center; color: var(--color-primario); margin-bottom: 40px; font-size: 2rem;">Cronograma Semanal</h3>
             
             <div class="calendario-semanal">
+                
                 <div class="col-dia">
                     <div class="cabecera-dia">LUNES</div>
-                    <div class="bloque-taller manana" onclick="abrirTaller('artes')">
-                        <span class="hora">9:00 a 12:00</span>
-                        <span class="nombre">Artes Visuales</span>
+                    
+                    <div class="taller-contenedor">
+                        <div class="bloque-taller manana" onclick="toggleTaller(this)">
+                            <div>
+                                <span class="hora">9:00 a 12:00</span>
+                                <span class="nombre">Artes Visuales</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono-desplegar"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/004aad/fff?text=Artes+Visuales" alt="Artes Visuales">
+                                <p class="profes">Coordinan: Solana y Lucila</p>
+                                <p class="desc">Se van a ofrecer dos propuestas: una propuesta es trabajar con CARTELERÍA mediante sellos. Se trabajará con sellos de fácil factura con diferentes símbolos e iconos y tipografías. El objetivo general es lograr el armado de carteles con frases y consignas construidas en el taller mediante la reflexión grupal. Otra propuesta: será partiendo del diseño textil de los mantos de PARACAS (Perú), observar su estética (colores, formas, composición y temática), contextualizar en la época en que se desarrollaron, acompañando con pequeños escritos sobre la mitología.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bloque-taller tarde" onclick="abrirTaller('cocina')">
-                        <span class="hora">13:00 a 16:00</span>
-                        <span class="nombre">Cocina Productiva</span>
+
+                    <div class="taller-contenedor">
+                        <div class="bloque-taller tarde" onclick="toggleTaller(this)">
+                            <div>
+                                <span class="hora">13:00 a 16:00</span>
+                                <span class="nombre">Cocina Productiva</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono-desplegar"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/FF7043/fff?text=Cocina+Productiva" alt="Cocina">
+                                <p class="profes">Coordinan: Equipo de Centro de Día</p>
+                                <p class="desc">Durante el ciclo 2026 nos enfocaremos en la producción de distintos productos que estarán destinados tanto a las comidas y colaciones del centro de día, como a la venta interna. Para lograrlo, organizaremos nuestros encuentros repitiendo cada mes la elaboración de distintos productos como por ejemplo muffins, pizzetas, mermeladas y panificados; una rutina que nos ayudará a afianzar las técnicas culinarias y ganar mucha más seguridad.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="col-dia">
                     <div class="cabecera-dia">MARTES</div>
-                    <div class="bloque-taller manana" onclick="abrirTaller('deportes')">
-                        <span class="hora">9:00 a 12:00</span>
-                        <span class="nombre">Deportes en Movimiento</span>
+                    
+                    <div class="taller-contenedor">
+                        <div class="bloque-taller manana" onclick="toggleTaller(this)">
+                            <div>
+                                <span class="hora">9:00 a 12:00</span>
+                                <span class="nombre">Deportes en Mov.</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono-desplegar"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/2196F3/fff?text=Deportes" alt="Deportes">
+                                <p class="profes">Coordinan: Vane y Fercha</p>
+                                <p class="desc">El taller de Deportes y Movimiento invita a cada concurrente a participar de manera activa con su cuerpo. El taller se enfoca en realizar actividades de preparación física corporal, con ejercicios de yoga y entrenamiento funcional, y un posterior trabajo en “las cachitas” donde se llevarán a cabo actividades deportivas y juegos recreativos pre-deportivos.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bloque-taller tarde" onclick="abrirTaller('streaming')">
-                        <span class="hora">13:00 a 16:00</span>
-                        <span class="nombre">Streaming Punto y Coma</span>
+
+                    <div class="taller-contenedor">
+                        <div class="bloque-taller tarde" onclick="toggleTaller(this)">
+                            <div>
+                                <span class="hora">13:00 a 16:00</span>
+                                <span class="nombre">Streaming Punto y Coma</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono-desplegar"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/FF9800/fff?text=Streaming" alt="Streaming">
+                                <p class="profes">Coordinan: Matu, Blas y Lucila</p>
+                                <p class="desc">Anunciamos el inicio del ciclo de streaming 2026, que llega con nuevos desafíos y propuestas. Se trata de un espacio radiofónico en formato streaming que combina contenidos de interés, música y una puesta en escena con estilo propio, generando un clima dinámico y participativo. Cada martes a las 15 hs, el equipo toma el aire a través del canal de YouTube de Fundación Caminos.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="col-dia">
                     <div class="cabecera-dia">MIÉRCOLES</div>
-                    <div class="bloque-taller manana" onclick="abrirTaller('miradas')">
-                        <span class="hora">9:00 a 12:00</span>
-                        <span class="nombre">Miradas Críticas</span>
+                    
+                    <div class="taller-contenedor">
+                        <div class="bloque-taller manana" onclick="toggleTaller(this)">
+                            <div>
+                                <span class="hora">9:00 a 12:00</span>
+                                <span class="nombre">Miradas Críticas</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono-desplegar"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/004aad/fff?text=Miradas+Criticas" alt="Miradas Críticas">
+                                <p class="profes">Coordinan: Matías y Gus</p>
+                                <p class="desc">Esta propuesta invita a abrir un espacio de diálogo entre distintos fenómenos socio-culturales, políticos y económicos del pasado y sus resonancias en la actualidad. Para abordar estos temas se trabajará mediante debates, entrevistas y producción de podcasts, utilizando estos formatos breves y dinámicos como herramientas que favorezcan la participación, el intercambio de opiniones y la construcción colectiva de miradas críticas.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bloque-taller tarde" onclick="abrirTaller('teatro')">
-                        <span class="hora">13:00 a 16:00</span>
-                        <span class="nombre">Obra en Acción</span>
+
+                    <div class="taller-contenedor">
+                        <div class="bloque-taller tarde" onclick="toggleTaller(this)">
+                            <div>
+                                <span class="hora">13:00 a 16:00</span>
+                                <span class="nombre">Obra en Acción</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono-desplegar"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/9C27B0/fff?text=Teatro" alt="Obra en Acción">
+                                <p class="profes">Coordinan: Mahia y Fer</p>
+                                <p class="desc">En este espacio, el taller de teatro invita a cada concurrente a participar de manera activa con su cuerpo expresivo. Se enfoca en realizar actividades, juegos y ejercicios de preparación corporal escénica para poder actuar. El objetivo del taller es presentar la obra en diferentes espacios culturales de la ciudad.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="col-dia">
                     <div class="cabecera-dia">JUEVES</div>
-                    <div class="bloque-taller manana" onclick="abrirTaller('productivo')">
-                        <span class="hora">9:00 a 10:30</span>
-                        <span class="nombre">Espacio Productivo</span>
+                    
+                    <div class="taller-contenedor">
+                        <div class="bloque-taller manana" onclick="toggleTaller(this)">
+                            <div>
+                                <span class="hora">9:00 a 10:30</span>
+                                <span class="nombre">Espacio Productivo</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono-desplegar"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/FF7043/fff?text=Espacio+Productivo" alt="Productivo">
+                                <p class="profes">Coordinan: Lara, Juli y Carlos</p>
+                                <p class="desc">Proponen un espacio orientado a la exploración de intereses y al desarrollo de habilidades vinculadas al ámbito productivo y laboral. Se busca fortalecer destrezas, participar en experiencias concretas de producción e intercambio con la comunidad y acercar el conocimiento sobre derechos laborales y modalidades de empleo.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bloque-taller especial" onclick="abrirTaller('coronautas')">
-                        <span class="hora">11:00 a 12:00</span>
-                        <span class="nombre">Coronautas</span>
+
+                    <div class="taller-contenedor">
+                        <div class="bloque-taller especial" onclick="toggleTaller(this)">
+                            <div>
+                                <span class="hora">11:00 a 12:00</span>
+                                <span class="nombre">Coronautas</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono-desplegar"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/2196F3/fff?text=Coronautas" alt="Coronautas">
+                                <p class="profes">Coordinan: Equipo de Música</p>
+                                <p class="desc">Es un espacio orientado a la exploración y la expresión musical a través de la actividad coral. Se trata de un ámbito que promueve la expresión artística, el trabajo grupal y el disfrute de hacer música juntos, generando un clima participativo.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bloque-taller tarde" onclick="abrirTaller('conectando')">
-                        <span class="hora">13:00 a 16:00</span>
-                        <span class="nombre">Conectando: Tecno y Vida</span>
+
+                    <div class="taller-contenedor">
+                        <div class="bloque-taller tarde" onclick="toggleTaller(this)">
+                            <div>
+                                <span class="hora">13:00 a 16:00</span>
+                                <span class="nombre">Tecno y Vida Diaria</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono-desplegar"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/004aad/fff?text=Tecnologia" alt="Conectando">
+                                <p class="profes">Coordinan: Mai, Juli y Maru</p>
+                                <p class="desc">Vamos a acompañarte en un recorrido donde combinamos habilidades digitales con la práctica de la vida cotidiana. Trabajaremos en informática, instructivos para la vida diaria y aplicaciones. Con visitas semanales a nuestro departamento anexo y una consultoría de dudas personales.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="col-dia">
                     <div class="cabecera-dia">VIERNES</div>
-                    <div class="bloque-taller manana" onclick="abrirTaller('fotocalendario')">
-                        <span class="hora">9:00 a 12:00</span>
-                        <span class="nombre">Foto-Calendario</span>
+                    
+                    <div class="taller-contenedor">
+                        <div class="bloque-taller manana" onclick="toggleTaller(this)">
+                            <div>
+                                <span class="hora">9:00 a 12:00</span>
+                                <span class="nombre">Foto-Calendario</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono-desplegar"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/FF9800/fff?text=Foto-Calendario" alt="Foto Calendario">
+                                <p class="profes">Coordinan: Lucila y Maru</p>
+                                <p class="desc">La propuesta del taller consistirá en la creación de un calendario anual con doce imágenes, una por mes. La temática elegida es “personajes argentin@s” proyectando que dichos personajes y la producción de las fotografías se armen en dos grupos. Las fotografías serán retratos ficcionados.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bloque-taller tarde" onclick="abrirTaller('ludoteca')">
-                        <span class="hora">13:00 a 16:00</span>
-                        <span class="nombre">Ludoteca Rodante</span>
+
+                    <div class="taller-contenedor">
+                        <div class="bloque-taller tarde" onclick="toggleTaller(this)">
+                            <div>
+                                <span class="hora">13:00 a 16:00</span>
+                                <span class="nombre">Ludoteca Rodante</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono-desplegar"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/9C27B0/fff?text=Ludoteca" alt="Ludoteca">
+                                <p class="profes">Coordinan: Hansi, Fercha y Vane</p>
+                                <p class="desc">En esta nueva propuesta el taller invita a cada concurrente a participar de manera activa en un espacio de creación y realización de juegos, actividades recreativas y lectura de cuentos para y con la comunidad barrial, instituciones educativas y espacios culturales.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <p style="text-align: center; margin-top: 20px; color: #777; font-size: 0.9rem; font-style: italic;">* Hacé clic en cualquier taller para ver más información.</p>
 
+            </div>
         </div>
     </section>
 
@@ -146,33 +288,81 @@
         </div>
     </section>
 
-    <div id="modal-taller" class="modal-taller-overlay">
-        <div class="modal-taller-cuerpo">
-            <span class="modal-cerrar" onclick="cerrarTaller()">&times;</span>
-            <img id="mt-img" src="" alt="Taller">
-            <div class="modal-taller-info">
-                <span id="mt-hora" class="mt-etiqueta"></span>
-                <h3 id="mt-titulo"></h3>
-                <p id="mt-profs" style="color: var(--color-acento); font-weight: bold; font-size: 0.95rem; margin-bottom: 15px;"></p>
-                <p id="mt-desc" style="color: #555; line-height: 1.6; font-family: 'Lato', sans-serif; text-align: justify;"></p>
-            </div>
-        </div>
-    </div>
-
     <style>
-        /* CRONOGRAMA */
-        .calendario-semanal { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; background: white; padding: 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        /* CRONOGRAMA DESPLEGABLE (ACORDEÓN INLINE) */
+        .calendario-semanal { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; background: white; padding: 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); align-items: start;}
         .col-dia { display: flex; flex-direction: column; gap: 10px; }
         .cabecera-dia { background-color: var(--color-primario); color: white; text-align: center; padding: 12px; border-radius: 10px; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: 1px; margin-bottom: 5px; }
-        .bloque-taller { border-radius: 10px; padding: 15px; cursor: pointer; transition: all 0.2s ease; display: flex; flex-direction: column; border-left: 5px solid transparent; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .bloque-taller:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        
+        .taller-contenedor {
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            background: white;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+        .taller-contenedor:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .bloque-taller {
+            padding: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 5px solid transparent;
+            position: relative;
+            z-index: 2;
+        }
+        .icono-desplegar {
+            color: #666;
+            transition: transform 0.3s ease;
+        }
+        .bloque-taller.abierto .icono-desplegar {
+            transform: rotate(180deg);
+        }
         
         .manana { background-color: #E3F2FD; border-left-color: #2196F3; }
         .tarde { background-color: #FFF3E0; border-left-color: #FF9800; }
         .especial { background-color: #F3E5F5; border-left-color: #9C27B0; }
         
-        .hora { font-size: 0.8rem; color: #666; font-weight: bold; margin-bottom: 5px; }
+        .hora { font-size: 0.8rem; color: #666; font-weight: bold; margin-bottom: 5px; display: block; }
         .nombre { font-size: 0.95rem; color: #333; font-family: 'Montserrat', sans-serif; font-weight: 700; line-height: 1.2; }
+
+        /* EL DETALLE QUE SE DESPLIEGA */
+        .detalle-taller {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            background: #fafafa;
+        }
+        .detalle-contenido {
+            padding: 15px;
+            border-top: 1px solid #eee;
+        }
+        .detalle-contenido img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .detalle-contenido .profes {
+            font-size: 0.85rem;
+            color: var(--color-acento);
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .detalle-contenido .desc {
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.5;
+            margin: 0;
+            text-align: left;
+        }
 
         /* COLLAGE */
         .sede-collage { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; padding: 10px; max-width: 1000px; margin: 0 auto; }
@@ -184,37 +374,7 @@
         .collage-row-2 { grid-row: span 2; }
         .collage-p1 { transform: rotate(-3deg); } .collage-p2 { transform: rotate(2deg); } .collage-p3 { transform: rotate(-1.5deg); } .collage-p4 { transform: rotate(3deg); } .collage-p5 { transform: rotate(-2.5deg); } .collage-p6 { transform: rotate(1.5deg); } .collage-p7 { transform: rotate(-4deg); } .collage-p8 { transform: rotate(2.5deg); } .collage-p9 { transform: rotate(-1deg); } .collage-p10 { transform: rotate(3.5deg); }
 
-        /* VENTANA EMERGENTE (MODAL BLINDADO) */
-        .modal-taller-overlay {
-            display: none !important; 
-            position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; 
-            width: 100vw !important; height: 100vh !important;
-            background: rgba(0,0,0,0.8) !important; z-index: 9999999 !important;
-        }
-        .modal-taller-overlay.activo { 
-            display: flex !important; align-items: center !important; justify-content: center !important; 
-        }
-        .modal-taller-cuerpo {
-            background: white; width: 90%; max-width: 600px;
-            max-height: 85vh; overflow-y: auto; 
-            border-radius: 20px; position: relative;
-            animation: zoomIn 0.3s ease;
-        }
-        @keyframes zoomIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-        .modal-cerrar {
-            position: absolute; top: 15px; right: 20px;
-            background: white; color: #333; width: 35px; height: 35px;
-            border-radius: 50%; text-align: center; line-height: 35px;
-            font-size: 1.5rem; cursor: pointer; z-index: 10;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-        .modal-cerrar:hover { background: #FF7043; color: white; }
-        .modal-taller-cuerpo img { width: 100%; height: 200px; object-fit: cover; border-bottom: 4px solid var(--color-acento); }
-        .modal-taller-info { padding: 25px 30px 30px; }
-        .mt-etiqueta { background: var(--color-primario); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; display: inline-block; margin-bottom: 15px; }
-        #mt-titulo { font-family: 'Montserrat', sans-serif; font-size: 1.6rem; color: #333; margin-bottom: 5px; }
-
-        @media (max-width: 900px) {
+        @media (max-width: 1000px) {
             .calendario-semanal { grid-template-columns: repeat(2, 1fr); }
             .col-dia:last-child { grid-column: span 2; }
             .sede-collage { grid-template-columns: repeat(2, 1fr); gap: 10px; }
@@ -229,72 +389,20 @@
     </style>
 
     <script>
-        const datosTalleres = {
-            artes: {
-                titulo: "Artes Visuales", profs: "Solana y Lucila", hora: "Lunes | 9:00 a 12:00 hs", img: "https://placehold.co/600x400/004aad/fff?text=Artes+Visuales",
-                desc: "Se van a ofrecer dos propuestas: una propuesta es trabajar con CARTELERÍA mediante sellos. Se trabajará con sellos de fácil factura con diferentes símbolos e iconos y tipografías. El objetivo general es lograr el armado de carteles con frases y consignas construidas en el taller mediante la reflexión grupal a partir de las inquietudes que vayan presentando los participantes y la puesta de los mismos en circulación en el espacio público trayendo una reflexión sobre el uso del mismo. Otra propuesta: será partiendo del diseño textil de los mantos de PARACAS (Perú), observar su estética (colores, formas, composición y temática), contextualizar en la época en que se desarrollaron, acompañando con pequeños escritos sobre la mitología, sus personajes principales son los que encontramos en las piezas textiles (seres antropomorfos, felinos, cóndores, peces y figuras demoníacas o míticas)."
-            },
-            cocina: {
-                titulo: "Taller de Cocina Productiva", profs: "Equipo", hora: "Lunes | 13:00 a 16:00 hs", img: "https://placehold.co/600x400/FF7043/fff?text=Cocina+Productiva",
-                desc: "Durante el ciclo 2026 nos enfocaremos en la producción de distintos productos que estarán destinados tanto a las comidas y colaciones del centro de día, como a la venta interna. Para lograrlo, organizaremos nuestros encuentros repitiendo cada mes la elaboración de distintos productos como por ejemplo muffins, pizzetas, mermeladas y panificados; una rutina que nos ayudará a afianzar las técnicas culinarias y ganar mucha más seguridad."
-            },
-            deportes: {
-                titulo: "Deportes en Movimiento", profs: "Vane y Fercha", hora: "Martes | 9:00 a 12:00 hs", img: "https://placehold.co/600x400/2196F3/fff?text=Deportes",
-                desc: "El taller de Deportes y Movimiento invita a cada concurrente a participar de manera activa con su cuerpo. El taller se enfoca en realizar actividades de preparación física corporal, con ejercicios de yoga y entrenamiento funcional, y un posterior trabajo en “las cachitas” donde se llevarán a cabo actividades deportivas y juegos recreativos pre-deportivos."
-            },
-            streaming: {
-                titulo: "Streaming Punto y Coma", profs: "Matu, Blas y Lucila", hora: "Martes | 13:00 a 16:00 hs", img: "https://placehold.co/600x400/FF9800/fff?text=Streaming",
-                desc: "Anunciamos el inicio del ciclo de streaming 2026, que llega con nuevos desafíos y propuestas. Se trata de un espacio radiofónico en formato streaming que combina contenidos de interés, música y una puesta en escena con estilo propio, generando un clima dinámico y participativo. Cada martes a las 15 hs, el equipo toma el aire a través del canal de YouTube de Fundación Caminos, compartiendo conversaciones, música y distintos segmentos pensados para el encuentro con la audiencia. ¡Les esperamos para acompañarnos en esta nueva temporada!"
-            },
-            miradas: {
-                titulo: "Miradas Críticas", profs: "Matías y Gus", hora: "Miércoles | 9:00 a 12:00 hs", img: "https://placehold.co/600x400/004aad/fff?text=Miradas+Criticas",
-                desc: "Esta propuesta invita a abrir un espacio de diálogo entre distintos fenómenos socio-culturales, políticos y económicos del pasado y sus resonancias en la actualidad. A partir de ese recorrido, se buscará pensar juntos cómo ciertos procesos, ideas o acontecimientos históricos siguen influyendo en la realidad contemporánea. Para abordar estos temas se trabajará mediante debates, entrevistas y producción de podcasts, utilizando estos formatos breves y dinámicos como herramientas que favorezcan la participación, el intercambio de opiniones y la construcción colectiva de miradas críticas."
-            },
-            teatro: {
-                titulo: "Obra en Acción", profs: "Mahia y Fer", hora: "Miércoles | 13:00 a 16:00 hs", img: "https://placehold.co/600x400/9C27B0/fff?text=Obra+en+Accion",
-                desc: "En este espacio, el taller de teatro invita a cada concurrente a participar de manera activa con su cuerpo expresivo. Se enfoca en realizar actividades, juegos y ejercicios de preparación corporal escénica para poder actuar. El objetivo del taller es presentar la obra en diferentes espacios culturales de la ciudad."
-            },
-            productivo: {
-                titulo: "Espacio Productivo", profs: "Lara, Juli y Carlos", hora: "Jueves | 9:00 a 10:30 hs", img: "https://placehold.co/600x400/FF7043/fff?text=Espacio+Productivo",
-                desc: "Proponen un espacio orientado a la exploración de intereses y al desarrollo de habilidades vinculadas al ámbito productivo y laboral. A través de diferentes propuestas prácticas, se busca que los concurrentes puedan identificar sus habilidades, fortalecer destrezas y participar en experiencias concretas de producción e intercambio con la comunidad. Asimismo, el espacio pretende acercar a los participantes al conocimiento del mundo del trabajo, promoviendo el acceso a información sobre derechos laborales, experiencias de inclusión y diferentes modalidades de empleo para personas con discapacidad."
-            },
-            coronautas: {
-                titulo: "Coronautas", profs: "Equipo", hora: "Jueves | 11:00 a 12:00 hs", img: "https://placehold.co/600x400/2196F3/fff?text=Coronautas",
-                desc: "Es un espacio orientado a la exploración y la expresión musical a través de la actividad coral. Se trata de un ámbito que promueve la expresión artística, el trabajo grupal y el disfrute de hacer música juntos, generando un clima participativo en el que cada integrante puede desarrollar y compartir su propio modo de habitar la experiencia musical."
-            },
-            conectando: {
-                titulo: "Conectando: Tecno y Vida Diaria", profs: "Mai, Juli y Maru", hora: "Jueves | 13:00 a 16:00 hs", img: "https://placehold.co/600x400/004aad/fff?text=Tecno+y+Vida",
-                desc: "Vamos a acompañarte en un recorrido donde combinamos habilidades digitales con la práctica de la vida cotidiana. A lo largo del año, trabajaremos en tres áreas: informática, instructivos para la vida diaria y aplicaciones, el taller te permitirá explorar herramientas tecnológicas y desarrollar autonomía en tus rutinas diarias. Con visitas semanales a nuestro departamento anexo y una consultoría de dudas personales."
-            },
-            fotocalendario: {
-                titulo: "Foto-Calendario", profs: "Lucila y Maru", hora: "Viernes | 9:00 a 12:00 hs", img: "https://placehold.co/600x400/FF9800/fff?text=Foto-Calendario",
-                desc: "La propuesta del taller consistirá en la creación de un calendario anual. La idea se toma del taller de verano donde trabajamos con un almanaque de página única. La idea del trabajo anual es armar un calendario con doce imágenes, una por mes. La temática elegida es “personajes argentin@s” proyectando que dichos personajes y la producción de las fotografías se armen en dos grupos. Las fotografías serán retratos ficcionados."
-            },
-            ludoteca: {
-                titulo: "Ludoteca Rodante", profs: "Hansi, Fercha y Vane", hora: "Viernes | 13:00 a 16:00 hs", img: "https://placehold.co/600x400/9C27B0/fff?text=Ludoteca",
-                desc: "En esta nueva propuesta el taller invita a cada concurrente a participar de manera activa en un espacio de creación y realización de juegos, actividades recreativas y lectura de cuentos para y con la comunidad barrial, instituciones educativas y espacios culturales."
-            }
-        };
-
-        function abrirTaller(id) {
-            const taller = datosTalleres[id];
-            document.getElementById('mt-img').src = taller.img;
-            document.getElementById('mt-hora').innerText = taller.hora;
-            document.getElementById('mt-titulo').innerText = taller.titulo;
-            document.getElementById('mt-profs').innerText = taller.profs ? "Coordinan: " + taller.profs : "";
-            document.getElementById('mt-desc').innerText = taller.desc;
+        function toggleTaller(elemento) {
+            // Alternar clase 'abierto' para la flechita
+            elemento.classList.toggle("abierto");
             
-            // Abre la ventana usando SOLO la clase "activo", sin tocar el body overflow
-            document.getElementById('modal-taller').classList.add('activo');
+            // Buscar el div 'detalle-taller' que está justo después
+            var detalle = elemento.nextElementSibling;
+            
+            // Alternar el alto máximo para la animación
+            if (detalle.style.maxHeight) {
+                detalle.style.maxHeight = null;
+            } else {
+                detalle.style.maxHeight = detalle.scrollHeight + "px";
+            }
         }
-
-        function cerrarTaller() {
-            document.getElementById('modal-taller').classList.remove('activo');
-        }
-
-        document.getElementById('modal-taller').addEventListener('click', function(event) {
-            if (event.target === this) cerrarTaller();
-        });
     </script>
 
     <footer class="footer-horizontal">
