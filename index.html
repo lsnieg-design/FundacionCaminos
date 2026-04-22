@@ -279,41 +279,53 @@
         }
     </style>
 
-    <footer class="footer">
+<footer style="background-color: #004aad; color: white; padding: 50px 20px 20px; text-align: center; position: relative; z-index: 10; margin-top: auto;">
         <div class="container">
-            <img src="logo.png" alt="Fundación Caminos" style="height: 60px; margin: 0 auto 20px; border-radius: 10px; border: 2px solid white;">
-            <p>Teodoro García 3545, CABA | Tel: (+54-11) 4551-2141</p>
-            <p>secretariafcaminos@gmail.com</p>
-            <p class="nomade-signature">Diseñado y desarrollado por <a href="https://www.somosnomade.com.ar" target="_blank">NOMADE</a></p>
+            <img src="logo.png" alt="Fundación Caminos" style="height: 80px; margin: 0 auto 30px; border-radius: 10px; background: white; padding: 10px; display: block; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+            
+            <div style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 40px; font-family: 'Lato', sans-serif;">
+                <p style="margin: 0;"><i class="fas fa-map-marker-alt" style="margin-right: 8px; color: #FF7043;"></i> Teodoro García 3545</p>
+                <p style="margin: 0;">C1427ECA</p>
+                <p style="margin: 0;">Ciudad Autónoma de Buenos Aires, Argentina</p>
+                <p style="margin: 15px 0 5px 0;"><i class="fas fa-phone-alt" style="margin-right: 8px; color: #FF7043;"></i> Tel (+54-11) 4551-2141</p>
+                <p style="margin: 0;"><i class="fas fa-envelope" style="margin-right: 8px; color: #FF7043;"></i> secretariafcaminos@gmail.com</p>
+            </div>
+            
+            <hr style="border-color: rgba(255,255,255,0.2); margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto;">
+            
+            <p style="font-size: 0.95rem; margin: 0; font-family: 'Montserrat', sans-serif;">Diseñado por <a href="https://www.somosnomade.com.ar" target="_blank" style="color: white; font-weight: 800; text-decoration: none; letter-spacing: 1px;">NOMADE</a></p>
         </div>
     </footer>
 
-    <script>
-        const navToggle = document.getElementById('nav-toggle');
-        const navList = document.querySelector('.nav-list');
-        if(navToggle){
-            navToggle.addEventListener('click', () => {
-                if(navList.style.display === 'flex'){
-                    navList.style.display = 'none';
-                } else {
-                    navList.style.display = 'flex';
-                    navList.style.flexDirection = 'column';
-                    navList.style.position = 'absolute';
-                    navList.style.top = '80px';
-                    navList.style.left = '0';
-                    navList.style.width = '100%';
-                    navList.style.background = 'white';
-                    navList.style.padding = '20px';
-                    navList.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
-                }
-            });
-        }
-    </script>
-    <script src="script.js"></script>
-    
-    <a href="https://api.whatsapp.com/send/?phone=541136953600&text&type=phone_number&app_absent=0" target="_blank" style="display: block !important; position: fixed !important; bottom: 30px !important; right: 30px !important; z-index: 2147483647 !important; width: 60px !important; height: 60px !important; transition: transform 0.3s;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 100%; height: 100%; filter: drop-shadow(0 4px 5px rgba(0,0,0,0.3));">
+    <a href="https://api.whatsapp.com/send/?phone=541136953600&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp-btn-fijo" aria-label="Chat en WhatsApp">
+        <i class="fab fa-whatsapp"></i>
     </a>
+
+    <style>
+        .whatsapp-btn-fijo {
+            position: fixed !important;
+            bottom: 30px !important;
+            right: 30px !important;
+            width: 60px !important;
+            height: 60px !important;
+            background-color: #25D366 !important;
+            color: white !important;
+            border-radius: 50% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            font-size: 35px !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+            z-index: 2147483647 !important;
+            text-decoration: none !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        }
+        .whatsapp-btn-fijo:hover {
+            transform: scale(1.1) !important;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4) !important;
+            color: white !important;
+        }
+    </style>
 
 </body>
 </html>
