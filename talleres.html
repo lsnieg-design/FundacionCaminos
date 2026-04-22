@@ -12,11 +12,11 @@
 
     <header class="header">
         <div class="container header-container">
-            <a href="index.html"><img src="logocontexto.png" alt="Fundación Caminos" class="logo-img"></a>
+            <a href="index"><img src="logocontexto.png" alt="Fundación Caminos" class="logo-img"></a>
             <div class="nav-toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
             <nav>
                 <ul class="nav-list" id="nav-menu">
-                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="index" class="nav-link">Inicio</a></li>
                     <li><a href="quienes-somos" class="nav-link">¿Quiénes somos?</a></li>
                     <li><a href="dispositivos" class="nav-link active">Dispositivos</a></li>
                     <li><a href="comunidad" class="nav-link">Comunidad</a></li>
@@ -26,7 +26,7 @@
         </div>
     </header>
 
-    <section class="page-header" style="background-image: url('centrodedia.png');">
+    <section class="page-header" style="background-color: #004aad; background-image: url('centrodedia.png'); background-size: cover; background-position: center;">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="page-title">NUESTROS TALLERES</h1>
@@ -44,186 +44,139 @@
         </div>
     </section>
 
-    <section class="section pt-0">
-        <div class="container">
-            <h3 style="text-align: center; color: var(--color-primario); margin-bottom: 30px;">Conocé nuestra Sede</h3>
-            <div class="sede-gallery">
-                <div class="sede-img-wrap"><img src="sede/sede1.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+1'" alt="Sede 1"></div>
-                <div class="sede-img-wrap"><img src="sede/sede2.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+2'" alt="Sede 2"></div>
-                <div class="sede-img-wrap"><img src="sede/sede3.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+3'" alt="Sede 3"></div>
-                <div class="sede-img-wrap"><img src="sede/sede4.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+4'" alt="Sede 4"></div>
-                <div class="sede-img-wrap"><img src="sede/sede5.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+5'" alt="Sede 5"></div>
-                <div class="sede-img-wrap"><img src="sede/sede6.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+6'" alt="Sede 6"></div>
-                <div class="sede-img-wrap"><img src="sede/sede7.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+7'" alt="Sede 7"></div>
-                <div class="sede-img-wrap"><img src="sede/sede8.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+8'" alt="Sede 8"></div>
-                <div class="sede-img-wrap"><img src="sede/sede9.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+9'" alt="Sede 9"></div>
-                <div class="sede-img-wrap"><img src="sede/sede10.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+10'" alt="Sede 10"></div>
-            </div>
-        </div>
-    </section>
-
-    <style>
-        .sede-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 15px;
-            padding: 0 15px;
-        }
-        .sede-img-wrap {
-            overflow: hidden;
-            border-radius: 12px;
-            aspect-ratio: 1 / 1;
-            background: #eee;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .sede-img-wrap img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(40%) brightness(90%);
-            transition: all 0.4s ease;
-            cursor: pointer;
-        }
-        .sede-img-wrap img:hover {
-            filter: grayscale(0%) brightness(100%);
-            transform: scale(1.1);
-        }
-    </style>
-
-<section class="section bg-light" style="padding-top: 40px; padding-bottom: 60px;">
+    <section class="section pt-0 bg-light">
         <div class="container">
             <h3 style="text-align: center; color: var(--color-primario); margin-bottom: 40px; font-size: 2rem;">Cronograma Semanal</h3>
             
-            <div class="tabs-container">
-                <button class="tab-btn active" onclick="abrirDia(event, 'Lunes')">LUNES</button>
-                <button class="tab-btn" onclick="abrirDia(event, 'Martes')">MARTES</button>
-                <button class="tab-btn" onclick="abrirDia(event, 'Miercoles')">MIÉRCOLES</button>
-                <button class="tab-btn" onclick="abrirDia(event, 'Jueves')">JUEVES</button>
-                <button class="tab-btn" onclick="abrirDia(event, 'Viernes')">VIERNES</button>
-            </div>
-
-            <div id="Lunes" class="tab-content activo">
-                <div class="workshops-grid">
-                    <div class="workshop-card">
-                        <img src="https://placehold.co/600x350/004aad/fff?text=Artes+Visuales" class="workshop-img" alt="Artes Visuales">
-                        <div class="workshop-info">
-                            <span class="workshop-time"><i class="far fa-clock"></i> 9 a 12 hs</span>
+            <div class="crono-grid">
+                
+                <div class="crono-day-col">
+                    <div class="day-header">LUNES</div>
+                    
+                    <div class="workshop-visual-card">
+                        <img src="https://placehold.co/600x350/004aad/fff?text=Artes+Visuales" alt="Artes Visuales">
+                        <div class="wvc-body">
+                            <span class="wvc-time"><i class="far fa-clock"></i> 9 a 12 hs</span>
                             <h4>ARTES VISUALES</h4>
-                            <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;"><strong>Con Solana y Lucila</strong></p>
-                            <p>Dos propuestas: cartelería mediante sellos para el espacio público y diseño textil inspirado en los mantos de Paracas (Perú), explorando su estética y mitología.</p>
+                            <p class="wvc-profs">Solana y Lucila</p>
+                            <p>Dos propuestas: cartelería mediante sellos e iconos para espacio público y diseño textil inspirado en los mantos de Paracas (Perú).</p>
                         </div>
                     </div>
-                    <div class="workshop-card">
-                        <img src="https://placehold.co/600x350/FF7043/fff?text=Cocina+Productiva" class="workshop-img" alt="Cocina Productiva">
-                        <div class="workshop-info">
-                            <span class="workshop-time"><i class="far fa-clock"></i> 13 a 16 hs</span>
+                    
+                    <div class="workshop-visual-card">
+                        <img src="https://placehold.co/600x350/FF7043/fff?text=Cocina" alt="Cocina">
+                        <div class="wvc-body">
+                            <span class="wvc-time"><i class="far fa-clock"></i> 13 a 16 hs</span>
                             <h4>COCINA PRODUCTIVA</h4>
-                            <p>Enfoque en la producción para comidas del centro y venta interna. Repetiremos cada mes la elaboración de distintos productos (muffins, pizzetas, mermeladas) para afianzar técnicas culinarias.</p>
+                            <p>Enfoque en la producción para el centro y venta interna. Repetición mensual para afianzar técnicas culinarias (muffins, pizzetas, mermeladas).</p>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div id="Martes" class="tab-content">
-                <div class="workshops-grid">
-                    <div class="workshop-card">
-                        <img src="https://placehold.co/600x350/004aad/fff?text=Deportes" class="workshop-img" alt="Deportes en Movimiento">
-                        <div class="workshop-info">
-                            <span class="workshop-time"><i class="far fa-clock"></i> 9 a 12 hs</span>
+                <div class="crono-day-col">
+                    <div class="day-header">MARTES</div>
+                    
+                    <div class="workshop-visual-card">
+                        <img src="https://placehold.co/600x350/004aad/fff?text=Deportes" alt="Deportes">
+                        <div class="wvc-body">
+                            <span class="wvc-time"><i class="far fa-clock"></i> 9 a 12 hs</span>
                             <h4>DEPORTES EN MOVIMIENTO</h4>
-                            <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;"><strong>Con Vane y Fercha</strong></p>
-                            <p>Participación activa con el cuerpo mediante yoga y entrenamiento funcional. Luego, trabajo en "las cachitas" con actividades deportivas y juegos recreativos pre-deportivos.</p>
+                            <p class="wvc-profs">Vane y Fercha</p>
+                            <p>Preparación física corporal (yoga y funcional) y actividades deportivas recreativas en “las cachitas”.</p>
                         </div>
                     </div>
-                    <div class="workshop-card">
-                        <img src="https://placehold.co/600x350/FF7043/fff?text=Streaming" class="workshop-img" alt="Streaming">
-                        <div class="workshop-info">
-                            <span class="workshop-time"><i class="far fa-clock"></i> 13 a 16 hs</span>
+                    
+                    <div class="workshop-visual-card">
+                        <img src="https://placehold.co/600x350/FF7043/fff?text=Streaming" alt="Streaming">
+                        <div class="wvc-body">
+                            <span class="wvc-time"><i class="far fa-clock"></i> 13 a 16 hs</span>
                             <h4>STREAMING PUNTO Y COMA</h4>
-                            <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;"><strong>Con Matu, Blas y Lucila</strong></p>
-                            <p>Ciclo radiofónico en streaming por nuestro canal de YouTube. Combina contenidos de interés, música y una puesta en escena con estilo propio para encontrarnos con la audiencia.</p>
+                            <p class="wvc-profs">Matu, Blas y Lucila</p>
+                            <p>Espacio radiofónico en YouTube que combina contenidos de interés, música y puesta en escena con estilo propio.</p>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div id="Miercoles" class="tab-content">
-                <div class="workshops-grid">
-                    <div class="workshop-card">
-                        <img src="https://placehold.co/600x350/004aad/fff?text=Miradas+Criticas" class="workshop-img" alt="Miradas Críticas">
-                        <div class="workshop-info">
-                            <span class="workshop-time"><i class="far fa-clock"></i> 9 a 12 hs</span>
+                <div class="crono-day-col">
+                    <div class="day-header">MIÉRCOLES</div>
+                    
+                    <div class="workshop-visual-card">
+                        <img src="https://placehold.co/600x350/004aad/fff?text=Miradas+Criticas" alt="Miradas Críticas">
+                        <div class="wvc-body">
+                            <span class="wvc-time"><i class="far fa-clock"></i> 9 a 12 hs</span>
                             <h4>MIRADAS CRÍTICAS</h4>
-                            <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;"><strong>Con Matías y Gus</strong></p>
-                            <p>Diálogo sobre fenómenos socio-culturales e históricos y sus resonancias en la actualidad, utilizando debates, entrevistas y producción de podcasts para construir miradas críticas.</p>
+                            <p class="wvc-profs">Matías y Gus</p>
+                            <p>Diálogo sobre fenómenos socio-culturales históricos y sus resonancias actuales mediante debates, entrevistas y podcasts.</p>
                         </div>
                     </div>
-                    <div class="workshop-card">
-                        <img src="https://placehold.co/600x350/FF7043/fff?text=Obra+en+Accion" class="workshop-img" alt="Obra en Acción">
-                        <div class="workshop-info">
-                            <span class="workshop-time"><i class="far fa-clock"></i> 13 a 16 hs</span>
+                    
+                    <div class="workshop-visual-card">
+                        <img src="https://placehold.co/600x350/FF7043/fff?text=Teatro" alt="Teatro">
+                        <div class="wvc-body">
+                            <span class="wvc-time"><i class="far fa-clock"></i> 13 a 16 hs</span>
                             <h4>OBRA EN ACCIÓN</h4>
-                            <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;"><strong>Con Mahia y Fer</strong></p>
-                            <p>Participación activa con el cuerpo expresivo. Realizamos juegos y ejercicios de preparación corporal escénica con el objetivo de presentar obras en diferentes espacios culturales de la ciudad.</p>
+                            <p class="wvc-profs">Mahia y Fer</p>
+                            <p>Taller de teatro y preparación corporal escénica para presentar obras en espacios culturales de la ciudad.</p>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div id="Jueves" class="tab-content">
-                <div class="workshops-grid">
-                    <div class="workshop-card">
-                        <img src="https://placehold.co/600x350/004aad/fff?text=Espacio+Productivo" class="workshop-img" alt="Espacio Productivo">
-                        <div class="workshop-info">
-                            <span class="workshop-time"><i class="far fa-clock"></i> 9 a 10.30 hs</span>
+                <div class="crono-day-col">
+                    <div class="day-header">JUEVES</div>
+                    
+                    <div class="workshop-visual-card wvc-small">
+                        <div class="wvc-body">
+                            <span class="wvc-time"><i class="far fa-clock"></i> 9 a 10.30 hs</span>
                             <h4>ESPACIO PRODUCTIVO</h4>
-                            <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;"><strong>Con Lara, Juli y Carlos</strong></p>
-                            <p>Exploración de habilidades vinculadas al ámbito laboral y acercamiento al conocimiento de derechos laborales, experiencias de inclusión y modalidades de empleo.</p>
+                            <p class="wvc-profs">Lara, Juli y Carlos</p>
+                            <p>Exploración de habilidades laborales, derechos, inclusión y modalidades de empleo.</p>
                         </div>
                     </div>
-                    <div class="workshop-card">
-                        <img src="https://placehold.co/600x350/FF7043/fff?text=Coronautas" class="workshop-img" alt="Coronautas">
-                        <div class="workshop-info">
-                            <span class="workshop-time"><i class="far fa-clock"></i> 11 a 12 hs</span>
+                    <div class="workshop-visual-card wvc-small">
+                        <div class="wvc-body">
+                            <span class="wvc-time"><i class="far fa-clock"></i> 11 a 12 hs</span>
                             <h4>CORONAUTAS</h4>
-                            <p>Exploración y expresión musical a través de la actividad coral. Un ámbito que promueve el trabajo grupal y el disfrute de hacer música juntos.</p>
+                            <p>Exploración y expresión musical coral y disfrute de hacer música juntos.</p>
                         </div>
                     </div>
-                    <div class="workshop-card">
-                        <img src="https://placehold.co/600x350/004aad/fff?text=Conectando" class="workshop-img" alt="Conectando">
-                        <div class="workshop-info">
-                            <span class="workshop-time"><i class="far fa-clock"></i> 13 a 16 hs</span>
+                    
+                    <div class="workshop-visual-card">
+                        <img src="https://placehold.co/600x350/004aad/fff?text=Tecno+y+Vida" alt="Tecno y Vida">
+                        <div class="wvc-body">
+                            <span class="wvc-time"><i class="far fa-clock"></i> 13 a 16 hs</span>
                             <h4>CONECTANDO: TECNO Y VIDA</h4>
-                            <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;"><strong>Con Mai, Juli y Maru</strong></p>
-                            <p>Combinamos habilidades digitales con la vida cotidiana. Exploramos herramientas informáticas, uso de aplicaciones y rutinas prácticas con visitas al departamento anexo.</p>
+                            <p class="wvc-profs">Mai, Juli y Maru</p>
+                            <p>Combinamos habilidades digitales con la práctica de vida cotidiana y autonomía en rutinas diarias.</p>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div id="Viernes" class="tab-content">
-                <div class="workshops-grid">
-                    <div class="workshop-card">
-                        <img src="https://placehold.co/600x350/004aad/fff?text=Foto-Calendario" class="workshop-img" alt="Foto-Calendario">
-                        <div class="workshop-info">
-                            <span class="workshop-time"><i class="far fa-clock"></i> 9 a 12 hs</span>
+                <div class="crono-day-col">
+                    <div class="day-header">VIERNES</div>
+                    
+                    <div class="workshop-visual-card">
+                        <img src="https://placehold.co/600x350/004aad/fff?text=Foto-Calendario" alt="Foto-Calendario">
+                        <div class="wvc-body">
+                            <span class="wvc-time"><i class="far fa-clock"></i> 9 a 12 hs</span>
                             <h4>FOTO-CALENDARIO</h4>
-                            <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;"><strong>Con Lucila y Maru</strong></p>
-                            <p>Creación de un calendario anual con doce imágenes. La temática elegida es “personajes argentin@s” donde los retratos serán ficcionados y producidos en grupo.</p>
+                            <p class="wvc-profs">Lucila y Maru</p>
+                            <p>Creación de un calendario anual ficcionado bajo la temática de “personajes argentinxs”.</p>
                         </div>
                     </div>
-                    <div class="workshop-card">
-                        <img src="https://placehold.co/600x350/FF7043/fff?text=Ludoteca" class="workshop-img" alt="Ludoteca Rodante">
-                        <div class="workshop-info">
-                            <span class="workshop-time"><i class="far fa-clock"></i> 13 a 16 hs</span>
+                    
+                    <div class="workshop-visual-card">
+                        <img src="https://placehold.co/600x350/FF7043/fff?text=Ludoteca" alt="Ludoteca">
+                        <div class="wvc-body">
+                            <span class="wvc-time"><i class="far fa-clock"></i> 13 a 16 hs</span>
                             <h4>LUDOTECA RODANTE</h4>
-                            <p style="font-size: 0.9rem; color: #777; margin-bottom: 10px;"><strong>Con Hansi, Fercha y Vane</strong></p>
-                            <p>Creación y realización de juegos, actividades recreativas y lectura de cuentos dirigidos hacia la comunidad barrial, instituciones educativas y espacios culturales.</p>
+                            <p class="wvc-profs">Hansi, Fercha y Vane</p>
+                            <p>Creación de juegos y actividades recreativas para la comunidad e instituciones barriales.</p>
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
+            
             <div class="text-center" style="margin-top: 50px;">
                 <a href="dispositivos" class="btn btn-primary" style="background: white; color: var(--color-primario); border: 2px solid var(--color-primario); box-shadow: none;">
                     <i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Volver a Dispositivos
@@ -234,135 +187,297 @@
     </section>
 
     <style>
-        .tabs-container {
+        .crono-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            align-items: start;
+        }
+        .crono-day-col {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 40px;
+            flex-direction: column;
+            gap: 15px;
         }
-        .tab-btn {
-            background-color: white;
-            color: var(--color-primario);
-            border: 2px solid var(--color-primario);
-            padding: 12px 25px;
-            border-radius: 30px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-        .tab-btn:hover, .tab-btn.active {
+        .day-header {
             background-color: var(--color-primario);
             color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0, 74, 173, 0.2);
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
         }
         
-        .tab-content {
-            display: none;
-            animation: aparecerSuave 0.5s ease-out;
-        }
-        .tab-content.activo {
-            display: block;
-        }
-        
-        @keyframes aparecerSuave {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .workshops-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-        
-        .workshop-card {
+        .workshop-visual-card {
             background: white;
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
         }
-        .workshop-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        .workshop-visual-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
         
-        .workshop-img {
+        .workshop-visual-card img {
             width: 100%;
-            height: 220px;
+            height: 120px;
             object-fit: cover;
-            border-bottom: 4px solid var(--color-acento);
+            border-bottom: 3px solid var(--color-acento);
         }
         
-        .workshop-info {
-            padding: 30px 25px 25px;
-            position: relative;
+        /* Versión sin foto para bloques cortos */
+        .wvc-small {
+            border-left: 5px solid var(--color-primario);
+        }
+        .wvc-small .wvc-body {
+            padding-top: 15px;
+        }
+        
+        .wvc-body {
+            padding: 15px 15px 15px;
             flex-grow: 1;
         }
         
-        .workshop-time {
-            position: absolute;
-            top: -20px;
-            right: 20px;
-            background: var(--color-acento);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 0.9rem;
+        .wvc-time {
+            color: var(--color-acento);
+            font-size: 0.85rem;
             font-weight: 800;
             font-family: 'Montserrat', sans-serif;
-            box-shadow: 0 4px 10px rgba(255, 112, 67, 0.3);
+            margin-bottom: 5px;
+            display: block;
         }
         
-        .workshop-info h4 {
-            color: var(--color-primario);
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+        .wvc-body h4 {
+            color: #333;
+            font-size: 1.05rem;
+            margin-bottom: 3px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 800;
+            line-height: 1.2;
         }
         
-        .workshop-info p {
+        .wvc-profs {
+            font-size: 0.8rem;
+            color: #888;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        
+        .wvc-body p {
             color: #555;
-            line-height: 1.6;
+            font-size: 0.85rem;
+            line-height: 1.4;
             margin: 0;
             font-family: 'Lato', sans-serif;
         }
+
+        @media (max-width: 1000px) {
+            .crono-grid { grid-template-columns: repeat(2, 1fr); }
+            .crono-day-col:last-child { grid-column: span 2; }
+        }
+        @media (max-width: 600px) {
+            .crono-grid { grid-template-columns: 1fr; }
+            .crono-day-col:last-child { grid-column: span 1; }
+        }
     </style>
 
+    <section class="section">
+        <div class="container text-center">
+            <span class="subtitle">Nuestra Casa</span>
+            <h2>Un recorrido por la Sede</h2>
+            <p style="max-width: 600px; margin: 0 auto 50px; color: #555;">Cada rincón de nuestra fundación está diseñado para alojar el deseo y potenciar la autonomía.</p>
+            
+            <div class="sede-collage">
+                <div class="collage-item collage-p1"><img src="sede/sede1.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+1'" alt="Sede 1"></div>
+                <div class="collage-item collage-p2"><img src="sede/sede2.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+2'" alt="Sede 2"></div>
+                <div class="collage-item collage-p3 collage-span-2"><img src="sede/sede3.jpg" onerror="this.src='https://placehold.co/600x300?text=Sede+3'" alt="Sede 3"></div>
+                <div class="collage-item collage-p4"><img src="sede/sede4.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+4'" alt="Sede 4"></div>
+                <div class="collage-item collage-p5"><img src="sede/sede5.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+5'" alt="Sede 5"></div>
+                <div class="collage-item collage-p6 collage-row-2"><img src="sede/sede6.jpg" onerror="this.src='https://placehold.co/300x600?text=Sede+6'" alt="Sede 6"></div>
+                <div class="collage-item collage-p7"><img src="sede/sede7.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+7'" alt="Sede 7"></div>
+                <div class="collage-item collage-p8"><img src="sede/sede8.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+8'" alt="Sede 8"></div>
+                <div class="collage-item collage-p9 collage-span-2"><img src="sede/sede9.jpg" onerror="this.src='https://placehold.co/600x300?text=Sede+9'" alt="Sede 9"></div>
+                <div class="collage-item collage-p10"><img src="sede/sede10.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+10'" alt="Sede 10"></div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .sede-collage {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            padding: 10px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .collage-item {
+            background: white;
+            padding: 8px 8px 25px 8px; /* Espacio abajo para efecto 'foto impresa' */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            z-index: 1;
+            position: relative;
+        }
+        .collage-item:hover {
+            transform: scale(1.15) rotate(0deg) !important;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+        
+        .collage-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.4s ease;
+        }
+        .collage-item:hover img {
+            filter: grayscale(0%);
+        }
+
+        /* Clases de disposición y rotación azarosa */
+        .collage-span-2 { grid-column: span 2; }
+        .collage-row-2 { grid-row: span 2; }
+
+        /* Rotaciones individuales para efecto collage */
+        .collage-p1 { transform: rotate(-3deg); }
+        .collage-p2 { transform: rotate(2deg); }
+        .collage-p3 { transform: rotate(-1.5deg); }
+        .collage-p4 { transform: rotate(3deg); }
+        .collage-p5 { transform: rotate(-2.5deg); }
+        .collage-p6 { transform: rotate(1.5deg); }
+        .collage-p7 { transform: rotate(-4deg); }
+        .collage-p8 { transform: rotate(2.5deg); }
+        .collage-p9 { transform: rotate(-1deg); }
+        .collage-p10 { transform: rotate(3.5deg); }
+
+        @media (max-width: 768px) {
+            .sede-collage { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .collage-span-2 { grid-column: span 1; }
+            .collage-row-2 { grid-row: span 1; }
+            .collage-item { padding: 5px 5px 15px 5px; transform: none !important; }
+        }
+    </style>
+
+    <footer class="footer-horizontal">
+        <div class="container footer-flex">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Fundación Caminos">
+            </div>
+            
+            <div class="footer-info">
+                <p><i class="fas fa-map-marker-alt"></i> Teodoro García 3545, C1427ECA, Ciudad Autónoma de Buenos Aires</p>
+                <p><i class="fas fa-phone-alt"></i> Tel (+54-11) 4551-2141 &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fas fa-envelope"></i> secretariafcaminos@gmail.com</p>
+            </div>
+            
+            <div class="footer-firma">
+                Diseñado por<br>
+                <a href="https://www.somosnomade.com.ar" target="_blank">NOMADE</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send/?phone=541136953600&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp-btn-fijo" aria-label="Chat en WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <style>
+        .footer-horizontal {
+            background-color: var(--color-primario, #004aad);
+            color: white;
+            padding: 20px 0;
+            margin-top: auto;
+            border-top: 4px solid var(--color-acento, #FF7043);
+        }
+        .footer-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .footer-logo img {
+            height: 55px;
+            background: white;
+            padding: 5px 10px;
+            border-radius: 8px;
+            display: block;
+        }
+        .footer-info {
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .footer-info p { margin: 0; }
+        .footer-info i {
+            color: var(--color-acento, #FF7043);
+            margin-right: 6px;
+        }
+        .footer-firma {
+            text-align: right;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            line-height: 1.2;
+        }
+        .footer-firma a {
+            color: white;
+            font-weight: 800;
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+        }
+        .footer-firma a:hover { color: var(--color-acento, #FF7043); }
+
+        .whatsapp-btn-fijo {
+            position: fixed !important; bottom: 30px !important; right: 30px !important;
+            width: 60px !important; height: 60px !important; background-color: #25D366 !important;
+            color: white !important; border-radius: 50% !important; display: flex !important;
+            align-items: center !important; justify-content: center !important;
+            font-size: 35px !important; box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+            z-index: 2147483647 !important; text-decoration: none !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        }
+        .whatsapp-btn-fijo:hover {
+            transform: scale(1.1) !important; box-shadow: 0 6px 20px rgba(0,0,0,0.4) !important; color: white !important;
+        }
+
+        @media (max-width: 900px) {
+            .footer-flex { flex-direction: column; text-align: center; }
+            .footer-info { margin: 10px 0; }
+            .footer-firma { text-align: center; }
+            .footer-info p { margin-bottom: 5px; }
+        }
+    </style>
+    
     <script>
-        function abrirDia(evt, nombreDia) {
-            // Ocultar todo el contenido de las pestañas
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-                tabcontent[i].classList.remove("activo");
-            }
-            
-            // Sacar la clase "active" de todos los botones
-            tablinks = document.getElementsByClassName("tab-btn");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
-            }
-            
-            // Mostrar la pestaña actual y añadirle la clase "active" al botón
-            var tabActual = document.getElementById(nombreDia);
-            tabActual.style.display = "block";
-            
-            // Pequeño truco para reiniciar la animación
-            setTimeout(function() {
-                tabActual.classList.add("activo");
-            }, 10);
-            
-            evt.currentTarget.classList.add("active");
+        const navToggle = document.getElementById('nav-toggle');
+        const navList = document.querySelector('.nav-list');
+        if(navToggle){
+            navToggle.addEventListener('click', () => {
+                if(navList.style.display === 'flex'){
+                    navList.style.display = 'none';
+                } else {
+                    navList.style.display = 'flex';
+                    navList.style.flexDirection = 'column';
+                    navList.style.position = 'absolute';
+                    navList.style.top = '80px';
+                    navList.style.left = '0';
+                    navList.style.width = '100%';
+                    navList.style.background = 'white';
+                    navList.style.padding = '20px';
+                    navList.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+                }
+            });
         }
     </script>
 </body>
