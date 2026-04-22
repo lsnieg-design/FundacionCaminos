@@ -257,16 +257,16 @@
             <p style="max-width: 600px; margin: 0 auto 50px; color: #555;">Cada rincón de nuestra fundación está diseñado para alojar el deseo y potenciar la autonomía.</p>
             
             <div class="sede-grilla-puzzle">
-                <div class="puzzle-item span-2-2"><img src="sede/sede1.jpg" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/600x600?text=Sede+1'" alt="Sede 1"></div>
-                <div class="puzzle-item"><img src="sede/sede2.jpg" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/300x300?text=Sede+2'" alt="Sede 2"></div>
-                <div class="puzzle-item"><img src="sede/sede3.jpg" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/300x300?text=Sede+3'" alt="Sede 3"></div>
-                <div class="puzzle-item row-span-2"><img src="sede/sede4.png" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/300x600?text=Sede+4'" alt="Sede 4"></div>
-                <div class="puzzle-item"><img src="sede/sede5.png" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/300x300?text=Sede+5'" alt="Sede 5"></div>
-                <div class="puzzle-item span-2-1"><img src="sede/sede6.png" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/600x300?text=Sede+6'" alt="Sede 6"></div>
-                <div class="puzzle-item"><img src="sede/sede7.png" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/300x300?text=Sede+7'" alt="Sede 7"></div>
-                <div class="puzzle-item"><img src="sede/sede8.png" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/300x300?text=Sede+8'" alt="Sede 8"></div>
-                <div class="puzzle-item span-2-1"><img src="sede/sede9.png" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/600x300?text=Sede+9'" alt="Sede 9"></div>
-                <div class="puzzle-item"><img src="sede/sede10.png" onclick="abrirFoto(this.src)" onerror="this.src='https://placehold.co/300x300?text=Sede+10'" alt="Sede 10"></div>
+                <div class="puzzle-item span-2-2"><img src="sede/sede1.jpg" onclick="ampliarImagen(this)" onerror="this.src='https://placehold.co/600x600?text=Sede+1'" alt="Sede 1"></div>
+                <div class="puzzle-item"><img src="sede/sede2.jpg" onclick="ampliarImagen(this)" onerror="this.src='https://placehold.co/300x300?text=Sede+2'" alt="Sede 2"></div>
+                <div class="puzzle-item"><img src="sede/sede3.jpg" onclick="ampliarImagen(this)" onerror="this.src='https://placehold.co/300x300?text=Sede+3'" alt="Sede 3"></div>
+                <div class="puzzle-item row-span-2"><img src="sede/sede4.jpg" onclick="ampliarImagen(this)" onerror="this.src='https://placehold.co/300x600?text=Sede+4'" alt="Sede 4"></div>
+                <div class="puzzle-item"><img src="sede/sede5.jpg" onclick="ampliarImagen(this)" onerror="this.src='https://placehold.co/300x300?text=Sede+5'" alt="Sede 5"></div>
+                <div class="puzzle-item span-2-1"><img src="sede/sede6.jpg" onclick="ampliarImagen(this)" onerror="this.src='https://placehold.co/600x300?text=Sede+6'" alt="Sede 6"></div>
+                <div class="puzzle-item"><img src="sede/sede7.jpg" onclick="ampliarImagen(this)" onerror="this.src='https://placehold.co/300x300?text=Sede+7'" alt="Sede 7"></div>
+                <div class="puzzle-item"><img src="sede/sede8.jpg" onclick="ampliarImagen(this)" onerror="this.src='https://placehold.co/300x300?text=Sede+8'" alt="Sede 8"></div>
+                <div class="puzzle-item span-2-1"><img src="sede/sede9.jpg" onclick="ampliarImagen(this)" onerror="this.src='https://placehold.co/600x300?text=Sede+9'" alt="Sede 9"></div>
+                <div class="puzzle-item"><img src="sede/sede10.jpg" onclick="ampliarImagen(this)" onerror="this.src='https://placehold.co/300x300?text=Sede+10'" alt="Sede 10"></div>
             </div>
             
             <div class="text-center" style="margin-top: 60px;">
@@ -276,11 +276,6 @@
             </div>
         </div>
     </section>
-
-    <div id="modal-galeria" class="modal-galeria-overlay" onclick="cerrarFoto()">
-        <span class="cerrar-galeria">&times;</span>
-        <img id="img-ampliada" src="" alt="Foto ampliada">
-    </div>
 
     <style>
         /* --- CRONOGRAMA --- */
@@ -305,53 +300,50 @@
         .taller-contenedor.abierto .info-resumen { align-items: center; justify-content: center; }
         .detalle-taller { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background: white; border-radius: 0 0 8px 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
         .taller-contenedor.abierto .detalle-taller { border: 1px solid #eee; border-top: none; }
-        .detalle-contenido { padding: 20px; }
+        .detalle-contenido { padding: 15px 5px 5px 5px; }
         .detalle-contenido .profes { font-size: 0.85rem; color: #FF7043; font-weight: 800; font-family: 'Montserrat', sans-serif; margin-bottom: 10px; }
         .detalle-contenido .desc { font-size: 0.85rem; color: #666; line-height: 1.6; margin: 0; font-family: 'Lato', sans-serif; }
 
-        /* --- GALERÍA PUZZLE GEOMÉTRICA CON EFECTOS --- */
+        /* --- GALERÍA PUZZLE GEOMÉTRICA CON ZOOM EN EL LUGAR --- */
         .sede-grilla-puzzle {
             display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(100px, auto); gap: 10px; max-width: 1000px; margin: 0 auto; padding: 0 15px;
         }
-        /* Ajuste para mantener proporción cuadrada en pantallas grandes */
-        @media (min-width: 769px) { .sede-grilla-puzzle { grid-auto-rows: calc((1000px / 4) - 20px); } }
+        @media (min-width: 769px) { .sede-grilla-puzzle { grid-auto-rows: calc((1000px / 4) - 10px); } }
         
-        .puzzle-item { overflow: hidden; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: relative; cursor: pointer; background-color: #eee;}
+        .puzzle-item { overflow: hidden; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: relative; background: #eee; }
         
         .puzzle-item img { 
-            width: 100%; height: 100%; object-fit: cover; display: block; 
-            /* Efecto inicial: Blanco y negro */
-            filter: grayscale(100%);
-            transition: transform 0.5s ease, filter 0.5s ease;
+            width: 100%; height: 100%; object-fit: cover; display: block;
+            filter: grayscale(100%); 
+            transition: transform 0.4s ease, filter 0.4s ease; 
+            cursor: zoom-in;
         }
         
-        /* Efecto HOVER: Color y Zoom */
         .puzzle-item:hover img { 
             transform: scale(1.1); 
-            filter: grayscale(0%); /* Vuelve a color */
+            filter: grayscale(0%); 
         }
         
-        /* Clases de grilla */
+        /* LA MAGIA: CLASE QUE HACE QUE LA IMAGEN SALTE Y SE AGRANDE */
+        .img-ampliada-activa {
+            position: fixed !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) scale(1) !important;
+            width: 90vw !important;
+            height: 90vh !important;
+            max-width: 1000px !important;
+            object-fit: contain !important;
+            z-index: 9999999 !important;
+            box-shadow: 0 0 0 3000px rgba(0,0,0,0.85) !important; /* Crea el fondo oscuro */
+            filter: grayscale(0%) !important;
+            border-radius: 10px !important;
+            cursor: zoom-out !important;
+        }
+
         .span-2-2 { grid-column: span 2; grid-row: span 2; }
         .span-2-1 { grid-column: span 2; }
         .row-span-2 { grid-row: span 2; }
-
-        /* --- ESTILOS LIGHTBOX (Ventana modal) --- */
-        .modal-galeria-overlay {
-            display: none; /* Oculto por defecto */
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.9); z-index: 99999; /* Por encima de todo */
-            align-items: center; justify-content: center;
-            cursor: zoom-out;
-            animation: fadeIn 0.3s ease;
-        }
-        .modal-galeria-overlay.activo { display: flex; }
-        
-        .modal-galeria-overlay img { max-width: 90%; max-height: 90%; border: 3px solid white; border-radius: 4px; box-shadow: 0 0 30px rgba(0,0,0,0.5); object-fit: contain;}
-        
-        .cerrar-galeria { position: absolute; top: 20px; right: 30px; color: white; font-size: 50px; cursor: pointer; font-family: Arial, sans-serif;}
-        
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
         /* --- RESPONSIVE GENERAl --- */
         @media (max-width: 1000px) {
@@ -374,7 +366,7 @@
     </style>
 
     <script>
-        // Funcionalidad del Cronograma (Acordeón)
+        // Funcionalidad del Cronograma
         function toggleTaller(elemento) {
             var contenedor = elemento.parentElement;
             document.querySelectorAll('.taller-contenedor').forEach(c => {
@@ -392,30 +384,24 @@
             }
         }
 
-        // Funcionalidad de la Galería (Lightbox)
-        function abrirFoto(src) {
-            // No ampliar si es la imagen de error (placeholder)
-            if (src.includes('placehold.co')) return;
-            
-            const modal = document.getElementById('modal-galeria');
-            const imgAmpliada = document.getElementById('img-ampliada');
-            imgAmpliada.src = src;
-            modal.classList.add('activo');
-            // Bloquear scroll de la página de fondo
-            document.body.style.overflow = 'hidden';
-        }
+        // Funcionalidad de la Galería (Agrandar en el lugar)
+        function ampliarImagen(img) {
+            // Evitar que las de prueba se amplíen si falla la carga de tu imagen original
+            if (img.src.includes('placehold.co')) return;
 
-        function cerrarFoto() {
-            const modal = document.getElementById('modal-galeria');
-            modal.classList.remove('activo');
-            // Reactivar scroll
-            document.body.style.overflow = '';
+            if (img.classList.contains('img-ampliada-activa')) {
+                img.classList.remove('img-ampliada-activa');
+            } else {
+                // Cerramos cualquier otra que estuviera abierta por accidente
+                document.querySelectorAll('.img-ampliada-activa').forEach(el => el.classList.remove('img-ampliada-activa'));
+                img.classList.add('img-ampliada-activa');
+            }
         }
         
-        // Cerrar también con la tecla Esc
+        // Cerrar si se presiona la tecla Escape
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape") {
-                cerrarFoto();
+                document.querySelectorAll('.img-ampliada-activa').forEach(el => el.classList.remove('img-ampliada-activa'));
             }
         });
     </script>
