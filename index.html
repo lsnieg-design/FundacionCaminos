@@ -212,11 +212,54 @@
             <span class="subtitle">Alianzas</span>
             <h2 style="margin-bottom: 20px;">Quienes nos acompañan</h2>
             
-            <p style="max-width: 800px; margin: 0 auto 50px; color: #555; font-size: 1.1rem; line-height: 1.6; font-family: 'Lato', sans-serif;">
+            <p style="max-width: 800px; margin: 0 auto 40px; color: #555; font-size: 1.1rem; line-height: 1.6; font-family: 'Lato', sans-serif;">
                 A lo largo de nuestra trayectoria, diversas empresas han sido pilares fundamentales para nuestro crecimiento. Gracias a su compromiso, hemos logrado construir nuestra sede actual y equiparla con la mejor tecnología.
             </p>
+        </div>
 
-            <div class="logos-alianzas-grid">
+        <div class="logos-marquee">
+            <div class="logos-marquee-track">
+                <img src="logos/abb.png" alt="ABB">
+                <img src="logos/Marlew S.A..png" alt="Marlew S.A.">
+                <img src="logos/ParexKlaukol.jpeg" alt="ParexKlaukol">
+                <img src="logos/Baremes.jpeg" alt="Baremes">
+                <img src="logos/Doble A.png" alt="Doble A">
+                <img src="logos/ILVA.png" alt="ILVA">
+                <img src="logos/Rep-San.png" alt="Rep-San">
+                <img src="logos/Currao.png" alt="Currao">
+                <img src="logos/Genrod.png" alt="Genrod">
+                <img src="logos/Melisam.png" alt="Melisam">
+                <img src="logos/Philips.png" alt="Philips">
+                <img src="logos/Sika.png" alt="Sika">
+                <img src="logos/Artelum.png" alt="Artelum">
+                <img src="logos/Moblar.png" alt="Moblar">
+                <img src="logos/Lomax.png" alt="Lomax">
+                <img src="logos/Hidraulpas S.A..png" alt="Hidraulpas S.A.">
+                <img src="logos/BLOQ..png" alt="BLOQ">
+                <img src="logos/VASA.png" alt="VASA">
+                <img src="logos/Sinteplast.jpg" alt="Sinteplast">
+                <img src="logos/Herrajes San Martín.png" alt="Herrajes San Martín">
+                <img src="logos/Barbieri.png" alt="Barbieri">
+                <img src="logos/SHAP.png" alt="SHAP">
+                <img src="logos/M.A.C..png" alt="M.A.C.">
+                <img src="logos/Cerámica San Lorenzo.png" alt="Cerámica San Lorenzo">
+                <img src="logos/Revear.png" alt="Revear">
+                <img src="logos/Durlock.png" alt="Durlock">
+                <img src="logos/Sabelli S.R.L. (Aberturas).png" alt="Sabelli S.R.L.">
+                <img src="logos/Caños Luz Ayan.jpg" alt="Caños Luz Ayan">
+                <img src="logos/AluTecnic.png" alt="AluTecnic">
+                <img src="logos/T.A.S.png" alt="T.A.S.">
+                <img src="logos/PEISA.png" alt="PEISA">
+                <img src="logos/Cerámica Fanelli.png" alt="Cerámica Fanelli">
+                <img src="logos/Ferrum.png" alt="Ferrum">
+                <img src="logos/Prysmian.png" alt="Prysmian">
+                <img src="logos/Adiabatic.png" alt="Adiabatic">
+                <img src="logos/MyS Matyser S.A.png" alt="MyS Matyser S.A.">
+                <img src="logos/Tecnocom.png" alt="Tecnocom">
+                <img src="logos/Ingeniería Gastronómica.jpeg" alt="Ingeniería Gastronómica">
+                <img src="logos/Roker.jpeg" alt="Roker">
+                <img src="logos/FV.png" alt="FV">
+
                 <img src="logos/abb.png" alt="ABB">
                 <img src="logos/Marlew S.A..png" alt="Marlew S.A.">
                 <img src="logos/ParexKlaukol.jpeg" alt="ParexKlaukol">
@@ -258,8 +301,10 @@
                 <img src="logos/Roker.jpeg" alt="Roker">
                 <img src="logos/FV.png" alt="FV">
             </div>
+        </div>
 
-            <div style="background: white; border-radius: 20px; padding: 40px; max-width: 700px; margin: 0 auto; box-shadow: 0 10px 40px rgba(0,0,0,0.06); border-top: 5px solid var(--color-acento);">
+        <div class="container">
+            <div style="background: white; border-radius: 20px; padding: 40px; max-width: 700px; margin: 40px auto 0; box-shadow: 0 10px 40px rgba(0,0,0,0.06); border-top: 5px solid var(--color-acento);">
                 <h3 style="color: var(--color-primario); font-family: 'Montserrat', sans-serif; margin-bottom: 15px; font-size: 1.5rem;">Sumá tu empresa</h3>
                 
                 <p style="color: #555; font-size: 1.05rem; margin-bottom: 25px; font-family: 'Lato', sans-serif;">
@@ -270,9 +315,81 @@
                     <i class="fas fa-envelope" style="margin-right: 8px;"></i> Escribinos
                 </a>
             </div>
-
         </div>
     </section>
+
+    <style>
+        .logos-marquee {
+            width: 100%;
+            overflow: hidden;
+            background: white;
+            padding: 30px 0;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.02); /* Sombra interna sutil */
+            position: relative;
+        }
+        
+        /* Difuminado a los costados para que los logos aparezcan suavemente */
+        .logos-marquee::before, .logos-marquee::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 100%;
+            z-index: 2;
+        }
+        .logos-marquee::before {
+            left: 0;
+            background: linear-gradient(to right, white 0%, transparent 100%);
+        }
+        .logos-marquee::after {
+            right: 0;
+            background: linear-gradient(to left, white 0%, transparent 100%);
+        }
+
+        .logos-marquee-track {
+            display: flex;
+            align-items: center;
+            width: max-content;
+            /* Si querés que vaya más rápido o lento, cambiá los 80s (segundos) */
+            animation: scrollLogos 80s linear infinite;
+        }
+
+        /* Frena la animación cuando le pasás el mouse */
+        .logos-marquee:hover .logos-marquee-track {
+            animation-play-state: paused;
+        }
+
+        .logos-marquee-track img {
+            height: 65px;
+            margin: 0 35px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+        }
+
+        .logos-marquee-track img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.15);
+        }
+
+        @keyframes scrollLogos {
+            0% { transform: translateX(0); }
+            /* Se mueve exactamente la mitad (la primera tanda) y vuelve a empezar */
+            100% { transform: translateX(-50%); } 
+        }
+
+        @media (max-width: 768px) {
+            .logos-marquee-track img {
+                height: 50px;
+                margin: 0 25px;
+            }
+            .logos-marquee::before, .logos-marquee::after {
+                width: 50px;
+            }
+        }
+    </style>
 
     <style>
         .logos-alianzas-grid {
