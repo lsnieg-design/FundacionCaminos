@@ -44,9 +44,9 @@
         </div>
     </section>
 
-    <section class="section bg-light" style="padding-top: 40px;">
+    <section class="section pt-0 bg-light">
         <div class="container" style="max-width: 1200px;">
-            <h3 style="text-align: center; color: var(--color-primario); margin-bottom: 30px; font-size: 2rem;">Cronograma Semanal</h3>
+            <h3 style="text-align: center; color: var(--color-primario); margin-bottom: 40px; font-size: 2rem;">Cronograma Semanal</h3>
             
             <div class="calendario-semanal">
                 
@@ -250,23 +250,23 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section pt-0">
         <div class="container text-center">
             <span class="subtitle">Nuestra Casa</span>
             <h2 style="margin-bottom: 15px;">Un recorrido por la Sede</h2>
             <p style="max-width: 600px; margin: 0 auto 50px; color: #555;">Cada rincón de nuestra fundación está diseñado para alojar el deseo y potenciar la autonomía.</p>
             
-            <div class="sede-collage">
-                <div class="collage-item collage-p1"><img src="sede/sede1.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+1'" alt="Sede 1"></div>
-                <div class="collage-item collage-p2"><img src="sede/sede2.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+2'" alt="Sede 2"></div>
-                <div class="collage-item collage-p3 collage-span-2"><img src="sede/sede3.jpg" onerror="this.src='https://placehold.co/600x300?text=Sede+3'" alt="Sede 3"></div>
-                <div class="collage-item collage-p4"><img src="sede/sede4.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+4'" alt="Sede 4"></div>
-                <div class="collage-item collage-p5"><img src="sede/sede5.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+5'" alt="Sede 5"></div>
-                <div class="collage-item collage-p6 collage-row-2"><img src="sede/sede6.jpg" onerror="this.src='https://placehold.co/300x600?text=Sede+6'" alt="Sede 6"></div>
-                <div class="collage-item collage-p7"><img src="sede/sede7.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+7'" alt="Sede 7"></div>
-                <div class="collage-item collage-p8"><img src="sede/sede8.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+8'" alt="Sede 8"></div>
-                <div class="collage-item collage-p9 collage-span-2"><img src="sede/sede9.jpg" onerror="this.src='https://placehold.co/600x300?text=Sede+9'" alt="Sede 9"></div>
-                <div class="collage-item collage-p10"><img src="sede/sede10.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+10'" alt="Sede 10"></div>
+            <div class="sede-grilla-puzzle">
+                <div class="puzzle-item span-2-2"><img src="sede/sede1.jpg" onerror="this.src='https://placehold.co/600x600?text=Sede+1'" alt="Sede 1"></div>
+                <div class="puzzle-item"><img src="sede/sede2.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+2'" alt="Sede 2"></div>
+                <div class="puzzle-item"><img src="sede/sede3.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+3'" alt="Sede 3"></div>
+                <div class="puzzle-item row-span-2"><img src="sede/sede4.jpg" onerror="this.src='https://placehold.co/300x600?text=Sede+4'" alt="Sede 4"></div>
+                <div class="puzzle-item"><img src="sede/sede5.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+5'" alt="Sede 5"></div>
+                <div class="puzzle-item span-2-1"><img src="sede/sede6.jpg" onerror="this.src='https://placehold.co/600x300?text=Sede+6'" alt="Sede 6"></div>
+                <div class="puzzle-item"><img src="sede/sede7.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+7'" alt="Sede 7"></div>
+                <div class="puzzle-item"><img src="sede/sede8.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+8'" alt="Sede 8"></div>
+                <div class="puzzle-item span-2-1"><img src="sede/sede9.jpg" onerror="this.src='https://placehold.co/600x300?text=Sede+9'" alt="Sede 9"></div>
+                <div class="puzzle-item"><img src="sede/sede10.jpg" onerror="this.src='https://placehold.co/300x300?text=Sede+10'" alt="Sede 10"></div>
             </div>
             
             <div class="text-center" style="margin-top: 60px;">
@@ -279,51 +279,15 @@
 
     <style>
         /* CRONOGRAMA */
-        .calendario-semanal { 
-            display: grid; 
-            grid-template-columns: repeat(5, 1fr); 
-            gap: 15px; 
-            align-items: start;
-        }
-        .col-dia { 
-            display: flex; 
-            flex-direction: column; 
-            gap: 15px; 
-        }
+        .calendario-semanal { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; align-items: start; }
+        .col-dia { display: flex; flex-direction: column; gap: 15px; }
         
-        .cabecera-dia { 
-            background-color: #004aad; 
-            color: white; 
-            text-align: center; 
-            padding: 12px; 
-            border-radius: 8px; 
-            font-family: 'Montserrat', sans-serif; 
-            font-weight: 800; 
-            font-size: 1rem; 
-            letter-spacing: 1px; 
-        }
+        .cabecera-dia { background-color: #0042a5; color: white; text-align: center; padding: 12px; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: 1px; }
         
-        .taller-contenedor {
-            display: flex;
-            flex-direction: column;
-            background: transparent;
-            margin-bottom: 5px;
-        }
+        .taller-contenedor { display: flex; flex-direction: column; background: transparent; margin-bottom: 5px; }
 
-        .bloque-taller {
-            padding: 12px 15px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        .info-resumen {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-        }
+        .bloque-taller { padding: 12px 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border-radius: 8px; transition: all 0.3s ease; }
+        .info-resumen { display: flex; flex-direction: column; width: 100%; }
         
         .bg-manana { background-color: #eef5fc; border-left: 4px solid #3b82f6; }
         .bg-tarde { background-color: #fdf5ea; border-left: 4px solid #ff9800; }
@@ -333,70 +297,49 @@
         .nombre { font-size: 0.95rem; color: #333; font-family: 'Montserrat', sans-serif; font-weight: 800; line-height: 1.3; }
         .icono { color: #666; transition: transform 0.3s ease; font-size: 0.9rem; margin-left: 10px;}
 
-        /* CUANDO EL TALLER ESTÁ ABIERTO (Se vuelve caja azul) */
-        .taller-contenedor.abierto .bloque-taller {
-            background-color: #004aad !important;
-            border-left: 4px solid #004aad !important;
-            border-radius: 8px;
-            padding: 20px 15px;
-        }
+        /* CUANDO EL TALLER ESTÁ ABIERTO */
+        .taller-contenedor.abierto .bloque-taller { background-color: #004aad !important; border-left: 4px solid #004aad !important; border-radius: 8px 8px 0 0; padding: 20px 15px; }
         .taller-contenedor.abierto .hora { display: none; }
-        .taller-contenedor.abierto .icono { display: none; }
-        .taller-contenedor.abierto .nombre { 
-            color: white !important; 
-            text-align: center; 
-            font-size: 1.1rem; 
-            margin: 0 auto; 
-        }
-        .taller-contenedor.abierto .info-resumen {
-            align-items: center;
-            justify-content: center;
-        }
+        .taller-contenedor.abierto .icono { transform: rotate(180deg); color: white !important;}
+        .taller-contenedor.abierto .nombre { color: white !important; text-align: left; font-size: 1.1rem; }
 
-        .detalle-taller {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-out;
-            background: transparent;
-        }
-        .detalle-contenido {
-            padding: 15px 5px 5px 5px;
-        }
-        .detalle-contenido .profes {
-            font-size: 0.85rem;
-            color: #FF7043;
-            font-weight: 800;
-            font-family: 'Montserrat', sans-serif;
-            margin-bottom: 10px;
-        }
-        .detalle-contenido .desc {
-            font-size: 0.85rem;
-            color: #666;
-            line-height: 1.6;
-            margin: 0;
-            font-family: 'Lato', sans-serif;
-        }
+        .detalle-taller { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background: white; border-radius: 0 0 8px 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .taller-contenedor.abierto .detalle-taller { border: 1px solid #eee; border-top: none; }
+        .detalle-contenido { padding: 20px; }
+        .detalle-contenido .profes { font-size: 0.85rem; color: #FF7043; font-weight: 800; font-family: 'Montserrat', sans-serif; margin-bottom: 10px; }
+        .detalle-contenido .desc { font-size: 0.85rem; color: #666; line-height: 1.6; margin: 0; font-family: 'Lato', sans-serif; }
 
-        /* COLLAGE */
-        .sede-collage { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; padding: 10px; max-width: 1000px; margin: 0 auto; }
-        .collage-item { background: white; padding: 8px 8px 25px 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: all 0.4s ease; cursor: pointer; z-index: 1; position: relative; }
-        .collage-item:hover { transform: scale(1.15) rotate(0deg) !important; box-shadow: 0 10px 25px rgba(0,0,0,0.2); z-index: 10; }
-        .collage-item img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: filter 0.4s ease; }
-        .collage-item:hover img { filter: grayscale(0%); }
-        .collage-span-2 { grid-column: span 2; }
-        .collage-row-2 { grid-row: span 2; }
-        .collage-p1 { transform: rotate(-3deg); } .collage-p2 { transform: rotate(2deg); } .collage-p3 { transform: rotate(-1.5deg); } .collage-p4 { transform: rotate(3deg); } .collage-p5 { transform: rotate(-2.5deg); } .collage-p6 { transform: rotate(1.5deg); } .collage-p7 { transform: rotate(-4deg); } .collage-p8 { transform: rotate(2.5deg); } .collage-p9 { transform: rotate(-1deg); } .collage-p10 { transform: rotate(3.5deg); }
+        /* GALERÍA PUZZLE GEOMÉTRICA */
+        .sede-grilla-puzzle {
+            display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(100px, auto); gap: 10px; max-width: 1000px; margin: 0 auto; padding: 0 15px;
+        }
+        @media (min-width: 769px) { .sede-grilla-puzzle { grid-auto-rows: calc((1000px / 4) - 10px); } }
+        
+        .puzzle-item { overflow: hidden; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: relative; }
+        .puzzle-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
+        .puzzle-item:hover img { transform: scale(1.1); }
+        
+        .span-2-2 { grid-column: span 2; grid-row: span 2; }
+        .span-2-1 { grid-column: span 2; }
+        .row-span-2 { grid-row: span 2; }
 
+        /* RESPONSIVE (Ambas secciones) */
         @media (max-width: 1000px) {
             .calendario-semanal { grid-template-columns: repeat(2, 1fr); }
             .col-dia:last-child { grid-column: span 2; }
-            .sede-collage { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-            .collage-span-2 { grid-column: span 1; } .collage-row-2 { grid-row: span 1; }
-            .collage-item { padding: 5px 5px 15px 5px; transform: none !important; }
+        }
+        @media (max-width: 768px) {
+            .sede-grilla-puzzle { grid-template-columns: repeat(3, 1fr); grid-auto-rows: minmax(150px, auto); gap: 8px; }
+            .span-2-2, .span-2-1, .row-span-2 { grid-column: span 1; grid-row: span 1; }
+            .puzzle-item:first-child { grid-column: span 2; grid-row: span 2; }
         }
         @media (max-width: 600px) {
             .calendario-semanal { grid-template-columns: 1fr; }
             .col-dia:last-child { grid-column: span 1; }
+        }
+        @media (max-width: 480px) {
+            .sede-grilla-puzzle { grid-template-columns: repeat(2, 1fr); gap: 5px; }
+            .puzzle-item:first-child { grid-column: span 2; grid-row: span 2; }
         }
     </style>
 
