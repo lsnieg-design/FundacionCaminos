@@ -47,16 +47,40 @@
 
     <section class="section pt-0 bg-light">
         <div class="container" style="max-width: 1200px;">
-            <h3 style="text-align: center; color: var(--color-primario); margin-bottom: 40px; font-size: 2rem;">Cronograma Semanal</h3>
+            <h3 style="text-align: center; color: var(--color-primario); margin-bottom: 20px; font-size: 2rem;">Cronograma Semanal</h3>
+            
+            <div class="filtros-container text-center">
+                <button class="btn-filtro activo" onclick="filtrarGrupo('todos', this)">Ver Todos</button>
+                <button class="btn-filtro filtro-g1" onclick="filtrarGrupo('grupo1', this)">Grupo 1</button>
+                <button class="btn-filtro filtro-g2" onclick="filtrarGrupo('grupo2', this)">Grupo 2</button>
+            </div>
             
             <div class="calendario-semanal">
                 
                 <div class="col-dia">
                     <div class="cabecera-dia">LUNES</div>
                     
-                    <div class="taller-contenedor">
-                        <div class="bloque-taller bg-manana" onclick="toggleTaller(this)">
+                    <div class="taller-contenedor grupo1">
+                        <div class="bloque-taller bg-grupo1" onclick="toggleTaller(this)">
                             <div class="info-resumen">
+                                <span class="tag-g1">GRUPO 1</span>
+                                <span class="hora">9:00 a 12:00</span>
+                                <span class="nombre">Cocina Productiva</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/004aad/fff?text=Cocina" alt="Cocina">
+                                <p class="desc">Durante el ciclo 2026 nos enfocaremos en la producción de distintos productos destinados tanto a comidas del centro como a la venta interna. Organizaremos encuentros repitiendo la elaboración (muffins, pizzetas, mermeladas, panificados) para afianzar técnicas y ganar seguridad.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="taller-contenedor grupo2">
+                        <div class="bloque-taller bg-grupo2" onclick="toggleTaller(this)">
+                            <div class="info-resumen">
+                                <span class="tag-g2">GRUPO 2</span>
                                 <span class="hora">9:00 a 12:00</span>
                                 <span class="nombre">Artes Visuales</span>
                             </div>
@@ -64,15 +88,35 @@
                         </div>
                         <div class="detalle-taller">
                             <div class="detalle-contenido">
-                                <p class="profes">Coordinan: Solana y Lucila</p>
-                                <p class="desc">Se van a ofrecer dos propuestas: una es trabajar con CARTELERÍA mediante sellos de fácil factura con iconos y tipografías. La otra es DISEÑO TEXTIL, partiendo de los mantos de Paracas (Perú), observando su estética y mitología.</p>
+                                <img src="https://placehold.co/600x300/ff9800/fff?text=Artes+Visuales" alt="Artes Visuales">
+                                <p class="profes">Coordinan: Gustavo y Lucila</p>
+                                <p class="desc">Dos propuestas: CARTELERÍA mediante sellos con símbolos y tipografías para construir consignas y circular en el espacio público. DISEÑO TEXTIL basado en los mantos de PARACAS (Perú), observando su estética y mitología.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="taller-contenedor">
-                        <div class="bloque-taller bg-tarde" onclick="toggleTaller(this)">
+                    <div class="taller-contenedor grupo1">
+                        <div class="bloque-taller bg-grupo1" onclick="toggleTaller(this)">
                             <div class="info-resumen">
+                                <span class="tag-g1">GRUPO 1</span>
+                                <span class="hora">13:00 a 16:00</span>
+                                <span class="nombre">Relatos de la Huerta</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/004aad/fff?text=Huerta" alt="Huerta">
+                                <p class="profes">Coordinan: Hansi y Gus</p>
+                                <p class="desc">Continuidad en la producción de aromáticas, sumando venta/distribución y confección de sales saborizadas. Sumamos un espacio de lectura y narración como herramienta de sensibilización ambiental.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="taller-contenedor grupo2">
+                        <div class="bloque-taller bg-grupo2" onclick="toggleTaller(this)">
+                            <div class="info-resumen">
+                                <span class="tag-g2">GRUPO 2</span>
                                 <span class="hora">13:00 a 16:00</span>
                                 <span class="nombre">Cocina Productiva</span>
                             </div>
@@ -80,8 +124,8 @@
                         </div>
                         <div class="detalle-taller">
                             <div class="detalle-contenido">
-                                <p class="profes">Coordinan: Equipo de Centro de Día</p>
-                                <p class="desc">Nos enfocaremos en la producción destinada a las comidas del centro y a la venta interna. Repetiremos cada mes la elaboración de muffins, pizzetas y panificados para afianzar técnicas culinarias.</p>
+                                <img src="https://placehold.co/600x300/ff9800/fff?text=Cocina" alt="Cocina">
+                                <p class="desc">Enfoque en la producción destinada a comidas y colaciones del centro, y a la venta interna. Repetiremos cada mes la elaboración de muffins, pizzetas, mermeladas y panificados para afianzar técnicas culinarias.</p>
                             </div>
                         </div>
                     </div>
@@ -90,25 +134,63 @@
                 <div class="col-dia">
                     <div class="cabecera-dia">MARTES</div>
                     
-                    <div class="taller-contenedor">
-                        <div class="bloque-taller bg-manana" onclick="toggleTaller(this)">
+                    <div class="taller-contenedor grupo1">
+                        <div class="bloque-taller bg-grupo1" onclick="toggleTaller(this)">
                             <div class="info-resumen">
+                                <span class="tag-g1">GRUPO 1</span>
                                 <span class="hora">9:00 a 12:00</span>
-                                <span class="nombre">Deportes en Mov.</span>
+                                <span class="nombre">Artes Visuales</span>
                             </div>
                             <i class="fas fa-chevron-down icono"></i>
                         </div>
                         <div class="detalle-taller">
                             <div class="detalle-contenido">
-                                <p class="profes">Coordinan: Vane y Fercha</p>
-                                <p class="desc">Invita a participar de manera activa con el cuerpo. Realizamos preparación física, yoga y entrenamiento funcional, seguido de un trabajo en “las cachitas” con actividades deportivas y juegos pre-deportivos.</p>
+                                <img src="https://placehold.co/600x300/004aad/fff?text=Artes+Visuales" alt="Artes">
+                                <p class="profes">Coordinan: Solana, Lucila y Gus</p>
+                                <p class="desc">Dos propuestas: LLEGÓ CARTA (poner en contexto la comunicación postal, redacción y sellado). CUADERNO DE ARTISTA (armado de un cuaderno personal con recursos visuales, hallazgos y escritos sobre la vida cotidiana).</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="taller-contenedor">
-                        <div class="bloque-taller bg-tarde" onclick="toggleTaller(this)">
+                    <div class="taller-contenedor grupo2">
+                        <div class="bloque-taller bg-grupo2" onclick="toggleTaller(this)">
                             <div class="info-resumen">
+                                <span class="tag-g2">GRUPO 2</span>
+                                <span class="hora">9:00 a 12:00</span>
+                                <span class="nombre">Deportes en Movimiento</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/ff9800/fff?text=Deportes" alt="Deportes">
+                                <p class="profes">Coordinan: Vane y Fercha</p>
+                                <p class="desc">Invita a participar de manera activa con el cuerpo. Realizamos preparación física, yoga y entrenamiento funcional, seguido de trabajo en “las cachitas” con actividades y juegos pre-deportivos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="taller-contenedor grupo1">
+                        <div class="bloque-taller bg-grupo1" onclick="toggleTaller(this)">
+                            <div class="info-resumen">
+                                <span class="tag-g1">GRUPO 1</span>
+                                <span class="hora">13:00 a 16:00</span>
+                                <span class="nombre">En Movimiento</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/004aad/fff?text=Movimiento" alt="Movimiento">
+                                <p class="desc">Participación activa con su cuerpo lúdico, deportivo y artístico. Realizamos juegos y ejercicios de preparación física en distintos territorios, cambiando el escenario semanalmente para conectar con la movilidad corporal.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="taller-contenedor grupo2">
+                        <div class="bloque-taller bg-grupo2" onclick="toggleTaller(this)">
+                            <div class="info-resumen">
+                                <span class="tag-g2">GRUPO 2</span>
                                 <span class="hora">13:00 a 16:00</span>
                                 <span class="nombre">Streaming Punto y Coma</span>
                             </div>
@@ -116,8 +198,9 @@
                         </div>
                         <div class="detalle-taller">
                             <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/ff9800/fff?text=Streaming" alt="Streaming">
                                 <p class="profes">Coordinan: Matu, Blas y Lucila</p>
-                                <p class="desc">Ciclo radiofónico en formato streaming que combina contenidos de interés, música y una puesta en escena propia, generando un clima dinámico para encontrarnos con la audiencia.</p>
+                                <p class="desc">Espacio radiofónico en formato streaming que combina contenidos de interés, música y puesta en escena. Cada martes a las 15 hs tomamos el aire por YouTube compartiendo con nuestra audiencia. ¡Les esperamos!</p>
                             </div>
                         </div>
                     </div>
@@ -126,9 +209,28 @@
                 <div class="col-dia">
                     <div class="cabecera-dia">MIÉRCOLES</div>
                     
-                    <div class="taller-contenedor">
-                        <div class="bloque-taller bg-manana" onclick="toggleTaller(this)">
+                    <div class="taller-contenedor grupo1">
+                        <div class="bloque-taller bg-grupo1" onclick="toggleTaller(this)">
                             <div class="info-resumen">
+                                <span class="tag-g1">GRUPO 1</span>
+                                <span class="hora">9:00 a 12:00</span>
+                                <span class="nombre">Autonomía</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/004aad/fff?text=Autonomia" alt="Autonomia">
+                                <p class="profes">Coordinan: Juli, Ayelen y Hansi</p>
+                                <p class="desc">Se brindan herramientas y espacios de práctica relacionados a la planificación y la gestión para la autonomía en la adultez. La propuesta se centra en visibilizar el accionar cotidiano y fortalecer su rol protagónico.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="taller-contenedor grupo2">
+                        <div class="bloque-taller bg-grupo2" onclick="toggleTaller(this)">
+                            <div class="info-resumen">
+                                <span class="tag-g2">GRUPO 2</span>
                                 <span class="hora">9:00 a 12:00</span>
                                 <span class="nombre">Miradas Críticas</span>
                             </div>
@@ -136,15 +238,35 @@
                         </div>
                         <div class="detalle-taller">
                             <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/ff9800/fff?text=Miradas+Criticas" alt="Miradas">
                                 <p class="profes">Coordinan: Matías y Gus</p>
-                                <p class="desc">Esta propuesta invita a abrir un espacio de diálogo entre distintos fenómenos socio-culturales, políticos y económicos del pasado y sus resonancias en la actualidad mediante debates y podcasts.</p>
+                                <p class="desc">Espacio de diálogo sobre fenómenos socio-culturales, políticos y económicos y sus resonancias en la actualidad. Trabajamos mediante debates, entrevistas y producción de podcasts para construir miradas críticas colectivas.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="taller-contenedor">
-                        <div class="bloque-taller bg-tarde" onclick="toggleTaller(this)">
+                    <div class="taller-contenedor grupo1">
+                        <div class="bloque-taller bg-grupo1" onclick="toggleTaller(this)">
                             <div class="info-resumen">
+                                <span class="tag-g1">GRUPO 1</span>
+                                <span class="hora">13:00 a 16:00</span>
+                                <span class="nombre">En Primer Plano</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/004aad/fff?text=Fotografia" alt="Foto">
+                                <p class="profes">Coordinan: Lucila y Gus</p>
+                                <p class="desc">Trabajaremos a partir de la imagen estática y la observación. Contar una historia a partir de un retrato mediante experimentación fotográfica y luego sumar sonido: voz en off, sonido ambiente y musicalización.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="taller-contenedor grupo2">
+                        <div class="bloque-taller bg-grupo2" onclick="toggleTaller(this)">
+                            <div class="info-resumen">
+                                <span class="tag-g2">GRUPO 2</span>
                                 <span class="hora">13:00 a 16:00</span>
                                 <span class="nombre">Obra en Acción</span>
                             </div>
@@ -152,8 +274,9 @@
                         </div>
                         <div class="detalle-taller">
                             <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/ff9800/fff?text=Teatro" alt="Teatro">
                                 <p class="profes">Coordinan: Mahia y Fer</p>
-                                <p class="desc">Taller de teatro que invita a participar de manera activa con el cuerpo expresivo. Realizamos juegos y preparación corporal escénica con el objetivo de presentar obras en espacios culturales de la ciudad.</p>
+                                <p class="desc">El taller de teatro invita a participar de manera activa con el cuerpo expresivo. Se enfoca en realizar juegos y ejercicios de preparación corporal escénica con el objetivo de presentar la obra en espacios culturales.</p>
                             </div>
                         </div>
                     </div>
@@ -162,9 +285,28 @@
                 <div class="col-dia">
                     <div class="cabecera-dia">JUEVES</div>
                     
-                    <div class="taller-contenedor">
-                        <div class="bloque-taller bg-manana" onclick="toggleTaller(this)">
+                    <div class="taller-contenedor grupo1">
+                        <div class="bloque-taller bg-grupo1" onclick="toggleTaller(this)">
                             <div class="info-resumen">
+                                <span class="tag-g1">GRUPO 1</span>
+                                <span class="hora">9:00 a 12:00</span>
+                                <span class="nombre">Aliados Digitales</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/004aad/fff?text=IA+Tecnologia" alt="Digitales">
+                                <p class="profes">Coordinan: Maru y Aye</p>
+                                <p class="desc">El objetivo principal es poner en práctica el uso de la Inteligencia Artificial como herramienta potenciadora de la autonomía. Buscamos que utilicen la IA de manera práctica para fomentar la creatividad y la participación en su entorno.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="taller-contenedor grupo2">
+                        <div class="bloque-taller bg-grupo2" onclick="toggleTaller(this)">
+                            <div class="info-resumen">
+                                <span class="tag-g2">GRUPO 2</span>
                                 <span class="hora">9:00 a 10:30</span>
                                 <span class="nombre">Espacio Productivo</span>
                             </div>
@@ -172,15 +314,17 @@
                         </div>
                         <div class="detalle-taller">
                             <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/ff9800/fff?text=Productivo" alt="Productivo">
                                 <p class="profes">Coordinan: Lara, Juli y Carlos</p>
-                                <p class="desc">Orientado a la exploración de intereses vinculados al ámbito laboral. Fortalecemos destrezas, participamos en producción comunitaria y conocemos sobre derechos laborales y modalidades de empleo.</p>
+                                <p class="desc">Exploración de intereses y desarrollo de habilidades vinculadas al ámbito laboral. Participación en producción, intercambio con la comunidad y acceso a información sobre derechos laborales y modalidades de empleo.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="taller-contenedor">
-                        <div class="bloque-taller bg-especial" onclick="toggleTaller(this)">
+                    <div class="taller-contenedor grupo2">
+                        <div class="bloque-taller bg-grupo2" onclick="toggleTaller(this)">
                             <div class="info-resumen">
+                                <span class="tag-g2">GRUPO 2</span>
                                 <span class="hora">11:00 a 12:00</span>
                                 <span class="nombre">Coronautas</span>
                             </div>
@@ -188,15 +332,34 @@
                         </div>
                         <div class="detalle-taller">
                             <div class="detalle-contenido">
-                                <p class="profes">Coordinan: Equipo de Música</p>
-                                <p class="desc">Espacio orientado a la exploración y la expresión musical a través de la actividad coral. Promueve el trabajo grupal y el disfrute de hacer música juntos.</p>
+                                <img src="https://placehold.co/600x300/ff9800/fff?text=Coro" alt="Musica">
+                                <p class="desc">Espacio orientado a la exploración y expresión musical a través de la actividad coral. Promueve la expresión artística, el trabajo grupal y el disfrute de hacer música juntos en un clima participativo.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="taller-contenedor">
-                        <div class="bloque-taller bg-tarde" onclick="toggleTaller(this)">
+                    <div class="taller-contenedor grupo1">
+                        <div class="bloque-taller bg-grupo1" onclick="toggleTaller(this)">
                             <div class="info-resumen">
+                                <span class="tag-g1">GRUPO 1</span>
+                                <span class="hora">13:00 a 16:00</span>
+                                <span class="nombre">Taller de Teatro</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/004aad/fff?text=Teatro" alt="Teatro">
+                                <p class="profes">Coordinan: Mahia y Gus</p>
+                                <p class="desc">Los coordinadores invitan a cada concurrente a participar activamente con su cuerpo expresivo. Realizaremos juegos y preparación escénica para poder actuar y presentar obras en diferentes espacios culturales.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="taller-contenedor grupo2">
+                        <div class="bloque-taller bg-grupo2" onclick="toggleTaller(this)">
+                            <div class="info-resumen">
+                                <span class="tag-g2">GRUPO 2</span>
                                 <span class="hora">13:00 a 16:00</span>
                                 <span class="nombre">Tecno y Vida Diaria</span>
                             </div>
@@ -204,8 +367,9 @@
                         </div>
                         <div class="detalle-taller">
                             <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/ff9800/fff?text=Tecnologia" alt="Tecno">
                                 <p class="profes">Coordinan: Mai, Juli y Maru</p>
-                                <p class="desc">Combinamos habilidades digitales con la práctica cotidiana. Exploramos herramientas informáticas, aplicaciones y rutinas diarias con visitas semanales a nuestro departamento anexo.</p>
+                                <p class="desc">Combinamos habilidades digitales con la práctica cotidiana. Trabajaremos en informática, aplicaciones y autonomía en rutinas diarias, con visitas semanales al departamento anexo y consultoría personal.</p>
                             </div>
                         </div>
                     </div>
@@ -214,9 +378,28 @@
                 <div class="col-dia">
                     <div class="cabecera-dia">VIERNES</div>
                     
-                    <div class="taller-contenedor">
-                        <div class="bloque-taller bg-manana" onclick="toggleTaller(this)">
+                    <div class="taller-contenedor grupo1">
+                        <div class="bloque-taller bg-grupo1" onclick="toggleTaller(this)">
                             <div class="info-resumen">
+                                <span class="tag-g1">GRUPO 1</span>
+                                <span class="hora">9:00 a 11:00</span>
+                                <span class="nombre">Varieté Urbana</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/004aad/fff?text=Ciudad" alt="Ciudad">
+                                <p class="profes">Coordinan: Carlos, Matu y Vane</p>
+                                <p class="desc">Propuesta que invita a explorar el mundo urbano y sus escenarios. El objetivo será favorecer la interacción con la comunidad a través del trabajo grupal, propiciando instancias de participación y encuentro.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="taller-contenedor grupo2">
+                        <div class="bloque-taller bg-grupo2" onclick="toggleTaller(this)">
+                            <div class="info-resumen">
+                                <span class="tag-g2">GRUPO 2</span>
                                 <span class="hora">9:00 a 12:00</span>
                                 <span class="nombre">Foto-Calendario</span>
                             </div>
@@ -224,15 +407,52 @@
                         </div>
                         <div class="detalle-taller">
                             <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/ff9800/fff?text=Calendario" alt="Calendario">
                                 <p class="profes">Coordinan: Lucila y Maru</p>
-                                <p class="desc">Creación de un calendario anual con doce imágenes. La temática elegida es "personajes argentinxs", donde los retratos serán ficcionados y producidos íntegramente en grupo.</p>
+                                <p class="desc">Creación de un calendario anual con doce imágenes. La temática elegida es “personajes argentin@s”. Las fotografías serán retratos ficcionados y producidos por los grupos.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="taller-contenedor">
-                        <div class="bloque-taller bg-tarde" onclick="toggleTaller(this)">
+                    <div class="taller-contenedor grupo1">
+                        <div class="bloque-taller bg-grupo1" onclick="toggleTaller(this)">
                             <div class="info-resumen">
+                                <span class="tag-g1">GRUPO 1</span>
+                                <span class="hora">11:00 a 12:00</span>
+                                <span class="nombre">Coronautas</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/004aad/fff?text=Coro" alt="Musica">
+                                <p class="desc">Espacio orientado a la exploración y la expresión musical a través de la actividad coral. Promueve la expresión artística, el trabajo grupal y el disfrute de hacer música juntos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="taller-contenedor grupo1">
+                        <div class="bloque-taller bg-grupo1" onclick="toggleTaller(this)">
+                            <div class="info-resumen">
+                                <span class="tag-g1">GRUPO 1</span>
+                                <span class="hora">13:00 a 16:00</span>
+                                <span class="nombre">Foto Cronistas</span>
+                            </div>
+                            <i class="fas fa-chevron-down icono"></i>
+                        </div>
+                        <div class="detalle-taller">
+                            <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/004aad/fff?text=Fotografia" alt="Foto">
+                                <p class="profes">Coordinan: Lucila y Maru</p>
+                                <p class="desc">Registro íntegro de la vida en la Fundación y su entorno a través de fotografías. Los concurrentes indagarán en las actividades cotidianas, el Anexo de vida independiente y los intercambios con el barrio.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="taller-contenedor grupo2">
+                        <div class="bloque-taller bg-grupo2" onclick="toggleTaller(this)">
+                            <div class="info-resumen">
+                                <span class="tag-g2">GRUPO 2</span>
                                 <span class="hora">13:00 a 16:00</span>
                                 <span class="nombre">Ludoteca Rodante</span>
                             </div>
@@ -240,8 +460,9 @@
                         </div>
                         <div class="detalle-taller">
                             <div class="detalle-contenido">
+                                <img src="https://placehold.co/600x300/ff9800/fff?text=Ludoteca" alt="Ludoteca">
                                 <p class="profes">Coordinan: Hansi, Fercha y Vane</p>
-                                <p class="desc">Espacio de creación y realización de juegos, actividades recreativas y lectura de cuentos dirigidos hacia la comunidad barrial, instituciones educativas y espacios culturales.</p>
+                                <p class="desc">Participación activa en un espacio de creación y realización de juegos, actividades recreativas y lectura de cuentos para y con la comunidad barrial, instituciones educativas y espacios culturales.</p>
                             </div>
                         </div>
                     </div>
@@ -279,88 +500,104 @@
     </section>
 
     <style>
-        /* --- CRONOGRAMA --- */
+        /* FILTROS DE GRUPOS */
+        .filtros-container {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .btn-filtro {
+            background: white;
+            border: 2px solid #ccc;
+            color: #666;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-filtro:hover { background: #f0f0f0; }
+        
+        .btn-filtro.activo {
+            background: #333;
+            color: white;
+            border-color: #333;
+        }
+        .filtro-g1.activo { background: var(--color-primario); border-color: var(--color-primario); }
+        .filtro-g2.activo { background: var(--color-acento); border-color: var(--color-acento); }
+
+        /* CRONOGRAMA Y COLUMNAS */
         .calendario-semanal { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; align-items: start; }
-        .col-dia { display: flex; flex-direction: column; gap: 15px; }
-        .cabecera-dia { background-color: #004aad; color: white; text-align: center; padding: 12px; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: 1px; }
-        .taller-contenedor { display: flex; flex-direction: column; background: transparent; margin-bottom: 5px; }
+        .col-dia { display: flex; flex-direction: column; gap: 12px; }
+        .cabecera-dia { background-color: #333; color: white; text-align: center; padding: 12px; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: 1px; }
+        
+        .taller-contenedor { display: flex; flex-direction: column; background: transparent; margin-bottom: 5px; transition: all 0.4s ease;}
+        
         .bloque-taller { padding: 12px 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border-radius: 8px; transition: all 0.3s ease; }
-        .info-resumen { display: flex; flex-direction: column; width: 100%; }
-        .bg-manana { background-color: #eef5fc; border-left: 4px solid #3b82f6; }
-        .bg-tarde { background-color: #fdf5ea; border-left: 4px solid #ff9800; }
-        .bg-especial { background-color: #f4e9f5; border-left: 4px solid #9c27b0; }
-        .hora { font-size: 0.75rem; color: #555; margin-bottom: 5px; font-family: 'Lato', sans-serif; font-weight: 700;}
+        .info-resumen { display: flex; flex-direction: column; width: 100%; position: relative; }
+        
+        /* ESTILOS GRUPO 1 (Azul) */
+        .bg-grupo1 { background-color: #eef5fc; border-left: 4px solid var(--color-primario); }
+        .tag-g1 { font-size: 0.65rem; background: var(--color-primario); color: white; padding: 3px 8px; border-radius: 10px; width: max-content; margin-bottom: 5px; font-weight: bold;}
+        
+        /* ESTILOS GRUPO 2 (Naranja) */
+        .bg-grupo2 { background-color: #fdf5ea; border-left: 4px solid var(--color-acento); }
+        .tag-g2 { font-size: 0.65rem; background: var(--color-acento); color: white; padding: 3px 8px; border-radius: 10px; width: max-content; margin-bottom: 5px; font-weight: bold;}
+        
+        .hora { font-size: 0.75rem; color: #555; margin-bottom: 3px; font-family: 'Lato', sans-serif; font-weight: 700;}
         .nombre { font-size: 0.95rem; color: #333; font-family: 'Montserrat', sans-serif; font-weight: 800; line-height: 1.3; }
         .icono { color: #666; transition: transform 0.3s ease; font-size: 0.9rem; margin-left: 10px;}
 
-        /* Taller Abierto */
-        .taller-contenedor.abierto .bloque-taller { background-color: #004aad !important; border-left: 4px solid #004aad !important; border-radius: 8px 8px 0 0; padding: 20px 15px; }
+        /* CUANDO EL TALLER ESTÁ ABIERTO */
+        .taller-contenedor.abierto .bg-grupo1 { background-color: var(--color-primario) !important; color: white !important;}
+        .taller-contenedor.abierto .bg-grupo2 { background-color: var(--color-acento) !important; color: white !important;}
+        
+        .taller-contenedor.abierto .bloque-taller { border-radius: 8px 8px 0 0; padding: 20px 15px; }
+        .taller-contenedor.abierto .tag-g1, .taller-contenedor.abierto .tag-g2, 
         .taller-contenedor.abierto .hora { display: none; }
+        
         .taller-contenedor.abierto .icono { transform: rotate(180deg); color: white !important;}
         .taller-contenedor.abierto .nombre { color: white !important; text-align: center; font-size: 1.1rem; margin: 0 auto; }
         .taller-contenedor.abierto .info-resumen { align-items: center; justify-content: center; }
+        
         .detalle-taller { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background: white; border-radius: 0 0 8px 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
         .taller-contenedor.abierto .detalle-taller { border: 1px solid #eee; border-top: none; }
-        .detalle-contenido { padding: 20px; }
-        .detalle-contenido .profes { font-size: 0.85rem; color: #FF7043; font-weight: 800; font-family: 'Montserrat', sans-serif; margin-bottom: 10px; }
-        .detalle-contenido .desc { font-size: 0.85rem; color: #666; line-height: 1.6; margin: 0; font-family: 'Lato', sans-serif; }
+        .detalle-contenido { padding: 15px; }
+        .detalle-contenido img { width: 100%; height: 120px; object-fit: cover; border-radius: 5px; margin-bottom: 10px;}
+        .detalle-contenido .profes { font-size: 0.85rem; color: #333; font-weight: 800; font-family: 'Montserrat', sans-serif; margin-bottom: 8px; }
+        .detalle-contenido .desc { font-size: 0.85rem; color: #666; line-height: 1.5; margin: 0; font-family: 'Lato', sans-serif; }
 
-        /* --- GALERÍA GEOMÉTRICA CON AMPLIACIÓN EXACTAMENTE EN EL LUGAR --- */
-        .sede-grilla-puzzle {
-            display: grid; 
-            grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-            gap: 15px; 
-            max-width: 1200px; margin: 0 auto; padding: 0 15px;
-        }
-        
-        .puzzle-item { 
-            position: relative; 
-            border-radius: 8px; 
-            background: #eee;
-            width: 100%;
-            padding-top: 100%; /* Mantiene las cajas perfectamente cuadradas */
-            z-index: 1; /* z-index base */
-        }
-        
-        .puzzle-item img { 
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
-            object-fit: cover; display: block; 
-            filter: grayscale(100%); 
-            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Animación elástica suave */
-            cursor: pointer; 
-            border-radius: 8px;
-        }
-        
-        /* Efecto Hover: Color y zoom pequeño */
+        /* GALERÍA GEOMÉTRICA CON AMPLIACIÓN EXACTAMENTE EN EL LUGAR */
+        .sede-grilla-puzzle { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+        .puzzle-item { position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); background: #eee; width: 100%; padding-top: 100%; z-index: 1; }
+        .puzzle-item img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(100%); transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); cursor: zoom-in; z-index: 1; border-radius: 8px; }
         .puzzle-item:hover { z-index: 10; }
-        .puzzle-item:hover img:not(.ampliada) { 
-            transform: scale(1.05); 
-            filter: grayscale(0%); 
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
+        .puzzle-item:hover img:not(.img-ampliada-activa) { transform: scale(1.05); filter: grayscale(0%); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
         
-        /* LA CLAVE: CLASE QUE LO AGRANDA EN EL LUGAR Y TAPA EL RESTO */
-        .puzzle-item.abierto { z-index: 100; }
-        .puzzle-item.abierto img.ampliada {
-            transform: scale(1.7); /* Se agranda un 70% sobre sí misma */
-            filter: grayscale(0%);
-            box-shadow: 0 15px 50px rgba(0,0,0,0.5);
-            border: 4px solid white; /* Le damos un marquito blanco para que se despegue */
+        .img-ampliada-activa {
+            position: fixed !important; top: 50% !important; left: 50% !important;
+            transform: translate(-50%, -50%) scale(1) !important;
+            width: auto !important; height: auto !important; max-width: 90vw !important; max-height: 90vh !important;
+            object-fit: contain !important; z-index: 9999999 !important;
+            box-shadow: 0 0 0 3000px rgba(0,0,0,0.85) !important;
+            filter: grayscale(0%) !important; border-radius: 10px !important; cursor: zoom-out !important;
         }
+        .puzzle-item.abierto { z-index: 100; }
+        .puzzle-item.abierto img.ampliada { transform: scale(1.7); filter: grayscale(0%); box-shadow: 0 15px 50px rgba(0,0,0,0.5); border: 4px solid white; }
 
         /* RESPONSIVE */
-        @media (max-width: 1000px) {
+        @media (max-width: 1100px) {
+            .sede-grilla-puzzle { grid-template-columns: repeat(3, 1fr); }
             .calendario-semanal { grid-template-columns: repeat(2, 1fr); }
             .col-dia:last-child { grid-column: span 2; }
-            .sede-grilla-puzzle { grid-template-columns: repeat(3, 1fr); } 
         }
-        
         @media (max-width: 768px) {
-            .sede-grilla-puzzle { grid-template-columns: repeat(2, 1fr); gap: 10px;} 
-            /* En tablets y celulares, reducimos un poco el zoom para que no se salga de pantalla */
+            .sede-grilla-puzzle { grid-template-columns: repeat(2, 1fr); gap: 10px;}
             .puzzle-item.abierto img.ampliada { transform: scale(1.4); }
         }
-        
         @media (max-width: 600px) {
             .calendario-semanal { grid-template-columns: 1fr; }
             .col-dia:last-child { grid-column: span 1; }
@@ -368,7 +605,32 @@
     </style>
 
     <script>
-        // Funcionalidad del Cronograma
+        // FILTRO DE GRUPOS
+        function filtrarGrupo(grupo, btn) {
+            // Activar botón tocado
+            document.querySelectorAll('.btn-filtro').forEach(b => b.classList.remove('activo'));
+            btn.classList.add('activo');
+
+            // Filtrar talleres
+            const talleres = document.querySelectorAll('.taller-contenedor');
+            talleres.forEach(taller => {
+                // Cerrar todos antes de filtrar
+                taller.classList.remove('abierto');
+                taller.querySelector('.detalle-taller').style.maxHeight = null;
+
+                if (grupo === 'todos') {
+                    taller.style.display = 'flex';
+                } else {
+                    if (taller.classList.contains(grupo)) {
+                        taller.style.display = 'flex';
+                    } else {
+                        taller.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        // ACORDEÓN DEL CRONOGRAMA
         function toggleTaller(elemento) {
             var contenedor = elemento.parentElement;
             document.querySelectorAll('.taller-contenedor').forEach(c => {
@@ -386,31 +648,22 @@
             }
         }
 
-        // Funcionalidad de la Galería (Ampliación EXACTA EN EL LUGAR)
+        // GALERÍA (Ampliación exacta en el lugar)
         function ampliarEnElLugar(img) {
-            // Evitar ampliar si la imagen de prueba de 'placehold.co' se disparó por error
             if (img.src.includes('placehold.co')) return;
-
             var contenedorPuzzle = img.parentElement;
-
-            // Si la foto ya está ampliada, la achicamos
             if (contenedorPuzzle.classList.contains('abierto')) {
                 contenedorPuzzle.classList.remove('abierto');
                 img.classList.remove('ampliada');
             } else {
-                // Primero cerramos cualquier otra foto que estuviera ampliada
                 document.querySelectorAll('.puzzle-item.abierto').forEach(el => {
                     el.classList.remove('abierto');
                     el.querySelector('img').classList.remove('ampliada');
                 });
-                
-                // Ampliamos la que acabás de tocar
                 contenedorPuzzle.classList.add('abierto');
                 img.classList.add('ampliada');
             }
         }
-        
-        // Cerrar si se presiona la tecla Escape o si se hace scroll
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape") {
                 document.querySelectorAll('.puzzle-item.abierto').forEach(el => {
