@@ -11,21 +11,25 @@
 </head>
 <body>
 
-   <header class="header">
-    <div class="container header-container">
-        <a href="index"><img src="logocontexto.png" alt="Fundación Caminos" class="logo-img"></a>
-        <div class="nav-toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
-        <nav>
-            <ul class="nav-list" id="nav-menu">
-                <li><a href="index" class="nav-link active">Inicio</a></li>
-                <li><a href="quienes-somos" class="nav-link">¿Quiénes somos?</a></li>
-                <li><a href="dispositivos" class="nav-link">Dispositivos</a></li>
-                <li><a href="comunidad" class="nav-link">Comunidad</a></li>
-                <li><a href="colaborar" class="nav-link btn-donar-header">DONAR AHORA</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    <a href="https://api.whatsapp.com/send/?phone=541136953600&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp-flotante" style="position: fixed !important; bottom: 30px !important; right: 30px !important; width: 60px !important; height: 60px !important; background-color: #25D366 !important; color: white !important; border-radius: 50% !important; display: flex !important; align-items: center !important; justify-content: center !important; font-size: 35px !important; box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important; z-index: 2147483647 !important; text-decoration: none !important;">
+        <i class="fab fa-whatsapp" style="color: white !important;"></i>
+    </a>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="index"><img src="logocontexto.png" alt="Fundación Caminos" class="logo-img"></a>
+            <div class="nav-toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
+            <nav>
+                <ul class="nav-list" id="nav-menu">
+                    <li><a href="index" class="nav-link active">Inicio</a></li>
+                    <li><a href="quienes-somos" class="nav-link">¿Quiénes somos?</a></li>
+                    <li><a href="dispositivos" class="nav-link">Dispositivos</a></li>
+                    <li><a href="comunidad" class="nav-link">Comunidad</a></li>
+                    <li><a href="colaborar" class="nav-link btn-donar-header">DONAR AHORA</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <section class="hero-home" style="background-image: url('portada.png');">
         <div class="hero-overlay"></div> <div class="container hero-content">
@@ -213,7 +217,7 @@
         </div>
     </section>
 
- <section class="section bg-light text-center" style="padding-top: 60px; padding-bottom: 60px; border-top: 1px solid #eaeaea;">
+    <section class="section bg-light text-center" style="padding-top: 60px; padding-bottom: 60px; border-top: 1px solid #eaeaea;">
         <div class="container">
             <span class="subtitle">Alianzas</span>
             <h2 style="margin-bottom: 20px;">Quienes nos acompañan</h2>
@@ -260,6 +264,24 @@
         </div>
     </section>
 
+    <footer class="footer-horizontal">
+        <div class="container footer-flex">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Fundación Caminos">
+            </div>
+            
+            <div class="footer-info">
+                <p><i class="fas fa-map-marker-alt"></i> Teodoro García 3545, C1427ECA, Ciudad Autónoma de Buenos Aires</p>
+                <p><i class="fas fa-phone-alt"></i> Tel (+54-11) 4551-2141 &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fas fa-envelope"></i> secretariafcaminos@gmail.com</p>
+            </div>
+            
+            <div class="footer-firma">
+                Diseñado por<br>
+                <a href="https://www.somosnomade.com.ar" target="_blank">NOMADE</a>
+            </div>
+        </div>
+    </footer>
+
     <style>
         .logos-alianzas-grid {
             display: flex;
@@ -295,50 +317,6 @@
             transform: scale(1.1);
         }
 
-        @media (max-width: 768px) {
-            .logos-alianzas-grid {
-                gap: 30px;
-            }
-            .logos-alianzas-grid img { 
-                max-height: 60px; 
-            }
-        }
-        @media (max-width: 480px) {
-            .logos-alianzas-grid {
-                gap: 20px;
-                flex-direction: column;
-            }
-            .logos-alianzas-grid img { 
-                max-height: 70px; 
-            }
-        }
-    </style>
-
-    <footer class="footer-horizontal">
-        <div class="container footer-flex">
-            <div class="footer-logo">
-                <img src="logo.png" alt="Fundación Caminos">
-            </div>
-            
-            <div class="footer-info">
-                <p><i class="fas fa-map-marker-alt"></i> Teodoro García 3545, C1427ECA, Ciudad Autónoma de Buenos Aires</p>
-                <p><i class="fas fa-phone-alt"></i> Tel (+54-11) 4551-2141 &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fas fa-envelope"></i> secretariafcaminos@gmail.com</p>
-            </div>
-            
-            <div class="footer-firma">
-                Diseñado por<br>
-                <a href="https://www.somosnomade.com.ar" target="_blank">NOMADE</a>
-            </div>
-        </div>
-    </footer>
-
-    <div class="whatsapp-container">
-        <a href="https://api.whatsapp.com/send/?phone=541136953600&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp-btn-fijo" aria-label="Chat en WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
-
-    <style>
         .footer-horizontal {
             background-color: var(--color-primario, #004aad);
             color: white;
@@ -386,59 +364,40 @@
         }
         .footer-firma a:hover { color: var(--color-acento, #FF7043); }
 
-        /* CONTENEDOR PARA FORZAR POSICIÓN FLOTANTE */
-        .whatsapp-container {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 2147483647; /* Máximo z-index posible */
-            pointer-events: none; /* Evita bloquear clicks en áreas vacías */
+        /* ESTILOS HOVER PARA WHATSAPP FLOTANTE */
+        .whatsapp-flotante {
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        }
+        .whatsapp-flotante:hover {
+            transform: scale(1.1) !important;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4) !important;
         }
 
-        /* BOTÓN WHATSAPP FIJO Y FLOTANTE */
-        .whatsapp-btn-fijo {
-            pointer-events: auto; /* Reactiva clicks en el botón */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            background-color: #25D366;
-            color: white;
-            border-radius: 50%;
-            font-size: 35px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            text-decoration: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        @media (max-width: 768px) {
+            .logos-alianzas-grid { gap: 30px; }
+            .logos-alianzas-grid img { max-height: 60px; }
         }
-        
-        /* Aseguramos color del icono y hover */
-        .whatsapp-btn-fijo i {
-            color: white !important;
+        @media (max-width: 600px) {
+            .whatsapp-flotante {
+                width: 50px !important;
+                height: 50px !important;
+                font-size: 30px !important;
+                bottom: 20px !important;
+                right: 20px !important;
+            }
         }
-        
-        .whatsapp-btn-fijo:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-            color: white !important;
+        @media (max-width: 480px) {
+            .logos-alianzas-grid {
+                gap: 20px;
+                flex-direction: column;
+            }
+            .logos-alianzas-grid img { max-height: 70px; }
         }
-
         @media (max-width: 900px) {
             .footer-flex { flex-direction: column; text-align: center; }
             .footer-info { margin: 10px 0; }
             .footer-firma { text-align: center; }
             .footer-info p { margin-bottom: 5px; }
-            
-            /* Ajuste del botón en móviles para no tapar contenido */
-            .whatsapp-container {
-                bottom: 20px;
-                right: 20px;
-            }
-            .whatsapp-btn-fijo {
-                width: 50px;
-                height: 50px;
-                font-size: 30px;
-            }
         }
     </style>
 
@@ -448,7 +407,7 @@
         if(navToggle){
             navToggle.addEventListener('click', () => {
                 if(navList.style.display === 'flex'){ navList.style.display = 'none'; } 
-                else { navList.style.display = 'flex'; navList.style.flexDirection = 'column'; navList.style.position = 'absolute'; navList.style.top = '80px'; navList.style.left = '0'; navList.style.width = '100%'; navList.style.background = 'white'; navList.style.padding = '20px'; navList.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)'; }
+                else { navList.style.display = 'flex'; navList.style.flexDirection = 'column'; navList.style.position = 'absolute'; navList.style.top = '80px'; navList.style.left = '0'; navList.style.width = '100%'; navList.style.background = 'white'; navList.style.padding = '20px'; navList.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)'; z-index: 9999;}
             });
         }
     </script>
