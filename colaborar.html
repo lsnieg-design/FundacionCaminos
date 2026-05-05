@@ -92,86 +92,155 @@
                 </div>
             </div>
 
-            <div style="max-width: 650px; margin: 60px auto 0; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.06); border-top: 5px solid var(--color-primario);">
-                
-                <div class="text-center" style="margin-bottom: 30px;">
-                    <h3 style="color: var(--color-primario); font-family: 'Montserrat', sans-serif; font-size: 1.8rem; margin-bottom: 10px;">¿Cómo donar?</h3>
-                    <p style="color: #666; font-size: 1.05rem;">Datos de transferencia:</p>
-                </div>
+            <div class="text-center" style="margin-top: 70px;">
+    <h2 style="color: var(--color-primario); font-family: 'Montserrat', sans-serif; font-size: 2rem; margin-bottom: 10px;">¿Cómo donar?</h2>
+    <p style="color: #666; font-size: 1.1rem; margin-bottom: 30px;">Elegí la opción que te resulte más cómoda</p>
+</div>
 
-                <div style="background: #f8f9fa; padding: 30px; border-radius: 12px; border-left: 5px solid var(--color-acento);">
-                    
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px solid #eaeaea; padding-bottom: 10px;">
-                        <span style="color: #666; font-family: 'Montserrat', sans-serif; font-weight: 700;">Banco</span>
-                        <span style="font-weight: 800; color: #333; text-align: right;">BANCO de la NACIÓN ARGENTINA</span>
-                    </div>
-                    
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px solid #eaeaea; padding-bottom: 10px;">
-                        <span style="color: #666; font-family: 'Montserrat', sans-serif; font-weight: 700;">Tipo y Nº de cuenta</span>
-                        <span style="font-weight: bold; color: #333; text-align: right;">CUENTA ESPECIAL Nº 658.011.383/1</span>
-                    </div>
+<div class="donacion-opciones-grid">
+    
+    <!-- OPCIÓN 1: TARJETA / DONAR ONLINE -->
+    <div class="caja-donacion caja-online">
+        <div class="caja-donacion-header">
+            <h3><i class="fas fa-credit-card"></i> Tarjeta</h3>
+            <p>Débito mensual o aporte único</p>
+        </div>
+        <div class="caja-donacion-body">
+            <p>Hacé tu aporte de forma rápida, simple y segura a través de la plataforma <strong>Donar Online</strong>. Podés elegir el monto y la frecuencia que desees.</p>
+            
+            <a href="https://donaronline.org/fundacion-caminos/mas-autonomia-mas-oportunidades-mas-comunidad" target="_blank" class="btn-donar-tarjeta">
+                <i class="fas fa-heart"></i> Donar con Tarjeta
+            </a>
+        </div>
+    </div>
 
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px solid #eaeaea; padding-bottom: 10px;">
-                        <span style="color: #666; font-family: 'Montserrat', sans-serif; font-weight: 700;">Titular</span>
-                        <span style="font-weight: bold; color: #333; text-align: right;">FUNDACION CAMINOS</span>
-                    </div>
-
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px solid #eaeaea; padding-bottom: 10px;">
-                        <span style="color: #666; font-family: 'Montserrat', sans-serif; font-weight: 700;">CUIT</span>
-                        <span style="font-weight: bold; color: #333; text-align: right;">30-69054624-4</span>
-                    </div>
-
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px solid #eaeaea; padding-bottom: 10px;">
-                        <span style="color: #666; font-family: 'Montserrat', sans-serif; font-weight: 700;">CBU</span>
-                        <span style="font-weight: 800; color: var(--color-primario); font-size: 1.1rem; text-align: right;">0110655440065801138312</span>
-                    </div>
-
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <span style="color: #666; font-family: 'Montserrat', sans-serif; font-weight: 700;">ALIAS</span>
-                        <span style="font-weight: 800; color: var(--color-acento); font-size: 1.1rem; text-align: right; background: #fff3e0; padding: 4px 12px; border-radius: 6px;">FCAMINOS1</span>
-                    </div>
-
-                </div>
-
-                <div class="text-center" style="margin-top: 35px; padding-top: 25px; border-top: 1px dashed #ddd;">
-                    <p style="color: #555; font-size: 1.05rem; line-height: 1.6; margin-bottom: 15px;">
-                        Si querés apoyarnos de alguna otra manera te podes contactar con nosotros a <br>
-                        <a href="mailto:donaciones@fundacioncaminos.org.ar" style="color: var(--color-primario); font-weight: 800; text-decoration: none;">donaciones@fundacioncaminos.org.ar</a> <br>
-                        y contarnos tu propuesta.
-                    </p>
-                    <p style="font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--color-acento); font-weight: 700; margin-top: 20px;">
-                        ¡Gracias por ser parte de este proyecto!
-                    </p>
-                </div>
-
+    <!-- OPCIÓN 2: TRANSFERENCIA BANCARIA -->
+    <div class="caja-donacion caja-transferencia">
+        <div class="caja-donacion-header">
+            <h3><i class="fas fa-university"></i> Transferencia</h3>
+            <p>Aporte directo a nuestra cuenta</p>
+        </div>
+        <div class="caja-donacion-body listado-banco">
+            <div class="dato-banco">
+                <span class="etiqueta">Banco</span>
+                <span class="valor">NACIÓN ARGENTINA</span>
             </div>
+            <div class="dato-banco">
+                <span class="etiqueta">Cuenta</span>
+                <span class="valor">Especial 658.011.383/1</span>
+            </div>
+            <div class="dato-banco">
+                <span class="etiqueta">Titular</span>
+                <span class="valor">FUNDACIÓN CAMINOS</span>
+            </div>
+            <div class="dato-banco">
+                <span class="etiqueta">CUIT</span>
+                <span class="valor">30-69054624-4</span>
+            </div>
+            <div class="dato-banco">
+                <span class="etiqueta">CBU</span>
+                <span class="valor cbu">0110655440065801138312</span>
+            </div>
+            <div class="dato-banco sin-borde">
+                <span class="etiqueta">ALIAS</span>
+                <span class="valor alias">FCAMINOS1</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- OTROS MEDIOS Y AGRADECIMIENTO -->
+<div class="text-center" style="max-width: 700px; margin: 50px auto 0; padding-top: 30px; border-top: 1px dashed #ccc;">
+    <p style="color: #555; font-size: 1.05rem; line-height: 1.6; margin-bottom: 15px;">
+        Si querés apoyarnos de alguna otra manera te podes contactar con nosotros a <br>
+        <a href="mailto:donaciones@fundacioncaminos.org.ar" style="color: var(--color-primario); font-weight: 800; text-decoration: none;">donaciones@fundacioncaminos.org.ar</a> <br>
+        y contarnos tu propuesta.
+    </p>
+    <p style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--color-acento); font-weight: 700; margin-top: 20px;">
+        ¡Gracias por ser parte de este proyecto!
+    </p>
+</div>
 
         </div>
     </section>
 
     <style>
-        .impacto-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
+      /* ========================================= */
+/* NUEVO DISEÑO: DOS CAJAS DE DONACIÓN       */
+/* ========================================= */
+.donacion-opciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
 
-        .impacto-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--color-primario);
-            transition: transform 0.3s ease;
-            position: relative;
-        }
+.caja-donacion {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
 
-        .impacto-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
+.caja-online { border-top: 5px solid var(--color-acento); }
+.caja-transferencia { border-top: 5px solid var(--color-primario); }
 
+.caja-donacion-header { text-align: center; padding: 30px 20px 20px; }
+.caja-donacion-header h3 { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; margin-bottom: 5px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.caja-online .caja-donacion-header h3 { color: var(--color-acento); }
+.caja-transferencia .caja-donacion-header h3 { color: var(--color-primario); }
+.caja-donacion-header p { color: #666; font-size: 0.95rem; margin: 0; }
+
+.caja-donacion-body {
+    background: #f8f9fa;
+    margin: 0 20px 20px;
+    padding: 30px 20px;
+    border-radius: 12px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.caja-online .caja-donacion-body { border-left: 5px solid var(--color-acento); align-items: center; text-align: center; }
+.caja-transferencia .caja-donacion-body { border-left: 5px solid var(--color-primario); }
+
+.caja-online .caja-donacion-body p { color: #444; font-size: 1.05rem; line-height: 1.5; margin-bottom: 25px; }
+
+.btn-donar-tarjeta {
+    background-color: var(--color-acento);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 250px;
+    box-shadow: 0 5px 15px rgba(255, 112, 67, 0.3);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-donar-tarjeta:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(255, 112, 67, 0.4); color: white; }
+
+.listado-banco .dato-banco { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eaeaea; padding: 10px 0; gap: 15px; }
+.listado-banco .dato-banco.sin-borde { border-bottom: none; padding-bottom: 0; }
+.listado-banco .etiqueta { color: #666; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.85rem; }
+.listado-banco .valor { font-weight: 700; color: #333; text-align: right; font-size: 0.9rem; word-break: break-all; }
+.listado-banco .valor.cbu { color: var(--color-primario); font-size: 0.95rem; font-weight: 800; }
+.listado-banco .valor.alias { background: #fff3e0; color: var(--color-acento); padding: 4px 10px; border-radius: 6px; font-weight: 800; }
+
+@media (max-width: 600px) {
+    .donacion-opciones-grid { grid-template-columns: 1fr; }
+    .listado-banco .dato-banco { flex-direction: column; align-items: flex-start; gap: 5px; }
+    .listado-banco .valor { text-align: left; }
+}
         .impacto-icono {
             background: var(--color-acento);
             color: white;
