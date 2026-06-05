@@ -407,13 +407,26 @@
 <a href="https://api.whatsapp.com/send/?phone=541136953600&text&type=phone_number&app_absent=0" target="_blank" style="position: fixed !important; bottom: 30px !important; right: 30px !important; width: 60px !important; height: 60px !important; background-color: #25D366 !important; color: white !important; border-radius: 50% !important; display: flex !important; align-items: center !important; justify-content: center !important; font-size: 35px !important; box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important; z-index: 2147483647 !important; text-decoration: none !important; cursor: pointer !important;">
         <i class="fab fa-whatsapp" style="color: white !important;"></i>
     </a>
-    <script>
+   <script>
         const navToggle = document.getElementById('nav-toggle');
         const navList = document.querySelector('.nav-list');
+        
         if(navToggle){
             navToggle.addEventListener('click', () => {
-                if(navList.style.display === 'flex'){ navList.style.display = 'none'; } 
-                else { navList.style.display = 'flex'; navList.style.flexDirection = 'column'; navList.style.position = 'absolute'; navList.style.top = '80px'; navList.style.left = '0'; navList.style.width = '100%'; navList.style.background = 'white'; navList.style.padding = '20px'; navList.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)'; z-index: 9999;}
+                if(navList.style.display === 'flex'){ 
+                    navList.style.display = 'none'; 
+                } else { 
+                    navList.style.display = 'flex'; 
+                    navList.style.flexDirection = 'column'; 
+                    navList.style.position = 'absolute'; 
+                    navList.style.top = '80px'; 
+                    navList.style.left = '0'; 
+                    navList.style.width = '100%'; 
+                    navList.style.background = 'white'; 
+                    navList.style.padding = '20px'; 
+                    navList.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)'; 
+                    navList.style.zIndex = '9999'; /* Corrección aplicada aquí */
+                }
             });
         }
     </script>
