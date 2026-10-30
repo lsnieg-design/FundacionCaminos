@@ -261,6 +261,219 @@
       color: #fff;
     }
 
+    /* ACCESO FLOTANTE AL CAMPUS */
+
+    .campus-access-float {
+      position: fixed;
+      top: 105px;
+      right: 22px;
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: calc(100vw - 32px);
+      padding: 12px 17px 12px 13px;
+      color: var(--form-navy);
+      background: #fff;
+      border: 1px solid rgba(16, 38, 111, .12);
+      border-radius: 16px;
+      box-shadow: 0 8px 28px rgba(16, 38, 111, .18);
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .campus-access-float:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(16, 38, 111, .23);
+    }
+
+    .campus-access-float:focus-visible {
+      outline: 3px solid #159f98;
+      outline-offset: 4px;
+    }
+
+    .campus-access-icon {
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--form-teal-dark);
+      border-radius: 13px;
+      font-size: 1.15rem;
+    }
+
+    .campus-access-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      line-height: 1.2;
+    }
+
+    .campus-access-copy small {
+      color: var(--form-teal-dark);
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+    }
+
+    .campus-access-copy strong {
+      color: var(--form-navy);
+      font: 700 .88rem 'Montserrat', sans-serif;
+    }
+
+    .campus-access-arrow {
+      color: var(--form-teal-dark);
+      margin-left: 3px;
+      font-size: .9rem;
+    }
+
+    /* NAVEGACION RAPIDA POR LA PAGINA */
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .form-section,
+    .form-quick-nav,
+    #cursos,
+    #contacto {
+      scroll-margin-top: 105px;
+    }
+
+    .form-quick-nav {
+      padding: 35px 0 48px;
+      background: #fff;
+    }
+
+    .form-quick-nav-head {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .form-quick-nav-head span {
+      display: block;
+      color: var(--form-teal-dark);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .form-quick-nav-head h2 {
+      margin: 0;
+      font: 700 clamp(1.35rem,2.5vw,1.85rem)/1.25 'Montserrat',sans-serif;
+      color: var(--form-navy);
+    }
+
+    .form-quick-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 12px;
+    }
+
+    .form-quick-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 76px;
+      padding: 15px;
+      border: 1px solid var(--form-line);
+      border-radius: 15px;
+      background: #f9fbfc;
+      color: var(--form-navy);
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+
+    .form-quick-link:hover {
+      transform: translateY(-3px);
+      border-color: #9bd8d2;
+      box-shadow: 0 8px 22px rgba(16,38,111,.08);
+    }
+
+    .form-quick-link:focus-visible {
+      outline: 3px solid var(--form-teal);
+      outline-offset: 3px;
+    }
+
+    .form-quick-icon {
+      flex: 0 0 38px;
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      color: var(--form-teal-dark);
+      background: #e5f4f2;
+      font-size: 1rem;
+    }
+
+    .form-quick-link strong {
+      display: block;
+      font: 700 .87rem/1.3 'Montserrat',sans-serif;
+    }
+
+    .form-quick-link small {
+      display: block;
+      margin-top: 3px;
+      color: var(--form-muted);
+      font-size: .76rem;
+      line-height: 1.3;
+    }
+
+    .form-back-index {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 28px;
+      color: var(--form-teal-dark);
+      text-decoration: none;
+      font-size: .88rem;
+      font-weight: 700;
+    }
+
+    .form-back-index:hover {
+      text-decoration: underline;
+    }
+
+    /* FLECHA FLOTANTE PARA VOLVER ARRIBA */
+
+    .back-to-top {
+      position: fixed;
+      right: 25px;
+      bottom: 105px;
+      z-index: 9998;
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border: 0;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--form-navy);
+      box-shadow: 0 5px 18px rgba(16,38,111,.25);
+      cursor: pointer;
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-3px);
+      background: var(--form-teal-dark);
+    }
+
+    .back-to-top:focus-visible {
+      outline: 3px solid var(--form-teal);
+      outline-offset: 4px;
+    }
+
+    .back-to-top[hidden] {
+      display: none;
+    }
+
     /* SECCIONES */
 
     .form-section {
@@ -309,8 +522,6 @@
       color: var(--form-muted);
     }
 
-    /* EJES */
-
     .form-pillars {
       display: grid;
       grid-template-columns: repeat(3,1fr);
@@ -349,7 +560,7 @@
       margin: 0;
     }
 
-    /* CATÁLOGO DE CURSOS */
+    /* CURSOS */
 
     .form-course-grid {
       display: grid;
@@ -540,7 +751,7 @@
       content: "0" counter(steps);
       display: block;
       color: var(--form-teal-dark);
-      font: 800 1.8rem 'Montserrat', sans-serif;
+      font: 800 1.8rem 'Montserrat',sans-serif;
       margin-bottom: 12px;
     }
 
@@ -683,6 +894,34 @@
     }
 
     @media(max-width:620px) {
+      .campus-access-float {
+        top: 92px;
+        right: 12px;
+        gap: 8px;
+        padding: 9px 11px 9px 9px;
+        border-radius: 13px;
+      }
+
+      .campus-access-icon {
+        flex-basis: 36px;
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        font-size: 1rem;
+      }
+
+      .campus-access-copy small {
+        font-size: .6rem;
+      }
+
+      .campus-access-copy strong {
+        font-size: .74rem;
+      }
+
+      .campus-access-arrow {
+        font-size: .78rem;
+      }
+
       .form-hero {
         padding: 65px 0 58px;
       }
@@ -719,12 +958,72 @@
         font-size: .85rem;
       }
     }
+
+    /* MENU DE SECCIONES RESPONSIVE */
+
+    @media(max-width:900px) {
+      .form-quick-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+
+    @media(max-width:620px) {
+      .form-quick-nav {
+        padding: 28px 0 35px;
+      }
+
+      .form-quick-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+      }
+
+      .form-quick-link {
+        min-height: 78px;
+        padding: 11px;
+        gap: 9px;
+      }
+
+      .form-quick-icon {
+        flex-basis: 33px;
+        width: 33px;
+        height: 33px;
+        font-size: .9rem;
+      }
+
+      .form-quick-link strong {
+        font-size: .75rem;
+      }
+
+      .form-quick-link small {
+        font-size: .68rem;
+      }
+
+      .back-to-top {
+        right: 17px;
+        bottom: 95px;
+        width: 44px;
+        height: 44px;
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- ENCABEZADO Y MENÚ -->
+  <!-- ENCABEZADO Y MENU -->
 
   <header class="header">
     <div class="container header-container">
@@ -802,18 +1101,86 @@
       </div>
     </section>
 
-    <!-- PRESENTACIÓN -->
+    <!-- INDICE DE ACCESO RAPIDO -->
 
-    <section class="form-section">
+    <section class="form-quick-nav" aria-labelledby="form-quick-title">
+      <div class="container">
+
+        <div class="form-quick-nav-head">
+          <span>Explorá la propuesta</span>
+          <h2 id="form-quick-title">¿Qué te gustaría conocer?</h2>
+        </div>
+
+        <nav class="form-quick-grid" aria-label="Secciones de la página de formación">
+
+          <a class="form-quick-link" href="#propuesta">
+            <span class="form-quick-icon"><i class="fas fa-lightbulb" aria-hidden="true"></i></span>
+            <span>
+              <strong>La propuesta</strong>
+              <small>Quiénes somos y qué buscamos</small>
+            </span>
+          </a>
+
+          <a class="form-quick-link" href="#cursos">
+            <span class="form-quick-icon"><i class="fas fa-book-open" aria-hidden="true"></i></span>
+            <span>
+              <strong>Cursos</strong>
+              <small>Conocé el catálogo</small>
+            </span>
+          </a>
+
+          <a class="form-quick-link" href="#modalidades">
+            <span class="form-quick-icon"><i class="fas fa-laptop-house" aria-hidden="true"></i></span>
+            <span>
+              <strong>Modalidades</strong>
+              <small>Cómo podés participar</small>
+            </span>
+          </a>
+
+          <a class="form-quick-link" href="#destinatarios">
+            <span class="form-quick-icon"><i class="fas fa-users" aria-hidden="true"></i></span>
+            <span>
+              <strong>Destinatarios</strong>
+              <small>Para quiénes está pensado</small>
+            </span>
+          </a>
+
+          <a class="form-quick-link" href="#materiales">
+            <span class="form-quick-icon"><i class="fas fa-folder-open" aria-hidden="true"></i></span>
+            <span>
+              <strong>Materiales y constancias</strong>
+              <small>Qué te llevás</small>
+            </span>
+          </a>
+
+          <a class="form-quick-link" href="#colaborar-formacion">
+            <span class="form-quick-icon"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
+            <span>
+              <strong>Donaciones y becas</strong>
+              <small>Cómo apoyar la iniciativa</small>
+            </span>
+          </a>
+
+          <a class="form-quick-link" href="#contacto">
+            <span class="form-quick-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+            <span>
+              <strong>Contacto</strong>
+              <small>Hablemos de tu propuesta</small>
+            </span>
+          </a>
+
+        </nav>
+      </div>
+    </section>
+
+    <!-- PRESENTACION -->
+
+    <section class="form-section" id="propuesta">
       <div class="container">
 
         <div class="form-section-head">
           <span class="form-eyebrow">Un espacio para aprender y hacer</span>
-
-          <h2>
-            La formación como punto de partida para transformar realidades
-          </h2>
-
+          <h2>La formación como punto de partida para transformar realidades</h2>
           <p>
             Creemos que una sociedad más inclusiva se construye cuando
             revisamos nuestras ideas, identificamos las barreras y contamos
@@ -831,9 +1198,7 @@
         <div class="form-pillars">
 
           <article class="form-pillar">
-            <div class="form-pillar-icon">
-              <i class="fas fa-lightbulb"></i>
-            </div>
+            <div class="form-pillar-icon"><i class="fas fa-lightbulb"></i></div>
             <h3>Comprender</h3>
             <p>
               Revisar paradigmas, representaciones y prácticas para mirar
@@ -842,9 +1207,7 @@
           </article>
 
           <article class="form-pillar">
-            <div class="form-pillar-icon">
-              <i class="fas fa-universal-access"></i>
-            </div>
+            <div class="form-pillar-icon"><i class="fas fa-universal-access"></i></div>
             <h3>Incorporar herramientas</h3>
             <p>
               Conocer estrategias y recursos para identificar barreras
@@ -853,9 +1216,7 @@
           </article>
 
           <article class="form-pillar">
-            <div class="form-pillar-icon">
-              <i class="fas fa-people-group"></i>
-            </div>
+            <div class="form-pillar-icon"><i class="fas fa-people-group"></i></div>
             <h3>Transformar prácticas</h3>
             <p>
               Llevar los aprendizajes a situaciones concretas en organizaciones,
@@ -864,19 +1225,23 @@
           </article>
 
         </div>
+
+        <a class="form-back-index" href="#form-quick-title">
+          <i class="fas fa-arrow-up" aria-hidden="true"></i>
+          Volver al índice de formación
+        </a>
+
       </div>
     </section>
 
-    <!-- CATÁLOGO DE CURSOS -->
+    <!-- CATALOGO DE CURSOS -->
 
     <section class="form-section form-section-soft" id="cursos">
       <div class="container">
 
         <div class="form-section-head">
           <span class="form-eyebrow">Caja de cursos</span>
-
           <h2>Elegí por dónde empezar</h2>
-
           <p>
             Un catálogo de propuestas independientes que también pueden
             combinarse en recorridos de formación según los intereses
@@ -1026,19 +1391,22 @@
           propuestas disponibles y próximas ediciones.
         </div>
 
+        <a class="form-back-index" href="#form-quick-title">
+          <i class="fas fa-arrow-up" aria-hidden="true"></i>
+          Volver al índice de formación
+        </a>
+
       </div>
     </section>
 
     <!-- MODALIDADES -->
 
-    <section class="form-section">
+    <section class="form-section" id="modalidades">
       <div class="container">
 
         <div class="form-section-head">
           <span class="form-eyebrow">Distintas formas de participar</span>
-
           <h2>Una modalidad para cada necesidad</h2>
-
           <p>
             Nos adaptamos a los tiempos, objetivos y características
             de cada persona, equipo u organización.
@@ -1084,19 +1452,23 @@
           </article>
 
         </div>
+
+        <a class="form-back-index" href="#form-quick-title">
+          <i class="fas fa-arrow-up" aria-hidden="true"></i>
+          Volver al índice de formación
+        </a>
+
       </div>
     </section>
 
     <!-- DESTINATARIOS -->
 
-    <section class="form-section form-section-soft">
+    <section class="form-section form-section-soft" id="destinatarios">
       <div class="container">
 
         <div class="form-section-head">
           <span class="form-eyebrow">Propuestas para diferentes públicos</span>
-
           <h2>¿A quiénes está dirigido?</h2>
-
           <p>
             La inclusión es una construcción colectiva. Cada espacio
             tiene preguntas y desafíos propios; por eso, las propuestas
@@ -1147,19 +1519,23 @@
           </article>
 
         </div>
+
+        <a class="form-back-index" href="#form-quick-title">
+          <i class="fas fa-arrow-up" aria-hidden="true"></i>
+          Volver al índice de formación
+        </a>
+
       </div>
     </section>
 
-    <!-- MATERIALES Y CERTIFICACIÓN -->
+    <!-- MATERIALES -->
 
-    <section class="form-section">
+    <section class="form-section" id="materiales">
       <div class="container">
 
         <div class="form-section-head">
           <span class="form-eyebrow">Formación con herramientas para la práctica</span>
-
           <h2>¿Qué te llevás de cada experiencia?</h2>
-
           <p>
             Buscamos que cada instancia de formación deje recursos
             concretos para seguir trabajando después del encuentro.
@@ -1193,19 +1569,24 @@
           </article>
 
         </div>
+
+        <a class="form-back-index" href="#form-quick-title">
+          <i class="fas fa-arrow-up" aria-hidden="true"></i>
+          Volver al índice de formación
+        </a>
+
       </div>
     </section>
 
     <!-- DONACIONES Y BECAS -->
 
-    <section class="form-section form-section-soft">
+    <section class="form-section form-section-soft" id="colaborar-formacion">
       <div class="container">
 
         <div class="form-donation">
 
           <div>
             <span class="form-eyebrow">Una iniciativa con compromiso social</span>
-
             <h2>Formar también es incluir</h2>
 
             <p>
@@ -1226,9 +1607,7 @@
 
           <aside class="form-donation-aside">
             <i class="fas fa-hand-holding-heart"></i>
-
             <strong>Tu aporte abre oportunidades</strong>
-
             <span>
               Sumate a una red que impulsa formación,
               accesibilidad e inclusión en la comunidad.
@@ -1236,6 +1615,12 @@
           </aside>
 
         </div>
+
+        <a class="form-back-index" href="#form-quick-title">
+          <i class="fas fa-arrow-up" aria-hidden="true"></i>
+          Volver al índice de formación
+        </a>
+
       </div>
     </section>
 
@@ -1248,9 +1633,7 @@
           Construyamos nuevos caminos
         </span>
 
-        <h2>
-          ¿Querés capacitar a tu equipo o participar de una propuesta?
-        </h2>
+        <h2>¿Querés capacitar a tu equipo o participar de una propuesta?</h2>
 
         <p>
           Contanos qué necesitás. Podemos orientarte para elegir
@@ -1278,7 +1661,7 @@
 
   </main>
 
-  <!-- PIE DE PÁGINA -->
+  <!-- PIE DE PAGINA -->
 
   <footer class="footer-horizontal">
     <div class="container footer-flex">
@@ -1314,7 +1697,7 @@
     </div>
   </footer>
 
-  <!-- MENÚ RESPONSIVE -->
+  <!-- MENU RESPONSIVE -->
 
   <script>
     const navToggle = document.getElementById('nav-toggle');
@@ -1354,7 +1737,28 @@
     }
   </script>
 
-  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <!-- ACCESO FLOTANTE AL CAMPUS VIRTUAL -->
+  <!-- Reemplazar esta URL cuando el campus esté creado -->
+
+  <a class="campus-access-float"
+     href="https://TU-ENLACE-DEL-CAMPUS"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Ingresar al campus virtual">
+
+    <span class="campus-access-icon">
+      <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+    </span>
+
+    <span class="campus-access-copy">
+      <small>¿Ya te anotaste?</small>
+      <strong>Ingresá al campus virtual</strong>
+    </span>
+
+    <i class="fas fa-arrow-up-right-from-square campus-access-arrow" aria-hidden="true"></i>
+  </a>
+
+  <!-- WHATSAPP -->
 
   <a href="https://api.whatsapp.com/send/?phone=541136953600&text&type=phone_number&app_absent=0"
      target="_blank"
@@ -1370,6 +1774,41 @@
     src="https://static.getwcag.com/widget.js"
     config-url="https://static.getwcag.com/configs/td8wzoi9JWoKaZuG5nnb/config.json"
     use-important="false">
+  </script>
+
+  <!-- BOTON PARA VOLVER ARRIBA -->
+
+  <button class="back-to-top"
+          id="back-to-top"
+          type="button"
+          aria-label="Volver al inicio de la página"
+          title="Volver arriba"
+          hidden>
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script>
+    const backToTopButton = document.getElementById('back-to-top');
+
+    function updateBackToTopVisibility() {
+      if (!backToTopButton) return;
+      backToTopButton.hidden = window.scrollY < 450;
+    }
+
+    if (backToTopButton) {
+      window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
+
+      updateBackToTopVisibility();
+
+      backToTopButton.addEventListener('click', () => {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        window.scrollTo({
+          top: 0,
+          behavior: reduceMotion ? 'auto' : 'smooth'
+        });
+      });
+    }
   </script>
 
 </body>
